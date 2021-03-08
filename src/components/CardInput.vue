@@ -15,6 +15,26 @@ export default class CardInput extends Vue
     input = "Long time no see, it has been a while"
     title = "おひさしぶり"
 }
+
+export interface Deck
+{
+    cards: Card[];
+    wordIndex: [];
+}
+
+export interface Card
+{
+    word: string[];
+    definition: string[];
+    sentences: SampleSentence[];
+    otherAnswers: string[] | null;
+}
+
+export interface SampleSentence
+{
+    sentence: string;
+    translation: string;
+}
 </script>
 
 <style lang="scss" scoped>
