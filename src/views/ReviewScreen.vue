@@ -27,4 +27,10 @@ export default class ReviewScreen extends Vue
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
 }
+
+#ReviewScreen
+{
+    background-color: #fff8fa;
+    height: 100vh;
+}
 </style>
