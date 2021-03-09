@@ -4,7 +4,7 @@
             <div class="btn-exit clickable" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
         </div>
 
-        <CardInput :card="card"></CardInput>
+        <CardInput class="card-input" :card="card"></CardInput>
     </div>
 </template>
 
@@ -38,8 +38,22 @@ export default class ReviewScreen extends Vue
 </script>
 
 <style lang="scss" scoped>
+#ReviewScreen
+{
+    // Vertical Flex Alignment
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+
+    background-color: #fff1f140;
+}
+
+// Progress bar on the top
 #div-progress
 {
+    // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=auto)
+    flex: 0 1 auto;
+
     // Height
     $navH: max(6vh, 40px);
     height: $navH;
@@ -63,9 +77,10 @@ export default class ReviewScreen extends Vue
     }
 }
 
-#ReviewScreen
+// Card
+.card-input
 {
-    background-color: #fff1f140;
-    height: 100vh;
+    // Vertical Flex Alignment: flex(grow=1, shrink=1, basis=auto)
+    flex: 1 1 auto;
 }
 </style>

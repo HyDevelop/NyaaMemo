@@ -103,11 +103,19 @@ export default class CardInput extends Vue.with(Props)
     //   but when it's smaller than 900px, use 100vw - 50px, because 50px is the margin)
     $ansWidth: max(50vw, min(900px, 100vw - 50px));
 
+    // Vertical Flex Alignment
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
     // Title (aka. word)
     #div-title
     {
         padding-bottom: 20px;
         margin: 0 20vw 10px;
+
+        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=auto)
+        flex: 0 1 auto;
 
         #word { font-size: xx-large }
         #wordForm2
@@ -147,28 +155,16 @@ export default class CardInput extends Vue.with(Props)
     // "Click the screen to show the answer" screen
     #div-before-answer
     {
-        // Fill entire screen
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-
-        z-index: -1;
-
-        #div-ba-inside
-        {
-            margin-top: 45vh;
-        }
+        flex: 1 1 auto;
     }
 
     // Input field and buttons on the bottom
     #div-bottom
     {
-        position: absolute;
-        bottom: 5vh;
         width: 100vw;
+
+        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=5vh)
+        flex: 0 1 5vh;
 
         // Input field
         #div-input
