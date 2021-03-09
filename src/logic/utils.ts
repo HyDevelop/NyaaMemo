@@ -1,3 +1,4 @@
+import * as wanakana from 'wanakana';
 
 // https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array
 export function rand<T>(array: T[], n: number)
@@ -18,4 +19,55 @@ export function blurAll()
     {
         if (el instanceof HTMLElement) el.blur()
     }
+}
+
+/**
+ * Convert okurigana to furigana
+ *
+ * Okurigana marks the pronunciation in parenthesis, and furigana marks the pronunciation at the top of the kanji.
+ */
+export function okuriganaToFurigana(okurigana: string)
+{
+    let result = ""
+    let kanjiCache = ""
+
+    // Loop through the entire string
+    for (let i = 0; i < okurigana.length; i++)
+    {
+        const c = okurigana[i]
+
+        // Is kanji
+        if (wanakana.isKanji(c)) kanjiCache += c
+
+        // Kanji cache is empty, and this is not a kanji
+        else if (kanjiCache == '') result += c
+
+        // Kanji cache is not empty, and this is a starting bracket
+        else if (c == '(')
+        {
+            // Get the index of the ending bracket
+            const endI = okurigana.indexOf(')', i)
+
+            // Get the hiragana pronunciation between the brackets
+            const inner = okurigana.substring(i + 1, endI)
+
+            // Add to result, clear cache, set i to after the ending bracket
+            result += `<ruby>${kanjiCache}<rt>${inner}</rt></ruby>`
+            kanjiCache = ''
+            i = endI
+        }
+
+        // Kanji cache is not empty, and this is not a kanji nor a starting bracket
+        //   (This is technically impossible if the string is in the correct format,
+        //   but maybe the string is mistyped)
+        else
+        {
+            console.log(`[Kanji] An error occurred when processing ${okurigana} - Unexpected symbol ${c}`)
+            result += kanjiCache
+            kanjiCache = ''
+            result += c
+        }
+    }
+
+    return result + kanjiCache
 }
