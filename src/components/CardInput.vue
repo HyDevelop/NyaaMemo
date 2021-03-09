@@ -21,7 +21,7 @@
 
             <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
                 <div id="div-ba-inside">
-                    <div>Please say the definition out loud.</div>
+                    <div style="color: gray">Please say the definition out loud.</div>
                     <div class="color-highlight">Click the screen to show the answer.</div>
                 </div>
             </div>
