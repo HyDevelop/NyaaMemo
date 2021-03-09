@@ -97,8 +97,8 @@ export default class CardInput extends Vue.with(Props)
 #word-input
 {
     // Answer container width (This is normally 50vw,
-    //   but when it's smaller than 900px, use 10vw - 100px, because 100px is the margin)
-    $ansWidth: max(50vw, min(900px, 100vw - 100px));
+    //   but when it's smaller than 900px, use 100vw - 50px, because 50px is the margin)
+    $ansWidth: max(50vw, min(900px, 100vw - 50px));
 
     // Title (aka. word)
     #div-title
@@ -120,7 +120,6 @@ export default class CardInput extends Vue.with(Props)
         // Container properties
         text-align: left;
         width: $ansWidth;
-        padding: 0 50px;
         margin: 0 auto 30px;
         font-size: x-large;
 
@@ -146,7 +145,7 @@ export default class CardInput extends Vue.with(Props)
     #div-bottom
     {
         position: absolute;
-        bottom: 50px;
+        bottom: 5vh;
         width: 100vw;
 
         // Input field
