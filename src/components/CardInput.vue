@@ -96,6 +96,8 @@ export default class CardInput extends Vue.with(Props)
 <style lang="scss" scoped>
 #word-input
 {
+    $ansWidth: max(50vw, min(900px, 100vw - 100px));
+
     #div-title
     {
         padding-bottom: 20px;
@@ -134,7 +136,7 @@ export default class CardInput extends Vue.with(Props)
         }
 
         text-align: left;
-        width: max(50vw, min(900px, 100vw - 100px));
+        width: $ansWidth;
         padding: 0 50px;
         margin: 0 auto 30px;
         font-size: x-large;
@@ -148,14 +150,16 @@ export default class CardInput extends Vue.with(Props)
 
         #div-input
         {
-            max-width: 400px;
-            margin: auto;
+            width: $ansWidth;
+            margin: 0 auto 20px;
         }
 
+        // Three buttons fill container width equally (https://stackoverflow.com/a/23345079/7346633)
         #div-buttons
         {
-            margin-top: 20px;
+            margin: auto;
             display: flex;
+            width: $ansWidth;
 
             button
             {
