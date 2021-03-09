@@ -40,10 +40,26 @@
 import {Options, prop, Vue} from 'vue-class-component';
 import {Card, SampleSentence} from "@/logic/models";
 import {rand} from "@/logic/utils";
+import * as wanakana from 'wanakana';
 
 class Props
 {
     card = prop<Card>({required: true})
+}
+
+// Temporary
+const kanji: {[key: string]: string} = {'猫': 'ねこ', '私': 'わたし', '田': 'た', '中': 'なか', '公': 'こう', '園': 'えん', '怖': 'こわ'}
+
+function withKanjiPronunciations(s: string)
+{
+    if (s.includes('<')) return s
+    let res = ""
+    for (const c of s)
+    {
+        if (wanakana.isKanji(c)) res += `<ruby>${c}<rt>${kanji[c]}</rt></ruby>`
+        else res += c
+    }
+    return res
 }
 
 @Options({components: {}})
@@ -57,7 +73,9 @@ export default class CardInput extends Vue.with(Props)
         return rand(this.card.sentences, 3).map(it =>
         {
             const n: SampleSentence = {...it}
-            this.card.word.forEach(w => n.sentence = n.sentence.replaceAll(w, `<span class="sentence-word-highlight">${w}</span>`))
+            this.card.word.forEach(w => n.sentence =
+                withKanjiPronunciations(n.sentence).replaceAll(w, `<span class="sentence-word-highlight">${w}</span>`)
+            )
             return n
         })
     }
