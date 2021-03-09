@@ -1,7 +1,7 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-
+            <div class="btn-nav"><i class="el-icon-arrow-left"></i></div>
         </div>
 
         <CardInput :card="card"></CardInput>
@@ -33,6 +33,12 @@ export default class ReviewScreen extends Vue
     background-color: white;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
+
+    .btn-nav
+    {
+        height: 100%;
+        width: 70px;
+    }
 }
 
 #ReviewScreen
