@@ -20,7 +20,7 @@
 // Clickable text
 .clickable:hover
 {
-    text-decoration: underline;
+    // text-decoration: underline;
     cursor: pointer;
 }
 
