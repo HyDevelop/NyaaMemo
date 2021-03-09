@@ -4,7 +4,9 @@
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
-        <div id="subtitle"></div>
+        <div id="div-answer">
+
+        </div>
 <!--        <el-button id="btn-reveal-ans">Reveal Answer</el-button>-->
         <div id="div-bottom">
             <div id="div-input">
@@ -27,6 +29,7 @@ class Props
 export default class CardInput extends Vue.with(Props)
 {
     input = ""
+    answerShown = true
 }
 </script>
 
@@ -37,6 +40,7 @@ export default class CardInput extends Vue.with(Props)
     {
         margin-bottom: 50px;
         background-color: #e2eeff;
+        padding: 10px;
 
         #word
         {
