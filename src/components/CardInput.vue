@@ -71,6 +71,7 @@ export default class CardInput extends Vue.with(Props)
             border-bottom: 2px solid #ffd700;
         }
 
+        width: max(50vw, min(900px, 100vw));
         margin: auto;
         font-size: x-large;
     }
