@@ -24,13 +24,13 @@
 
         <div id="div-bottom">
             <div id="div-input">
-                <el-input id="input" v-model="input"></el-input>
+                <el-input v-if="!answerShown" id="input" v-model="input"></el-input>
+            </div>
 
-                <div id="div-buttons">
-                    <el-button type="success" plain>簡単</el-button>
-                    <el-button type="warning" plain>難い</el-button>
-                    <el-button type="danger"  plain>忘れた</el-button>
-                </div>
+            <div id="div-buttons">
+                <el-button type="success" plain>簡単</el-button>
+                <el-button type="warning" plain>難い</el-button>
+                <el-button type="danger"  plain>忘れた</el-button>
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@ function withKanjiPronunciations(s: string)
 export default class CardInput extends Vue.with(Props)
 {
     input = ""
-    answerShown = true
+    answerShown = false
 
     get filteredSentences(): SampleSentence[]
     {
