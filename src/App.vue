@@ -7,6 +7,20 @@
     <router-view/>
 </template>
 
+<script lang="ts">
+import {Options, Vue} from 'vue-class-component';
+
+@Options({components: {}})
+export default class App extends Vue
+{
+
+}
+</script>
+
+<style lang="sass">
+@import "global"
+</style>
+
 <style lang="scss">
 #app
 {
@@ -15,24 +29,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-}
-
-// Clickable text
-.clickable:hover
-{
-    // text-decoration: underline;
-    cursor: pointer;
-}
-
-// Non-selectable text
-.unselectable
-{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 #nav
