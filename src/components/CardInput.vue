@@ -155,10 +155,13 @@ export default class CardInput extends Vue.with(Props)
         #div-buttons
         {
             margin-top: 20px;
+            display: flex;
 
             button
             {
-                width: 25vw;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 100%;
             }
         }
     }
