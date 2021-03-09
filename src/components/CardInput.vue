@@ -110,6 +110,7 @@ export default class CardInput extends Vue.with(Props)
     // Vertical Flex Alignment
     display: flex;
     flex-flow: column;
+    min-height: 0;
 
     // Title (aka. word)
     #div-title
@@ -158,7 +159,11 @@ export default class CardInput extends Vue.with(Props)
     // "Click the screen to show the answer" screen
     #div-middle
     {
-        flex: 1 1 auto;
+        flex: 1 2 auto;
+
+        // Vertical scroll on this one section only
+        overflow-y: auto;
+        min-height: 0;
 
         #div-before-answer
         {
