@@ -21,10 +21,10 @@ export default class ReviewScreen extends Vue
         word: ["猫", "ねこ"],
         definition: ["n. Cat", "<strike>n. God :o</strike>"],
         sentences: [
-            {sentence: "私は猫です", translation: "I'm a cat :3"},
-            {sentence: "田中さんはねこではありません", translation: "Tanaka is not a cat"},
-            {sentence: "あそこの公園に猫がたくさんいます", translation: "That park over there has a lot of cats"},
-            {sentence: "猫は怖くない", translation: "Cats are not scary"}
+            {s: "私(わたし)は猫(ねこ)です", tr: "I'm a cat :3"},
+            {s: "田中(たなか)さんは猫(ねこ)ではありません", tr: "Tanaka is not a cat"},
+            {s: "あそこの公園(こうえん)に猫(ねこ)がたくさんいます", tr: "That park over there has a lot of cats"},
+            {s: "猫(ねこ)は怖(こわ)くない", tr: "Cats are not scary"}
         ]
     }
 

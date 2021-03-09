@@ -15,6 +15,6 @@ export interface Card
 
 export interface SampleSentence
 {
-    sentence: string;
-    translation: string;
+    s: string; // Sentence
+    tr: string; // Translation
 }

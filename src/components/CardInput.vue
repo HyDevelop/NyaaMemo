@@ -13,9 +13,9 @@
 
             <div v-if="answerShown" class="div-answer">
                 <div class="ans-title">Sentences</div>
-                <div v-for="s in filteredSentences" :key="s.sentence">
-                    <div class="sentence" v-html="s.sentence"></div>
-                    <div class="translation">{{ s.translation }}</div>
+                <div v-for="s in filteredSentences" :key="s.s">
+                    <div class="sentence" v-html="s.s"></div>
+                    <div class="translation">{{ s.tr }}</div>
                 </div>
             </div>
 
@@ -78,8 +78,8 @@ export default class CardInput extends Vue.with(Props)
         return rand(this.card.sentences, 3).map(it =>
         {
             const n: SampleSentence = {...it}
-            this.card.word.forEach(w => n.sentence =
-                withKanjiPronunciations(n.sentence).replaceAll(w, `<span class="color-highlight">${w}</span>`)
+            this.card.word.forEach(w => n.s =
+                withKanjiPronunciations(n.s).replaceAll(w, `<span class="color-highlight">${w}</span>`)
             )
             return n
         })
