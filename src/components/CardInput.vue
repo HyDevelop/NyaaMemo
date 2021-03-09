@@ -120,13 +120,13 @@ export default class CardInput extends Vue.with(Props)
     #div-bottom
     {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         width: 100vw;
 
         #div-input
         {
             max-width: 400px;
-            margin: auto auto 50px;
+            margin: auto;
         }
     }
 
