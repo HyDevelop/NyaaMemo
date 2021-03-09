@@ -18,8 +18,9 @@
             </div>
         </div>
 
-        <div v-if="!answerShown" id="div-before-answer" @click="revealAnswer">
-
+        <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
+            <div>Please say the definition out loud.</div>
+            <div>Click the screen to show the answer.</div>
         </div>
 
         <div id="div-bottom">
