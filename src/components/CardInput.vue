@@ -65,6 +65,10 @@ export default class CardInput extends Vue.with(Props)
         #ans-title-definition
         {
             font-size: medium;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            width: 50%;
+            border-bottom: 2px solid #ffd700;
         }
 
         margin: auto;
