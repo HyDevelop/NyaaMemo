@@ -44,7 +44,7 @@
 <script lang="ts">
 import {Options, prop, Vue} from 'vue-class-component';
 import {Card, SampleSentence} from "@/logic/models";
-import {rand} from "@/logic/utils";
+import {blurAll, rand} from "@/logic/utils";
 import * as wanakana from 'wanakana';
 
 class Props
@@ -92,6 +92,7 @@ export default class CardInput extends Vue.with(Props)
 
     clickDone(difficulty: number)
     {
+        blurAll()
         console.log(difficulty)
         this.answerShown = false
     }
