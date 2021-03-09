@@ -4,8 +4,8 @@
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
-        <div v-if="answerShown" id="div-answer">
-            <div id="ans-title-definition">Definition</div>
+        <div v-if="answerShown" class="div-answer">
+            <div class="ans-title">Definition</div>
             <div v-for="def in card.definition" :key="def">{{ def }}</div>
         </div>
 
@@ -60,14 +60,14 @@ export default class CardInput extends Vue.with(Props)
         }
     }
 
-    #div-answer
+    .div-answer
     {
-        #ans-title-definition
+        .ans-title-definition
         {
             font-size: medium;
             text-transform: uppercase;
             margin-bottom: 10px;
-            width: 50%;
+            width: 70%;
             border-bottom: 2px solid #ffd700;
         }
 
