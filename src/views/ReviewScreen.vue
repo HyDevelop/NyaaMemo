@@ -39,6 +39,7 @@ export default class ReviewScreen extends Vue
         height: 100%;
         width: 70px;
         float: left;
+        font-size: max(2vh, 14px);
         line-height: max(6vh, 40px);
     }
 }
