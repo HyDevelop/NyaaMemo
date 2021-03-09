@@ -44,27 +44,11 @@
 <script lang="ts">
 import {Options, prop, Vue} from 'vue-class-component';
 import {Card, SampleSentence} from "@/logic/models";
-import {blurAll, rand} from "@/logic/utils";
-import * as wanakana from 'wanakana';
+import {blurAll, okuriganaToFurigana, rand} from "@/logic/utils";
 
 class Props
 {
     card = prop<Card>({required: true})
-}
-
-// Temporary
-const kanji: {[key: string]: string} = {'猫': 'ねこ', '私': 'わたし', '田': 'た', '中': 'なか', '公': 'こう', '園': 'えん', '怖': 'こわ'}
-
-function withKanjiPronunciations(s: string)
-{
-    if (s.includes('<')) return s
-    let res = ""
-    for (const c of s)
-    {
-        if (wanakana.isKanji(c)) res += `<ruby>${c}<rt>${kanji[c]}</rt></ruby>`
-        else res += c
-    }
-    return res
 }
 
 @Options({components: {}})
@@ -79,7 +63,7 @@ export default class CardInput extends Vue.with(Props)
         {
             const n: SampleSentence = {...it}
             this.card.word.forEach(w => n.s =
-                withKanjiPronunciations(n.s).replaceAll(w, `<span class="color-highlight">${w}</span>`)
+                okuriganaToFurigana(n.s).replaceAll(w, `<span class="color-highlight">${w}</span>`)
             )
             return n
         })
