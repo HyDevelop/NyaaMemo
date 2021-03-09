@@ -125,8 +125,8 @@ export default class CardInput extends Vue.with(Props)
             font-size: medium;
             text-transform: uppercase;
             margin-bottom: 10px;
-            width: 70%;
-            border-bottom: 2px solid #ffd700;
+            width: 100%;
+            border-bottom: 2px solid #f5dab1;
         }
 
         .translation
