@@ -61,7 +61,7 @@ export default class CardInput extends Vue.with(Props)
         padding-bottom: 20px;
 
         // 60vw border
-        margin: 0 20vw 20px;
+        margin: 0 20vw 10px;
         //border-bottom: 2px solid #cacaca;
 
         #word
@@ -90,7 +90,7 @@ export default class CardInput extends Vue.with(Props)
         text-align: left;
         width: max(50vw, min(900px, 100vw - 100px));
         padding: 0 50px;
-        margin: auto;
+        margin: 0 auto 30px;
         font-size: x-large;
     }
 

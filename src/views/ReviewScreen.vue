@@ -20,7 +20,7 @@ export default class ReviewScreen extends Vue
         word: ["猫", "ねこ"],
         definition: ["n. Cat", "n. God :o"],
         sentences: [
-            {sentence: "私わ猫です", translation: "I'm a cat"}
+            {sentence: "私は猫です", translation: "I'm a cat :3"}
         ]
     }
 
