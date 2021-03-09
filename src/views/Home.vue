@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        Go to /review
+        <router-link to="/review">Go to /review</router-link>
     </div>
 </template>
 

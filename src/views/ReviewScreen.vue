@@ -33,7 +33,7 @@ export default class ReviewScreen extends Vue
      */
     btnExit()
     {
-        console.log("Return button pressed")
+        this.$router.push('/')
     }
 
     btnSettings()
