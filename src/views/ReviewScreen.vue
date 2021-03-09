@@ -1,7 +1,7 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <div class="btn-nav"><i class="el-icon-arrow-left"></i></div>
+            <div class="btn-exit"><i class="el-icon-arrow-left" @click="btnExit"></i></div>
         </div>
 
         <CardInput :card="card"></CardInput>
@@ -23,6 +23,14 @@ export default class ReviewScreen extends Vue
             {sentence: "私わ猫です", translation: "I'm a cat"}
         ]
     }
+
+    /**
+     * Called when the exit button is pressed.
+     */
+    btnExit()
+    {
+        console.log("Return button pressed")
+    }
 }
 </script>
 
@@ -39,7 +47,7 @@ export default class ReviewScreen extends Vue
     margin-bottom: 20px;
 
     // Return button
-    .btn-nav
+    .btn-exit
     {
         // Alignment
         height: 100%;
