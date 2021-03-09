@@ -163,10 +163,11 @@ export default class CardInput extends Vue.with(Props)
 
             button
             {
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-right: 20px;
                 width: 100%;
             }
+
+            button:last-child { margin-right: 0 }
         }
     }
 }
