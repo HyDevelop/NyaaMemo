@@ -12,7 +12,7 @@
 
         <div v-if="answerShown" class="div-answer">
             <div class="ans-title">Sentences</div>
-            <div v-for="s in card.sentences" :key="s.sentence">
+            <div v-for="s in filteredSentences" :key="s.sentence">
                 <div class="sentence" v-html="s.sentence"></div>
                 <div>{{ s.translation }}</div>
             </div>
@@ -33,7 +33,8 @@
 
 <script lang="ts">
 import {Options, prop, Vue} from 'vue-class-component';
-import {Card} from "@/logic/models";
+import {Card, SampleSentence} from "@/logic/models";
+import {rand} from "@/logic/utils";
 
 class Props
 {
@@ -46,6 +47,16 @@ export default class CardInput extends Vue.with(Props)
     input = ""
     answerShown = true
 
+    get filteredSentences(): SampleSentence[]
+    {
+        return this.card.sentences.map(it =>
+        {
+            const n: SampleSentence = {...it}
+            this.card.word.forEach(w => n.sentence = n.sentence.replaceAll(w, `<span class="sentence-word-highlight">${w}</span>`))
+            return n
+        })
+    }
+
     revealAnswer()
     {
         console.log("Reveal answer area is pressed")
@@ -53,6 +64,12 @@ export default class CardInput extends Vue.with(Props)
 }
 </script>
 
+<!-- Global styles -->
+<style lang="scss">
+.sentence-word-highlight { color: #ff7878 }
+</style>
+
+<!-- Scoped styles -->
 <style lang="scss" scoped>
 #word-input
 {
