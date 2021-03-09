@@ -38,9 +38,11 @@ export default class CardInput extends Vue.with(Props)
 {
     #div-title
     {
-        margin-bottom: 50px;
-        background-color: #e2eeff;
-        padding: 10px;
+        padding-bottom: 20px;
+
+        // 60vw border
+        margin: 0 20vw 50px;
+        border-bottom: 2px solid #cacaca;
 
         #word
         {
