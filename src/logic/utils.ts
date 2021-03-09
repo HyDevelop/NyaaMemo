@@ -8,3 +8,14 @@ export function rand<T>(array: T[], n: number)
     // Get sub-array of first n elements after shuffled
     return shuffled.slice(0, Math.min(n, shuffled.length));
 }
+
+/**
+ * Un-focus all buttons
+ */
+export function blurAll()
+{
+    for (const el of document.getElementsByClassName('el-button'))
+    {
+        if (el instanceof HTMLElement) el.blur()
+    }
+}
