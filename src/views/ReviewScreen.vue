@@ -29,18 +29,26 @@ export default class ReviewScreen extends Vue
 <style lang="scss" scoped>
 #div-progress
 {
-    height: max(6vh, 40px);
+    // Height
+    $navH: max(6vh, 40px);
+    height: $navH;
+
+    // Shadow
     background-color: white;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
 
+    // Return button
     .btn-nav
     {
+        // Alignment
         height: 100%;
         width: 70px;
         float: left;
+        line-height: $navH;
+
+        // Size
         font-size: max(2vh, 14px);
-        line-height: max(6vh, 40px);
     }
 }
 
