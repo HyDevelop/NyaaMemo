@@ -14,7 +14,7 @@
             <div class="ans-title">Sentences</div>
             <div v-for="s in filteredSentences" :key="s.sentence">
                 <div class="sentence" v-html="s.sentence"></div>
-                <div>{{ s.translation }}</div>
+                <div class="translation">{{ s.translation }}</div>
             </div>
         </div>
 
@@ -102,6 +102,12 @@ export default class CardInput extends Vue.with(Props)
             margin-bottom: 10px;
             width: 70%;
             border-bottom: 2px solid #ffd700;
+        }
+
+        .translation
+        {
+            font-size: large;
+            margin-bottom: 10px;
         }
 
         text-align: left;
