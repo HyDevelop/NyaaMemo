@@ -1,6 +1,6 @@
 <template>
     <div id="word-input">
-        <div id="title">{{ title }}</div>
+        <div id="title">{{ 'test' }}</div>
         <el-button id="btn-reveal-ans">Reveal Answer</el-button>
         <el-input v-model="input"></el-input>
     </div>
@@ -8,12 +8,17 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
+import {Card} from "@/logic/models";
+
+class Props
+{
+    card!: Card
+}
 
 @Options({components: {}})
-export default class CardInput extends Vue
+export default class CardInput extends Vue.with(Props)
 {
-    input = "Long time no see, it has been a while"
-    title = "おひさしぶり"
+    input = ""
 }
 </script>
 
