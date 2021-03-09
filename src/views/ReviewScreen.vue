@@ -18,7 +18,7 @@ export default class ReviewScreen extends Vue
 {
     card: Card = {
         word: ["猫", "ねこ"],
-        definition: ["n. Cat", "n. God :o"],
+        definition: ["n. Cat", "<strike>n. God :o</strike>"],
         sentences: [
             {sentence: "私は猫です", translation: "I'm a cat :3"},
             {sentence: "田中さんはねこではありません", translation: "Tanaka is not a cat"},

@@ -7,7 +7,7 @@
 
         <div v-if="answerShown" class="div-answer">
             <div class="ans-title">Definition</div>
-            <div v-for="def in card.definition" :key="def">{{ def }}</div>
+            <div v-for="def in card.definition" :key="def" v-html="def"></div>
         </div>
 
         <div v-if="answerShown" class="div-answer">
