@@ -49,7 +49,7 @@ export default class CardInput extends Vue.with(Props)
 
     get filteredSentences(): SampleSentence[]
     {
-        return this.card.sentences.map(it =>
+        return rand(this.card.sentences, 3).map(it =>
         {
             const n: SampleSentence = {...it}
             this.card.word.forEach(w => n.sentence = n.sentence.replaceAll(w, `<span class="sentence-word-highlight">${w}</span>`))
