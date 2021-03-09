@@ -29,7 +29,7 @@ export default class ReviewScreen extends Vue
 <style lang="scss" scoped>
 #div-progress
 {
-    height: 6vh;
+    height: max(6vh, 40px);
     background-color: white;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
