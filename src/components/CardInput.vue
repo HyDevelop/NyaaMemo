@@ -33,9 +33,9 @@
             </div>
 
             <div id="div-buttons">
-                <el-button type="success" plain>簡単</el-button>
-                <el-button type="warning" plain>難い</el-button>
-                <el-button type="danger"  plain>忘れた</el-button>
+                <el-button type="success" plain @click="clickDone(0)">簡単</el-button>
+                <el-button type="warning" plain @click="clickDone(1)">難い</el-button>
+                <el-button type="danger"  plain @click="clickDone(2)">忘れた</el-button>
             </div>
         </div>
     </div>
@@ -87,7 +87,13 @@ export default class CardInput extends Vue.with(Props)
 
     revealAnswer()
     {
-        console.log("Reveal answer area is pressed")
+        this.answerShown = true
+    }
+
+    clickDone(difficulty: number)
+    {
+        console.log(difficulty)
+        this.answerShown = false
     }
 }
 </script>
