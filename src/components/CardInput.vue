@@ -106,7 +106,6 @@ export default class CardInput extends Vue.with(Props)
     // Vertical Flex Alignment
     display: flex;
     flex-flow: column;
-    height: 100%;
 
     // Title (aka. word)
     #div-title
@@ -156,6 +155,11 @@ export default class CardInput extends Vue.with(Props)
     #div-before-answer
     {
         flex: 1 1 auto;
+
+        // Align the text to the center
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     // Input field and buttons on the bottom
@@ -163,8 +167,9 @@ export default class CardInput extends Vue.with(Props)
     {
         width: 100vw;
 
-        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=5vh)
-        flex: 0 1 5vh;
+        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=0)
+        flex: 0 1 0;
+        margin-bottom: 5vh;
 
         // Input field
         #div-input
