@@ -1,7 +1,7 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <div class="btn-exit"><i class="el-icon-arrow-left" @click="btnExit"></i></div>
+            <div class="btn-exit" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
         </div>
 
         <CardInput :card="card"></CardInput>
