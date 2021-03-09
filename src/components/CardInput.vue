@@ -99,11 +99,6 @@ export default class CardInput extends Vue.with(Props)
 }
 </script>
 
-<!-- Global styles -->
-<style lang="scss">
-.color-highlight { color: #ff7878 }
-</style>
-
 <!-- Scoped styles -->
 <style lang="scss" scoped>
 #word-input
