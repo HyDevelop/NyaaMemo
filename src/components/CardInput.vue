@@ -9,6 +9,8 @@
             <div v-for="def in card.definition" :key="def">{{ def }}</div>
         </div>
 
+        <div v-if="!answerShown" id="div-before-answer" @click="revealAnswer">
+
         </div>
 
 <!--        <el-button id="btn-reveal-ans">Reveal Answer</el-button>-->
@@ -34,6 +36,11 @@ export default class CardInput extends Vue.with(Props)
 {
     input = ""
     answerShown = true
+
+    revealAnswer()
+    {
+        console.log("Reveal answer area is pressed")
+    }
 }
 </script>
 
