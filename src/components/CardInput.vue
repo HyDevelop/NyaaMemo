@@ -172,6 +172,9 @@ export default class CardInput extends Vue.with(Props)
             align-items: center;
             justify-content: center;
             height: 100%;
+
+            // Dynamic font size: max=24px, min=16px, middle=2.3vw
+            font-size: min(24px, max(16px, 3vw));
         }
     }
 
