@@ -4,9 +4,15 @@
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
+
         <div v-if="answerShown" class="div-answer">
             <div class="ans-title">Definition</div>
             <div v-for="def in card.definition" :key="def">{{ def }}</div>
+        </div>
+
+        <div v-if="answerShown" class="div-answer">
+            <div class="ans-title">Sentences</div>
+            <div v-for="s in card.sentences" :key="s.sentence">{{ s.sentence }}</div>
         </div>
 
         <div v-if="!answerShown" id="div-before-answer" @click="revealAnswer">
