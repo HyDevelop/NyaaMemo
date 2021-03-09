@@ -1,12 +1,16 @@
 <template>
     <div id="word-input">
-        <div id="title">
+        <div id="div-title">
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
         <div id="subtitle"></div>
-        <el-button id="btn-reveal-ans">Reveal Answer</el-button>
-        <el-input id="input" v-model="input"></el-input>
+<!--        <el-button id="btn-reveal-ans">Reveal Answer</el-button>-->
+        <div id="div-bottom">
+            <div id="div-input">
+                <el-input id="input" v-model="input"></el-input>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -29,7 +33,7 @@ export default class CardInput extends Vue.with(Props)
 <style lang="scss" scoped>
 #word-input
 {
-    #title
+    #div-title
     {
         margin-bottom: 50px;
         background-color: #e2eeff;
@@ -46,10 +50,17 @@ export default class CardInput extends Vue.with(Props)
         }
     }
 
-    #input
+    #div-bottom
     {
-        max-width: 400px;
-        margin: auto;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+
+        #div-input
+        {
+            max-width: 400px;
+            margin: auto auto 50px;
+        }
     }
 
     #btn-reveal-ans
