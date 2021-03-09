@@ -73,6 +73,7 @@ export default class CardInput extends Vue.with(Props)
 
         text-align: left;
         width: max(50vw, min(900px, 100vw));
+        padding: 0 50px;
         margin: auto;
         font-size: x-large;
     }
