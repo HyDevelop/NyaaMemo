@@ -96,21 +96,17 @@ export default class CardInput extends Vue.with(Props)
 <style lang="scss" scoped>
 #word-input
 {
+    // Answer container width (This is normally 50vw,
+    //   but when it's smaller than 900px, use 10vw - 100px, because 100px is the margin)
     $ansWidth: max(50vw, min(900px, 100vw - 100px));
 
+    // Title (aka. word)
     #div-title
     {
         padding-bottom: 20px;
-
-        // 60vw border
         margin: 0 20vw 10px;
-        //border-bottom: 2px solid #cacaca;
 
-        #word
-        {
-            font-size: xx-large;
-        }
-
+        #word { font-size: xx-large }
         #wordForm2
         {
             color: gray;
@@ -118,8 +114,17 @@ export default class CardInput extends Vue.with(Props)
         }
     }
 
+    // Answer container
     .div-answer
     {
+        // Container properties
+        text-align: left;
+        width: $ansWidth;
+        padding: 0 50px;
+        margin: 0 auto 30px;
+        font-size: x-large;
+
+        // Title of the answer container ("Definition" or "Sentences")
         .ans-title
         {
             font-size: medium;
@@ -129,25 +134,22 @@ export default class CardInput extends Vue.with(Props)
             border-bottom: 2px solid #f5dab1;
         }
 
+        // Translation for the sample sentences
         .translation
         {
             font-size: large;
             margin-bottom: 10px;
         }
-
-        text-align: left;
-        width: $ansWidth;
-        padding: 0 50px;
-        margin: 0 auto 30px;
-        font-size: x-large;
     }
 
+    // Input field and buttons on the bottom
     #div-bottom
     {
         position: absolute;
         bottom: 50px;
         width: 100vw;
 
+        // Input field
         #div-input
         {
             width: $ansWidth;
