@@ -1084,6 +1084,11 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/wanakana@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/wanakana/-/wanakana-4.0.2.tgz#fe04d0e83e9a964ca9a1ccbf08428621e39420b2"
+  integrity sha512-UtECfmvYsKED/iMV83xIaJCUKuo+wXwaYRM+hZuUeiU+Mg8JIxUyVbvG4dff0M5tQXGOoC9QUZ88jUFlLR0jLQ==
+
 "@types/webpack-dev-server@^3.11.0":
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-3.11.1.tgz#f8f4dac1da226d530bd15a1d5dc34b23ba766ccb"
@@ -8750,6 +8755,11 @@ vuex@^4.0.0-0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.0.tgz#ac877aa76a9c45368c979471e461b520d38e6cf5"
   integrity sha512-56VPujlHscP5q/e7Jlpqc40sja4vOhC4uJD1llBCWolVI8ND4+VzisDVkUMl+z5y0MpIImW6HjhNc+ZvuizgOw==
+
+wanakana@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/wanakana/-/wanakana-4.0.2.tgz#a7d60186724a56fd50e6e9c224628c09294901d8"
+  integrity sha512-lBFtnLJhTpp5wQBdH7TrOHhLxqmUabAfL86plNN8+iffyhosjZyx+kkO8KEBGR8zWH5nxSQ67oyx3W/lcEC8sg==
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"
