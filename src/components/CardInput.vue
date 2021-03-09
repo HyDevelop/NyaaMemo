@@ -25,6 +25,12 @@
         <div id="div-bottom">
             <div id="div-input">
                 <el-input id="input" v-model="input"></el-input>
+
+                <div id="div-buttons">
+                    <el-button type="success" plain>簡単</el-button>
+                    <el-button type="warning" plain>難い</el-button>
+                    <el-button type="danger"  plain>忘れた</el-button>
+                </div>
             </div>
         </div>
     </div>
@@ -126,6 +132,16 @@ export default class CardInput extends Vue.with(Props)
         {
             max-width: 400px;
             margin: auto;
+        }
+
+        #div-buttons
+        {
+            margin-top: 20px;
+
+            button
+            {
+                width: 25vw;
+            }
         }
     }
 }
