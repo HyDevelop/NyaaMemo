@@ -4,9 +4,13 @@
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
-        <div id="div-answer">
+        <div v-if="answerShown" id="div-answer">
+            <div id="ans-title-definition">Definition</div>
+            <div v-for="def in card.definition" :key="def">{{ def }}</div>
+        </div>
 
         </div>
+
 <!--        <el-button id="btn-reveal-ans">Reveal Answer</el-button>-->
         <div id="div-bottom">
             <div id="div-input">
@@ -41,8 +45,8 @@ export default class CardInput extends Vue.with(Props)
         padding-bottom: 20px;
 
         // 60vw border
-        margin: 0 20vw 50px;
-        border-bottom: 2px solid #cacaca;
+        margin: 0 20vw 20px;
+        //border-bottom: 2px solid #cacaca;
 
         #word
         {

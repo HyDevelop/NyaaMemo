@@ -62,7 +62,7 @@ export default class ReviewScreen extends Vue
 
 #ReviewScreen
 {
-    background-color: #fff8fa;
+    background-color: #fff1f140;
     height: 100vh;
 }
 </style>
