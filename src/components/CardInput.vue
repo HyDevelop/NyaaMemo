@@ -22,7 +22,6 @@
 
         </div>
 
-<!--        <el-button id="btn-reveal-ans">Reveal Answer</el-button>-->
         <div id="div-bottom">
             <div id="div-input">
                 <el-input id="input" v-model="input"></el-input>
@@ -128,11 +127,6 @@ export default class CardInput extends Vue.with(Props)
             max-width: 400px;
             margin: auto;
         }
-    }
-
-    #btn-reveal-ans
-    {
-        margin-bottom: 50px;
     }
 }
 </style>
