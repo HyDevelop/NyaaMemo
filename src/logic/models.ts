@@ -10,7 +10,7 @@ export interface Card
     word: string[];
     definition: string[];
     sentences: SampleSentence[];
-    otherAnswers: string[] | null;
+    otherAnswers?: string[];
 }
 
 export interface SampleSentence
