@@ -12,7 +12,10 @@
 
         <div v-if="answerShown" class="div-answer">
             <div class="ans-title">Sentences</div>
-            <div v-for="s in card.sentences" :key="s.sentence">{{ s.sentence }}</div>
+            <div v-for="s in card.sentences" :key="s.sentence">
+                <div class="sentence" v-html="s.sentence"></div>
+                <div>{{ s.translation }}</div>
+            </div>
         </div>
 
         <div v-if="!answerShown" id="div-before-answer" @click="revealAnswer">
