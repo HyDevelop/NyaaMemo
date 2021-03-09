@@ -79,7 +79,7 @@ export default class CardInput extends Vue.with(Props)
         {
             const n: SampleSentence = {...it}
             this.card.word.forEach(w => n.sentence =
-                withKanjiPronunciations(n.sentence).replaceAll(w, `<span class="sentence-word-highlight">${w}</span>`)
+                withKanjiPronunciations(n.sentence).replaceAll(w, `<span class="color-highlight">${w}</span>`)
             )
             return n
         })
@@ -94,7 +94,7 @@ export default class CardInput extends Vue.with(Props)
 
 <!-- Global styles -->
 <style lang="scss">
-.sentence-word-highlight { color: #ff7878 }
+.color-highlight { color: #ff7878 }
 </style>
 
 <!-- Scoped styles -->
