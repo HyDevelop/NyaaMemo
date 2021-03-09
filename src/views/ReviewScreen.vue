@@ -1,7 +1,8 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <div class="btn-exit clickable" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
+            <div class="left clickable" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
+            <div class="right clickable" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
         </div>
 
         <CardInput class="card-input" :card="card"></CardInput>
@@ -34,6 +35,11 @@ export default class ReviewScreen extends Vue
     {
         console.log("Return button pressed")
     }
+
+    btnSettings()
+    {
+        console.log("Settings button pressed")
+    }
 }
 </script>
 
@@ -63,13 +69,12 @@ export default class ReviewScreen extends Vue
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
 
-    // Return button
-    .btn-exit
+    // Buttons
+    div.clickable
     {
         // Alignment
         height: 100%;
         width: 70px;
-        float: left;
         line-height: $navH;
 
         // Size
