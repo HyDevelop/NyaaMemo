@@ -69,7 +69,7 @@ export default class CardInput extends Vue.with(Props)
 
     .div-answer
     {
-        .ans-title-definition
+        .ans-title
         {
             font-size: medium;
             text-transform: uppercase;
