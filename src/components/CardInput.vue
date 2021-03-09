@@ -5,23 +5,25 @@
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
 
-        <div v-if="answerShown" class="div-answer">
-            <div class="ans-title">Definition</div>
-            <div v-for="def in card.definition" :key="def" v-html="def"></div>
-        </div>
-
-        <div v-if="answerShown" class="div-answer">
-            <div class="ans-title">Sentences</div>
-            <div v-for="s in filteredSentences" :key="s.sentence">
-                <div class="sentence" v-html="s.sentence"></div>
-                <div class="translation">{{ s.translation }}</div>
+        <div id="div-middle">
+            <div v-if="answerShown" class="div-answer">
+                <div class="ans-title">Definition</div>
+                <div v-for="def in card.definition" :key="def" v-html="def"></div>
             </div>
-        </div>
 
-        <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
-            <div id="div-ba-inside">
-                <div>Please say the definition out loud.</div>
-                <div>Click the screen to show the answer.</div>
+            <div v-if="answerShown" class="div-answer">
+                <div class="ans-title">Sentences</div>
+                <div v-for="s in filteredSentences" :key="s.sentence">
+                    <div class="sentence" v-html="s.sentence"></div>
+                    <div class="translation">{{ s.translation }}</div>
+                </div>
+            </div>
+
+            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
+                <div id="div-ba-inside">
+                    <div>Please say the definition out loud.</div>
+                    <div class="color-highlight">Click the screen to show the answer.</div>
+                </div>
             </div>
         </div>
 
@@ -152,14 +154,18 @@ export default class CardInput extends Vue.with(Props)
     }
 
     // "Click the screen to show the answer" screen
-    #div-before-answer
+    #div-middle
     {
         flex: 1 1 auto;
 
-        // Align the text to the center
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        #div-before-answer
+        {
+            // Align the text to the center
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
     }
 
     // Input field and buttons on the bottom
