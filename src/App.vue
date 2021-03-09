@@ -17,6 +17,24 @@
     color: #2c3e50;
 }
 
+// Clickable text
+.clickable:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+// Non-selectable text
+.unselectable
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 #nav
 {
     padding: 30px;
