@@ -60,6 +60,17 @@ export default class CardInput extends Vue.with(Props)
         }
     }
 
+    #div-answer
+    {
+        #ans-title-definition
+        {
+            font-size: medium;
+        }
+
+        margin: auto;
+        font-size: x-large;
+    }
+
     #div-bottom
     {
         position: absolute;
