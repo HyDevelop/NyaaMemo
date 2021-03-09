@@ -19,8 +19,10 @@
         </div>
 
         <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
-            <div>Please say the definition out loud.</div>
-            <div>Click the screen to show the answer.</div>
+            <div id="div-ba-inside">
+                <div>Please say the definition out loud.</div>
+                <div>Click the screen to show the answer.</div>
+            </div>
         </div>
 
         <div id="div-bottom">
@@ -139,6 +141,25 @@ export default class CardInput extends Vue.with(Props)
         {
             font-size: large;
             margin-bottom: 10px;
+        }
+    }
+
+    // "Click the screen to show the answer" screen
+    #div-before-answer
+    {
+        // Fill entire screen
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+
+        z-index: -1;
+
+        #div-ba-inside
+        {
+            margin-top: 45vh;
         }
     }
 
