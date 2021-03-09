@@ -28,6 +28,9 @@ export function blurAll()
  */
 export function okuriganaToFurigana(okurigana: string)
 {
+    // Already processed
+    if (okurigana.includes("<ruby>")) return okurigana
+
     let result = ""
     let kanjiCache = ""
 
