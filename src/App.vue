@@ -55,6 +55,8 @@ export default class App extends Vue
     // Buttons
     .clickable
     {
+        transition: all 1s ease;
+
         // Alignment
         height: 100%;
         width: 70px;
@@ -71,6 +73,9 @@ export default class App extends Vue
         box-sizing: border-box;
     }
 
+
+    // Animation transition
+    i, div, span { transition: all .25s ease !important }
     // Active button
     .clickable.router-link-exact-active
     {
@@ -86,4 +91,5 @@ export default class App extends Vue
 
 <style lang="sass">
 @import "global"
+@import "animations"
 </style>
