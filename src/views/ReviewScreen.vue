@@ -81,6 +81,15 @@ export default class ReviewScreen extends Vue
         // Size
         font-size: max(2vh, 14px);
     }
+
+    // Active button
+    div.clickable.active
+    {
+        //width: 100%;
+        color: #fb8080;
+        border-bottom: 3px solid #fb8080;
+        box-sizing: border-box;
+    }
 }
 
 // Card
