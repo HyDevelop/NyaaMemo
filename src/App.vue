@@ -5,7 +5,7 @@
             <router-link class="clickable flex-vcenter" to="/review">
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
-                    <span id="lbl-progress" class="fade-in-left" style="display: inline-block">
+                    <span id="lbl-progress" class="fade-in-left">
                         <span>32</span> / <span>16</span> / <span>2</span>
                     </span>
                 </div>
@@ -97,6 +97,9 @@ export default class App extends Vue
         border-bottom: 3px solid #fb8080;
 
         flex: 1 0 auto;
+
+        // Show progress only when active
+        #lbl-progress { display: inline-block }
     }
 }
 </style>
