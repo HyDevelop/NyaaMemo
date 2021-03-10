@@ -2,6 +2,9 @@
     <div id="ReviewScreen">
         <div id="div-progress">
             <div class="left clickable flex-vcenter" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
+            <div class="right clickable flex-vcenter active" @click="btnSettings"><i class="el-icon-s-management"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-unfold"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-data"></i></div>
             <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
         </div>
 
