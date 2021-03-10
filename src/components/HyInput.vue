@@ -1,9 +1,10 @@
 <template>
     <div id="hy-input">
-        <label>
-            <input class="hy-input-inner" :modelValue="modelValue"
-                   @input="passInput($event.target.value)"/>
-        </label>
+        <input id="hy-input-inner" class="hy-input-inner tr" :modelValue="modelValue"
+               @input="passInput($event.target.value)"/>
+        <div class="hy-input-placeholder tr">
+            <label for="hy-input-inner">{{ placeholder }}</label>
+        </div>
     </div>
 </template>
 
@@ -11,7 +12,8 @@
 export default {
     name: "HyInput",
     props: {
-        modelValue: String
+        modelValue: String,
+        placeholder: String
     },
     emits: [
         'update:modelValue',
@@ -27,19 +29,59 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.tr
+    transition: all .25s ease
+
+#hy-input
+    position: relative
+
 input
-    -webkit-appearance: none
-    background-color: white
-    background-image: none
-    border-radius: 4px
-    border: 1px solid #DCDFE6
-    -webkit-box-sizing: border-box
+    transition: all .25s ease
+
+    border: none
+    background-color: #edf1f2
+    border-radius: 15px
+    padding: 0 15px
+
+    height: 36px
+    line-height: 36px
+
+    // From ElementUI
     box-sizing: border-box
     color: #606266
     display: inline-block
-    height: 40px
-    line-height: 40px
     outline: 0
-    padding: 0 15px
     width: 100%
+
+input:focus
+    padding-left: 20px
+
+    .hy-input-placeholder
+        background-color: red
+
+// Placeholder (From Vuesax)
+.hy-input-placeholder
+
+    // Fill the entire input box
+    position: absolute
+    width: 100%
+    height: 100%
+
+    // Vertical center
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    // Not selectable
+    user-select: none
+    pointer-events: none
+
+    left: 15px
+    font-size: .8rem
+    opacity: .4
+    text-align: left
+
+input:focus~.hy-input-placeholder
+    left: 21px
+
 </style>
