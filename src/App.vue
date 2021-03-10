@@ -1,8 +1,7 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <router-link class="clickable flex-vcenter" to="/"><i class="el-icon-arrow-left"></i></router-link>
-            <router-link class="clickable flex-vcenter" to="/review">
+            <router-link class="clickable flex-vcenter" to="/">
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
                     <span id="lbl-progress" class="fade-in-left">

@@ -1,5 +1,4 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
-import Home from '../views/Home.vue'
 import Debug from "@/views/Debug.vue";
 import Review from "@/views/Review.vue";
 import WordSelection from "@/views/WordSelection.vue";
@@ -9,11 +8,6 @@ import Settings from "@/views/Settings.vue";
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/review',
         name: 'Review',
         component: Review
     },
