@@ -4,21 +4,6 @@ export interface Deck
     cards: Word[];
     wordIndex: [];
 }
-
-export interface Word
-{
-    word: string[];
-    definition: string[];
-    sentences: SampleSentence[];
-    otherAnswers?: string[];
-}
-
-export interface SampleSentence
-{
-    s: string; // Sentence
-    tr: string; // Translation
-}
-
 /**
  * A dictionary contains words and its definitions
  */
@@ -32,6 +17,20 @@ export interface Dictionary
     // words['word (main form)'] = Word
     // Indexes should be built subsequently on client side
     words: {[id: string]: Word};
+}
+
+export interface Word
+{
+    word: string[];
+    definition: string[];
+    sentences: SampleSentence[];
+    otherAnswers?: string[];
+}
+
+export interface SampleSentence
+{
+    s: string; // Sentence
+    tr: string; // Translation
 }
 
 /**
