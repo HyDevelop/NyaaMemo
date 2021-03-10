@@ -49,8 +49,8 @@ export default class App extends Vue
 // Progress bar on the top
 #div-progress
 {
-    // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=auto)
-    flex: 0 1 auto;
+    // Vertical Flex Alignment: flex(grow=0, shrink=0, basis=auto)
+    flex: 0 0 auto;
 
     // Height
     height: max(6vh, 40px);
