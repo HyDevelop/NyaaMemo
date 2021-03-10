@@ -65,6 +65,10 @@ export default class App extends Vue
 
         // Size
         font-size: max(2vh, 14px);
+
+        // Bottom Border
+        border-bottom: 3px solid #ffebc4;
+        box-sizing: border-box;
     }
 
     // Active button
