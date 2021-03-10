@@ -43,7 +43,7 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import {Card, SampleSentence} from "@/logic/models";
+import {Word, SampleSentence} from "@/logic/models";
 import {blurAll, okuriganaToFurigana, rand} from "@/logic/utils";
 
 class Props
@@ -57,7 +57,7 @@ export default class Review extends Vue.with(Props)
     input = ""
     answerShown = false
 
-    card: Card = {
+    card: Word = {
         word: ["猫", "ねこ"],
         definition: ["n. Cat", "<strike>n. God :o</strike>"],
         sentences: [

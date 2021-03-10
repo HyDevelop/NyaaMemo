@@ -1,11 +1,11 @@
 
 export interface Deck
 {
-    cards: Card[];
+    cards: Word[];
     wordIndex: [];
 }
 
-export interface Card
+export interface Word
 {
     word: string[];
     definition: string[];
