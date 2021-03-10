@@ -1,9 +1,9 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 import Debug from "@/views/Debug.vue";
-import Review from "@/views/Review.vue";
-import WordSelection from "@/views/WordSelection.vue";
-import Stats from "@/views/Stats.vue";
-import Settings from "@/views/Settings.vue";
+import Review from "@/views/0-Review.vue";
+import WordSelection from "@/views/1-WordSelection.vue";
+import Stats from "@/views/2-Stats.vue";
+import Settings from "@/views/3-Settings.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
