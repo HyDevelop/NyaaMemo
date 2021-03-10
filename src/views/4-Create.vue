@@ -2,6 +2,8 @@
     <div id="Create">
         <div id="title">
             <h2>Create</h2>
+            <p>This screen allows you to create dictionaries or books. Please note that this is an advanced feature,
+                and creating a dictionary or book requires a lot of effort.</p>
         </div>
     </div>
 </template>
@@ -16,6 +18,10 @@ export default class Create extends Vue
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
+@import "../global"
 
+#Create
+    width: $app-width
+    margin: auto
 </style>

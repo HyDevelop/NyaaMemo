@@ -1,6 +1,7 @@
 <template>
     <div id="Settings">
-
+        <h2>Settings</h2>
+        <p>You can change the configuration here.</p>
     </div>
 </template>
 
@@ -14,6 +15,10 @@ export default class Settings extends Vue
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
+@import "../global"
 
+#Settings
+    width: $app-width
+    margin: auto
 </style>

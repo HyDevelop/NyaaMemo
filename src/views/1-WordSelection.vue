@@ -1,6 +1,8 @@
 <template>
     <div id="WordSelection">
-        <h1>This is the word selection screen</h1>
+        <h2>Word Selection</h2>
+        <p>You can select words and add them to your list on this screen.
+            You can either find words through direct searching or by adding them through a book.</p>
     </div>
 </template>
 
@@ -14,6 +16,10 @@ export default class WordSelection extends Vue
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
+@import "../global"
 
+#WordSelection
+    width: $app-width
+    margin: auto
 </style>
