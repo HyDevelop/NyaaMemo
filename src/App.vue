@@ -2,10 +2,10 @@
     <div id="ReviewScreen">
         <div id="div-progress">
             <router-link class="left clickable flex-vcenter" to="/"><i class="el-icon-arrow-left"></i></router-link>
-            <div class="right clickable flex-vcenter active" @click="btnSettings"><i class="el-icon-s-management"></i></div>
-            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-unfold"></i></div>
-            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-data"></i></div>
-            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
+            <router-link class="right clickable flex-vcenter" to="/review"><i class="el-icon-s-management"></i></router-link>
+            <router-link class="right clickable flex-vcenter" to="/words"><i class="el-icon-s-unfold"></i></router-link>
+            <router-link class="right clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
+            <router-link class="right clickable flex-vcenter" to="/settings"><i class="el-icon-s-tools"></i></router-link>
         </div>
         <router-view/>
     </div>
@@ -76,7 +76,7 @@ export default class App extends Vue
     }
 
     // Active button
-    .clickable.active
+    .clickable.router-link-exact-active
     {
         //width: 100%;
         color: #fb8080;
