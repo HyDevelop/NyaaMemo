@@ -22,6 +22,7 @@ export interface SampleSentence
 export interface Dictionary
 {
     name: string;
+    description: string;
     author: string;
     license: string;
 
