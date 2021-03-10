@@ -58,7 +58,7 @@ export default class Review extends Vue.with(Props)
     input = ""
     answerShown = false
 
-    card: Word = dictionary.words[0]
+    card: Word = dictionary.words['猫']
 
     get filteredSentences(): SampleSentence[]
     {
