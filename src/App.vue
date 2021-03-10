@@ -67,6 +67,10 @@ export default class App extends Vue
         height: 100%;
         width: 70px;
 
+        // Counteract the styles for <a> tag
+        text-decoration: none;
+        color: #2c3e50;
+
         // Size
         font-size: max(2vh, 14px);
     }
