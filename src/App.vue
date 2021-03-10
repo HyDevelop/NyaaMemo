@@ -1,11 +1,13 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <router-link class="left clickable flex-vcenter" to="/"><i class="el-icon-arrow-left"></i></router-link>
-            <router-link class="right clickable flex-vcenter" to="/review"><i class="el-icon-s-management"></i></router-link>
-            <router-link class="right clickable flex-vcenter" to="/words"><i class="el-icon-s-unfold"></i></router-link>
-            <router-link class="right clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
-            <router-link class="right clickable flex-vcenter" to="/settings"><i class="el-icon-s-tools"></i></router-link>
+            <router-link class="clickable flex-vcenter" to="/"><i class="el-icon-arrow-left"></i></router-link>
+            <router-link class="clickable flex-vcenter" to="/review">
+                <i class="el-icon-s-management"></i>
+            </router-link>
+            <router-link class="clickable flex-vcenter" to="/words"><i class="el-icon-s-unfold"></i></router-link>
+            <router-link class="clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
+            <router-link class="clickable flex-vcenter" to="/settings"><i class="el-icon-s-tools"></i></router-link>
         </div>
         <router-view/>
     </div>
@@ -60,6 +62,9 @@ export default class App extends Vue
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
 
+    // Horizontal flexbox
+    display: flex;
+
     // Buttons
     .clickable
     {
@@ -81,15 +86,9 @@ export default class App extends Vue
         //width: 100%;
         color: #fb8080;
         border-bottom: 3px solid #fb8080;
-        box-sizing: border-box;
-    }
-}
 
-// Card
-.card-input
-{
-    // Vertical Flex Alignment: flex(grow=1, shrink=1, basis=auto)
-    flex: 1 1 auto;
+        flex: 1 0 auto;
+    }
 }
 </style>
 
