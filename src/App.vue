@@ -1,49 +1,103 @@
 <template>
-<!--    <div id="nav">-->
-<!--        <router-link to="/">Home</router-link>-->
-<!--        |-->
-<!--        <router-link to="/about">About</router-link>-->
-<!--    </div>-->
-    <router-view/>
+    <div id="ReviewScreen">
+        <div id="div-progress">
+            <div class="left clickable flex-vcenter" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
+            <div class="right clickable flex-vcenter active" @click="btnSettings"><i class="el-icon-s-management"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-unfold"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-data"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
+        </div>
+
+<!--        <div id="nav">-->
+<!--            <router-link to="/">Home</router-link>-->
+<!--            |-->
+<!--            <router-link to="/stats">Stats</router-link>-->
+<!--        </div>-->
+
+<!--        <CardInput class="card-input" :card="card"></CardInput>-->
+        <router-view/>
+    </div>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
+import CardInput from "@/views/Review.vue";
 
-@Options({components: {}})
+@Options({components: {CardInput}})
 export default class App extends Vue
 {
 
+
+    /**
+     * Called when the exit button is pressed.
+     */
+    btnExit()
+    {
+        this.$router.push('/')
+    }
+
+    btnSettings()
+    {
+        console.log("Settings button pressed")
+    }
 }
 </script>
 
-<style lang="sass">
-@import "global"
-</style>
-
-<style lang="scss">
-#app
+<style lang="scss" scoped>
+#ReviewScreen
 {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+    // Vertical Flex Alignment
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+
+    background-color: #fff1f140;
 }
 
-#nav
+// Progress bar on the top
+#div-progress
 {
-    padding: 30px;
+    // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=auto)
+    flex: 0 1 auto;
 
-    a
+    // Height
+    height: max(6vh, 40px);
+
+    // Shadow
+    background-color: white;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+
+    // Buttons
+    div.clickable
     {
-        font-weight: bold;
-        color: #2c3e50;
+        // Alignment
+        height: 100%;
+        width: 70px;
 
-        &.router-link-exact-active
-        {
-            color: #42b983;
-        }
+        // Size
+        font-size: max(2vh, 14px);
+    }
+
+    // Active button
+    div.clickable.active
+    {
+        //width: 100%;
+        color: #fb8080;
+        border-bottom: 3px solid #fb8080;
+        box-sizing: border-box;
     }
 }
+
+// Card
+.card-input
+{
+    // Vertical Flex Alignment: flex(grow=1, shrink=1, basis=auto)
+    flex: 1 1 auto;
+}
+</style>
+
+
+<style lang="sass">
+@import "global"
 </style>

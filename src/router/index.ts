@@ -1,7 +1,9 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 import Home from '../views/Home.vue'
-import ReviewScreen from "@/views/ReviewScreen.vue";
 import Debug from "@/views/Debug.vue";
+import Review from "@/views/Review.vue";
+import WordSelection from "@/views/WordSelection.vue";
+import Stats from "@/views/Stats.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -12,7 +14,17 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/review',
         name: 'Review',
-        component: ReviewScreen
+        component: Review
+    },
+    {
+        path: '/words',
+        name: 'Word Selection',
+        component: WordSelection
+    },
+    {
+        path: '/stats',
+        name: 'Stats',
+        component: Stats
     },
     // Hidden
     {
