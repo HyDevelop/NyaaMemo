@@ -4,6 +4,7 @@ import Debug from "@/views/Debug.vue";
 import Review from "@/views/Review.vue";
 import WordSelection from "@/views/WordSelection.vue";
 import Stats from "@/views/Stats.vue";
+import Settings from "@/views/Settings.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -25,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/stats',
         name: 'Stats',
         component: Stats
+    },
+    {
+        path: '/settings',
+        name: 'Settings',
+        component: Settings
     },
     // Hidden
     {
