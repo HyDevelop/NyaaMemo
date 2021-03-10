@@ -13,6 +13,8 @@
             <router-link class="clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/settings"><i class="el-icon-s-tools"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/create"><i class="el-icon-plus"></i></router-link>
+
+            <router-link class="clickable flex-vcenter" style="display: none" to="/debaggu"><i class="el-icon-cpu"></i></router-link>
         </div>
         <router-view/>
     </div>
@@ -97,6 +99,9 @@ export default class App extends Vue
         border-bottom: 3px solid #fb8080;
 
         flex: 1 0 auto;
+
+        // Unhide debug view
+        display: flex !important;
 
         // Show progress only when active
         #lbl-progress { display: inline-block }
