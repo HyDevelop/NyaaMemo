@@ -21,19 +21,6 @@ import CardInput from "@/views/Review.vue";
 export default class App extends Vue
 {
 
-
-    /**
-     * Called when the exit button is pressed.
-     */
-    btnExit()
-    {
-        this.$router.push('/')
-    }
-
-    btnSettings()
-    {
-        console.log("Settings button pressed")
-    }
 }
 </script>
 
