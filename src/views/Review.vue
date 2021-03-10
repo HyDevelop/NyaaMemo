@@ -45,6 +45,7 @@
 import {Options, Vue} from 'vue-class-component';
 import {Word, SampleSentence} from "@/logic/models";
 import {blurAll, okuriganaToFurigana, rand} from "@/logic/utils";
+import {dictionary} from "@/logic/dictionary-prototype";
 
 class Props
 {
@@ -57,16 +58,7 @@ export default class Review extends Vue.with(Props)
     input = ""
     answerShown = false
 
-    card: Word = {
-        word: ["猫", "ねこ"],
-        definition: ["n. Cat", "<strike>n. God :o</strike>"],
-        sentences: [
-            {s: "私(わたし)は猫(ねこ)です", tr: "I'm a cat :3"},
-            {s: "田中(たなか)さんは猫(ねこ)ではありません", tr: "Tanaka is not a cat"},
-            {s: "あそこの公園(こうえん)に猫(ねこ)がたくさんいます", tr: "That park over there has a lot of cats"},
-            {s: "猫(ねこ)は怖(こわ)くない", tr: "Cats are not scary"}
-        ]
-    }
+    card: Word = dictionary.words[0]
 
     get filteredSentences(): SampleSentence[]
     {

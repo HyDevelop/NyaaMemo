@@ -1,7 +1,7 @@
 import {Dictionary} from "@/logic/models";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const dictionary: Dictionary = {
+export const dictionary: Dictionary = {
     name: "Hy's Personal Dictionary",
     description: "Created for my own use, not really accurate",
     author: "Hykilpikonna",
