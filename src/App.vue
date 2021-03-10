@@ -3,7 +3,12 @@
         <div id="div-progress">
             <router-link class="clickable flex-vcenter" to="/"><i class="el-icon-arrow-left"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/review">
-                <i class="el-icon-s-management"></i>
+                <div class="nowrap">
+                    <i class="el-icon-s-management"></i>
+                    <span id="lbl-progress" class="fade-in-left" style="display: inline-block">
+                        <span>32</span> / <span>16</span> / <span>2</span>
+                    </span>
+                </div>
             </router-link>
             <router-link class="clickable flex-vcenter" to="/words"><i class="el-icon-s-unfold"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
@@ -73,6 +78,12 @@ export default class App extends Vue
         box-sizing: border-box;
     }
 
+    #lbl-progress
+    {
+        margin-left: 5px;
+        display: none;
+        font-size: 14px;
+    }
 
     // Hover animation
     i, div, span { transition: all .25s ease !important }
