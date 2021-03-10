@@ -88,12 +88,10 @@ export default class Review extends Vue.with(Props)
 
 <!-- Scoped styles -->
 <style lang="scss" scoped>
+@import "../global";
+
 #word-input
 {
-    // Answer container width (This is normally 50vw,
-    //   but when it's smaller than 900px, use 100vw - 50px, because 50px is the margin)
-    $ansWidth: max(50vw, min(900px, 100vw - 50px));
-
     // Vertical Flex Alignment
     display: flex;
     flex-flow: column;
@@ -125,7 +123,7 @@ export default class Review extends Vue.with(Props)
     {
         // Container properties
         text-align: left;
-        width: $ansWidth;
+        width: $app-width;
         margin: 0 auto 30px;
         font-size: x-large;
 
@@ -177,7 +175,7 @@ export default class Review extends Vue.with(Props)
         // Input field
         #div-input
         {
-            width: $ansWidth;
+            width: $app-width;
             margin: 0 auto 20px;
         }
 
@@ -186,7 +184,7 @@ export default class Review extends Vue.with(Props)
         {
             margin: auto;
             display: flex;
-            width: $ansWidth;
+            width: $app-width;
 
             // Alignment
             button

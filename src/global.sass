@@ -1,16 +1,23 @@
+// Constants
+
+// Container width (This is normally 50vw,
+//   but when it's smaller than 900px, use 100vw - 50px, because 50px is the margin)
+$app-width: max(50vw, min(900px, 100vw - 50px))
+$c-text: #2c3e50
+$c-highlight: #ff7878
+
+
 // Global Styles
-
-
 #app
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: #2c3e50
+  color: $c-text
 
 // Highlight color
 .color-highlight
-  color: #ff7878
+  color: $c-highlight
 
 // Clickable text
 .clickable:hover
