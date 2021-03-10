@@ -2,7 +2,7 @@ import {Book, Dictionary} from "@/logic/models";
 
 export const book: Book = {
     name: "LingoDeer Japanese 1 Words",
-    description: "",
+    description: "Around n5",
     publication: "",
     chapters: [
         {
@@ -11,7 +11,7 @@ export const book: Book = {
             subchapters: [
                 { name: 'Nationalities', words: ['韓国人','アメリカ人','中国人','イギリス人','日本人'] },
                 { name: 'Profession', words: ['学生','医者','先生','留学生','会社員'] },
-                { name: 'People', words: ['女の人','男の人'] },
+                { name: 'People', words: ['女の人','男の人','女の子','男の子'] },
                 { name: 'Everyday Items', words: ['手紙','雑誌','新聞','本'] },
                 { name: 'My House', words: ['椅子','机','カメラ','テレビ'] },
                 { name: 'Language', words: ['英語','日本語','中国語','映画'] },
@@ -34,8 +34,19 @@ export const book: Book = {
         },
         {
             name: 'Section 3',
-            description: '',
+            description: 'From Numbers to Animals 2',
             subchapters: [
+                { name: 'Numbers', words: ['一','二','三','四','五','六','七','八','九','十',
+                        '二十九','六十五','十一','三十八','七十四'] },
+                { name: 'Time', words: ['午前','午後','一時','四時','七時','九時',
+                        '一分','二分','三分','四分','六分','八分','十分', '二時十分','十時半'] },
+                { name: 'The Week', words: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日', '今日','明日','明後日'] },
+                { name: 'Shopping', words: ['百','三百','六百','八百','千','三千','八千','万'] },
+                { name: 'My Family', words: [''] },
+                { name: 'Weather', words: [''] },
+                { name: 'Seasons', words: [''] },
+                { name: 'Animals 1', words: [''] },
+                { name: 'Animals 2', words: [''] },
                 { name: '', words: [''] },
                 { name: '', words: [''] },
                 { name: '', words: [''] },
