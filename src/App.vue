@@ -74,8 +74,10 @@ export default class App extends Vue
     }
 
 
-    // Animation transition
+    // Hover animation
     i, div, span { transition: all .25s ease !important }
+    .clickable:hover i, .clickable:hover div { transform: translateY(-3px) !important }
+
     // Active button
     .clickable.router-link-exact-active
     {
