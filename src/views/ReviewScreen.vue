@@ -1,8 +1,8 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <div class="left clickable" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
-            <div class="right clickable" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
+            <div class="left clickable flex-vcenter" @click="btnExit"><i class="el-icon-arrow-left"></i></div>
+            <div class="right clickable flex-vcenter" @click="btnSettings"><i class="el-icon-s-tools"></i></div>
         </div>
 
         <CardInput class="card-input" :card="card"></CardInput>
@@ -61,8 +61,7 @@ export default class ReviewScreen extends Vue
     flex: 0 1 auto;
 
     // Height
-    $navH: max(6vh, 40px);
-    height: $navH;
+    height: max(6vh, 40px);
 
     // Shadow
     background-color: white;
@@ -75,7 +74,6 @@ export default class ReviewScreen extends Vue
         // Alignment
         height: 100%;
         width: 70px;
-        line-height: $navH;
 
         // Size
         font-size: max(2vh, 14px);

@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable" @click="revealAnswer">
+            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable flex-vcenter" @click="revealAnswer">
                 <div id="div-ba-inside">
                     <div style="color: gray">Please say the definition out loud.</div>
                     <div class="color-highlight">Click the screen to show the answer.</div>
@@ -151,10 +151,6 @@ export default class CardInput extends Vue.with(Props)
 
         #div-before-answer
         {
-            // Align the text to the center
-            display: flex;
-            align-items: center;
-            justify-content: center;
             height: 100%;
 
             // Dynamic font size: max=24px, min=16px, middle=2.3vw
