@@ -4,6 +4,7 @@ import Review from "@/views/0-Review.vue";
 import WordSelection from "@/views/1-WordSelection.vue";
 import Stats from "@/views/2-Stats.vue";
 import Settings from "@/views/3-Settings.vue";
+import Create from "@/views/4-Create.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -26,6 +27,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Settings',
         component: Settings
     },
+    {
+        path: '/create',
+        name: 'Create',
+        component: Create
+    },
+
     // Hidden
     {
         path: '/debaggu',

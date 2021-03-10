@@ -12,6 +12,7 @@
             <router-link class="clickable flex-vcenter" to="/words"><i class="el-icon-s-unfold"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/stats"><i class="el-icon-s-data"></i></router-link>
             <router-link class="clickable flex-vcenter" to="/settings"><i class="el-icon-s-tools"></i></router-link>
+            <router-link class="clickable flex-vcenter" to="/create"><i class="el-icon-plus"></i></router-link>
         </div>
         <router-view/>
     </div>
