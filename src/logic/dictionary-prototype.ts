@@ -1,6 +1,21 @@
-import {Dictionary} from "@/logic/models";
+import {Book, Dictionary} from "@/logic/models";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const book: Book = {
+    name: "LingoDeer Japanese 1 Words",
+    description: "",
+    publication: "",
+    chapters: [
+        {
+            name: 'Section 1',
+            description: 'From Nationalities to Language.',
+            subchapters: [
+                { name: 'Nationalities', words: ['韓国人','アメリカ人','中国人','イギリス人','日本人'] },
+                { name: 'Profession', words: ['学生','医者','先生','留学生','会社員'] }
+            ]
+        },
+    ],
+}
+
 export const dictionary: Dictionary = {
     name: "Hy's Personal Dictionary",
     description: "Created for my own use, not really accurate",
