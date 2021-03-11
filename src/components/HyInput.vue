@@ -28,8 +28,8 @@ export default {
     ],
     methods: {
         passInput(value) {
-            this.$emit('input', value)
             this.$emit('update:modelValue', value)
+            this.$emit('input', value)
         }
     }
 }
