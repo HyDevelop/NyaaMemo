@@ -1,6 +1,6 @@
 import {Book, Dictionary} from "@/logic/models";
 
-export const book: Book = {
+const book: Book = {
     name: "LingoDeer Japanese 1 Words",
     description: "Around n5",
     publication: "",
@@ -41,8 +41,8 @@ export const book: Book = {
                 { name: 'Time', words: ['午前','午後','一時','四時','七時','九時',
                         '一分','二分','三分','四分','六分','八分','十分', '二時十分','十時半'] },
                 { name: 'The Week', words: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日', '今日','明日','明後日'] },
-                { name: 'Shopping', words: ['百','三百','六百','八百','千','三千','八千','万'] },
-                { name: 'My Family', words: [''] },
+                { name: 'Shopping', words: ['百','三百','六百','八百','千','三千','八千','万','円','幾ら'] },
+                { name: 'My Family', words: ['お母さん','お父さん','お爺さん','お婆さん','お姉さん','お兄さん', '母','父','姐','兄','娘','息子'] },
                 { name: 'Weather', words: [''] },
                 { name: 'Seasons', words: [''] },
                 { name: 'Animals 1', words: [''] },
@@ -54,6 +54,17 @@ export const book: Book = {
         }
     ],
 }
+
+const book2: Book = {
+    name: "LingoDeer Japanese 2 Words",
+    description: "Around n4",
+    publication: "",
+    chapters: []
+}
+
+export const books: Book[] = [book, book2]
+
+// console.log(JSON.stringify(book))
 
 export const dictionary: Dictionary = {
     name: "Hy's Personal Dictionary",
