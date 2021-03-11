@@ -1,0 +1,1591 @@
+{
+  "name": "Jisho.org (Auto-Generated on Thu Mar 11 2021)",
+  "author": "Jisho.org",
+  "description": "",
+  "license": "",
+  "words": {
+    "韓国人": {
+      "word": [
+        "韓国人",
+        "かんこくじん"
+      ],
+      "definition": [
+        "Noun | South Korean person"
+      ],
+      "sentences": []
+    },
+    "アメリカ人": {
+      "word": [
+        "アメリカ人",
+        "アメリカじん"
+      ],
+      "definition": [
+        "Noun | American person"
+      ],
+      "sentences": []
+    },
+    "中国人": {
+      "word": [
+        "中国人",
+        "ちゅうごくじん"
+      ],
+      "definition": [
+        "Noun | Chinese person"
+      ],
+      "sentences": []
+    },
+    "イギリス人": {
+      "word": [
+        "イギリス人",
+        "イギリスじん"
+      ],
+      "definition": [
+        "Noun | British person"
+      ],
+      "sentences": []
+    },
+    "日本人": {
+      "word": [
+        "日本人",
+        "にほんじん"
+      ],
+      "definition": [
+        "Noun | Japanese person, Japanese people"
+      ],
+      "sentences": []
+    },
+    "学生": {
+      "word": [
+        "学生",
+        "がくせい"
+      ],
+      "definition": [
+        "Noun | student (esp. a university student)"
+      ],
+      "sentences": []
+    },
+    "医者": {
+      "word": [
+        "医者",
+        "いしゃ"
+      ],
+      "definition": [
+        "Noun | (medical) doctor, physician"
+      ],
+      "sentences": []
+    },
+    "先生": {
+      "word": [
+        "先生",
+        "せんせい"
+      ],
+      "definition": [
+        "Noun | teacher, instructor, master",
+        "Noun | sensei, title or form of address for a teacher, master, doctor, lawyer, etc.",
+        "Noun | intimate or teasing form of address",
+        "Noun | one's elder"
+      ],
+      "sentences": []
+    },
+    "留学生": {
+      "word": [
+        "留学生",
+        "りゅうがくせい"
+      ],
+      "definition": [
+        "Noun | overseas student, exchange student"
+      ],
+      "sentences": []
+    },
+    "会社員": {
+      "word": [
+        "会社員",
+        "かいしゃいん"
+      ],
+      "definition": [
+        "Noun | company employee, office worker, white-collar worker"
+      ],
+      "sentences": []
+    },
+    "女の人": {
+      "word": [
+        "女の人",
+        "おんなのひと"
+      ],
+      "definition": [
+        "Expression | woman"
+      ],
+      "sentences": []
+    },
+    "男の人": {
+      "word": [
+        "男の人",
+        "おとこのひと"
+      ],
+      "definition": [
+        "Expression | man"
+      ],
+      "sentences": []
+    },
+    "女の子": {
+      "word": [
+        "女の子",
+        "おんなのこ"
+      ],
+      "definition": [
+        "Expression | girl, daughter, baby girl",
+        "Expression | young woman"
+      ],
+      "sentences": []
+    },
+    "男の子": {
+      "word": [
+        "男の子",
+        "おとこのこ"
+      ],
+      "definition": [
+        "Expression | boy, son, baby boy",
+        "Expression | young man"
+      ],
+      "sentences": []
+    },
+    "手紙": {
+      "word": [
+        "手紙",
+        "てがみ"
+      ],
+      "definition": [
+        "Noun | letter, missive, note, mail"
+      ],
+      "sentences": []
+    },
+    "雑誌": {
+      "word": [
+        "雑誌",
+        "ざっし"
+      ],
+      "definition": [
+        "Noun | journal, magazine, periodical"
+      ],
+      "sentences": []
+    },
+    "新聞": {
+      "word": [
+        "新聞",
+        "しんぶん"
+      ],
+      "definition": [
+        "Noun | newspaper"
+      ],
+      "sentences": []
+    },
+    "本": {
+      "word": [
+        "本",
+        "ほん"
+      ],
+      "definition": [
+        "Noun | book, volume, script",
+        "Prefix | this, present",
+        "Prefix | main, head",
+        "Prefix | real, regular",
+        "Suffix | counter for long cylindrical things, counter for films, TV shows, etc., counter for goals, home runs, etc., counter for telephone calls"
+      ],
+      "sentences": []
+    },
+    "椅子": {
+      "word": [
+        "椅子",
+        "いす"
+      ],
+      "definition": [
+        "Noun | chair, stool",
+        "Noun | post, office, position"
+      ],
+      "sentences": []
+    },
+    "机": {
+      "word": [
+        "机",
+        "つくえ"
+      ],
+      "definition": [
+        "Noun | desk"
+      ],
+      "sentences": []
+    },
+    "カメラ": {
+      "word": [
+        "カメラ",
+        "カメラ"
+      ],
+      "definition": [
+        "Noun | camera"
+      ],
+      "sentences": []
+    },
+    "テレビ": {
+      "word": [
+        "テレビ",
+        "テレビ"
+      ],
+      "definition": [
+        "Noun | television, TV",
+        "Noun | TV program, TV programme, TV broadcast"
+      ],
+      "sentences": []
+    },
+    "英語": {
+      "word": [
+        "英語",
+        "えいご"
+      ],
+      "definition": [
+        "Noun | English (language)"
+      ],
+      "sentences": []
+    },
+    "日本語": {
+      "word": [
+        "日本語",
+        "にほんご"
+      ],
+      "definition": [
+        "Noun | Japanese (language)"
+      ],
+      "sentences": []
+    },
+    "中国語": {
+      "word": [
+        "中国語",
+        "ちゅうごくご"
+      ],
+      "definition": [
+        "Noun | Chinese (language)"
+      ],
+      "sentences": []
+    },
+    "映画": {
+      "word": [
+        "映画",
+        "えいが"
+      ],
+      "definition": [
+        "Noun | movie, film"
+      ],
+      "sentences": []
+    },
+    "傘": {
+      "word": [
+        "傘",
+        "かさ"
+      ],
+      "definition": [
+        "Noun | umbrella, parasol",
+        "Noun | something shaped like an umbrella or a conical hat, shade (of a lamp), mushroom cap, pileus"
+      ],
+      "sentences": []
+    },
+    "時計": {
+      "word": [
+        "時計",
+        "とけい"
+      ],
+      "definition": [
+        "Noun | clock, watch, timepiece"
+      ],
+      "sentences": []
+    },
+    "かばん": {
+      "word": [
+        "かばん",
+        "かばん"
+      ],
+      "definition": [
+        "Noun | bag, satchel, briefcase, basket"
+      ],
+      "sentences": []
+    },
+    "パソコン": {
+      "word": [
+        "パソコン",
+        "パソコン"
+      ],
+      "definition": [
+        "Noun | personal computer"
+      ],
+      "sentences": []
+    },
+    "ハンカチ": {
+      "word": [
+        "ハンカチ",
+        "ハンカチ"
+      ],
+      "definition": [
+        "Noun | handkerchief"
+      ],
+      "sentences": []
+    },
+    "辞書": {
+      "word": [
+        "辞書",
+        "じしょ"
+      ],
+      "definition": [
+        "Noun | dictionary, lexicon",
+        "Noun | letter of resignation"
+      ],
+      "sentences": []
+    },
+    "教室": {
+      "word": [
+        "教室",
+        "きょうしつ"
+      ],
+      "definition": [
+        "Noun | classroom",
+        "Noun | department, laboratory",
+        "Noun | single-room school, small school"
+      ],
+      "sentences": []
+    },
+    "会議室": {
+      "word": [
+        "会議室",
+        "かいぎしつ"
+      ],
+      "definition": [
+        "Noun | conference room, council room"
+      ],
+      "sentences": []
+    },
+    "トイレ": {
+      "word": [
+        "トイレ",
+        "トイレ"
+      ],
+      "definition": [
+        "Noun | toilet, restroom, bathroom, lavatory"
+      ],
+      "sentences": []
+    },
+    "図書館": {
+      "word": [
+        "図書館",
+        "としょかん"
+      ],
+      "definition": [
+        "Noun | library"
+      ],
+      "sentences": []
+    },
+    "学校": {
+      "word": [
+        "学校",
+        "がっこう"
+      ],
+      "definition": [
+        "Noun | school",
+        "Place | Gakkou"
+      ],
+      "sentences": []
+    },
+    "事務室": {
+      "word": [
+        "事務室",
+        "じむしつ"
+      ],
+      "definition": [
+        "Noun | office (room)"
+      ],
+      "sentences": []
+    },
+    "レストラン": {
+      "word": [
+        "レストラン",
+        "レストラン"
+      ],
+      "definition": [
+        "Noun | restaurant (esp. Western-style)"
+      ],
+      "sentences": []
+    },
+    "映画館": {
+      "word": [
+        "映画館",
+        "えいがかん"
+      ],
+      "definition": [
+        "Noun | movie theatre, movie theater, cinema"
+      ],
+      "sentences": []
+    },
+    "銀行": {
+      "word": [
+        "銀行",
+        "ぎんこう"
+      ],
+      "definition": [
+        "Noun | bank, banking institution"
+      ],
+      "sentences": []
+    },
+    "本屋": {
+      "word": [
+        "本屋",
+        "ほんや"
+      ],
+      "definition": [
+        "Noun | bookstore, bookshop",
+        "Noun | publisher",
+        "Noun | main building"
+      ],
+      "sentences": []
+    },
+    "病院": {
+      "word": [
+        "病院",
+        "びょういん"
+      ],
+      "definition": [
+        "Noun | hospital, clinic, doctor's office, doctor's surgery, infirmary"
+      ],
+      "sentences": []
+    },
+    "デパート": {
+      "word": [
+        "デパート",
+        "デパート"
+      ],
+      "definition": [
+        "Noun | department store",
+        "Noun | department"
+      ],
+      "sentences": []
+    },
+    "郵便局": {
+      "word": [
+        "郵便局",
+        "ゆうびんきょく"
+      ],
+      "definition": [
+        "Noun | post office"
+      ],
+      "sentences": []
+    },
+    "喫茶店": {
+      "word": [
+        "喫茶店",
+        "きっさてん"
+      ],
+      "definition": [
+        "Noun | coffee shop, tearoom, coffee lounge, coffeehouse, cafe"
+      ],
+      "sentences": []
+    },
+    "公園": {
+      "word": [
+        "公園",
+        "こうえん"
+      ],
+      "definition": [
+        "Noun | (public) park"
+      ],
+      "sentences": []
+    },
+    "部屋": {
+      "word": [
+        "部屋",
+        "へや"
+      ],
+      "definition": [
+        "Noun | room, chamber",
+        "Noun | apartment, flat, pad",
+        "Noun | stable"
+      ],
+      "sentences": []
+    },
+    "花": {
+      "word": [
+        "花",
+        "はな"
+      ],
+      "definition": [
+        "Noun | flower, blossom, bloom, petal",
+        "Noun | cherry blossom",
+        "Noun | beauty",
+        "Noun | blooming (esp. of cherry blossoms)",
+        "Noun | ikebana",
+        "Noun | hanafuda",
+        "Noun | (the) best",
+        "No-adjective | glorious, lovely"
+      ],
+      "sentences": []
+    },
+    "石": {
+      "word": [
+        "石",
+        "いし"
+      ],
+      "definition": [
+        "Noun | stone",
+        "Noun | jewel, precious stone",
+        "Noun | flint (in a lighter)",
+        "Noun | stone (in go)",
+        "Noun | stone (in the bladder, kidney etc.), calculus",
+        "Noun | rock (in rock-paper-scissors), stone"
+      ],
+      "sentences": []
+    },
+    "庭": {
+      "word": [
+        "庭",
+        "にわ"
+      ],
+      "definition": [
+        "Noun | garden, yard, courtyard",
+        "Noun | field (of action), area"
+      ],
+      "sentences": []
+    },
+    "子供": {
+      "word": [
+        "子供",
+        "こども"
+      ],
+      "definition": [
+        "Noun | child"
+      ],
+      "sentences": []
+    },
+    "犬": {
+      "word": [
+        "犬",
+        "いぬ"
+      ],
+      "definition": [
+        "Noun | dog (Canis (lupus) familiaris)",
+        "Noun | squealer, rat, snitch, informer, informant, spy",
+        "Noun | loser, asshole",
+        "Noun - used as a prefix | counterfeit, inferior, useless, wasteful"
+      ],
+      "sentences": []
+    },
+    "猫": {
+      "word": [
+        "猫",
+        "ねこ"
+      ],
+      "definition": [
+        "Noun | cat (esp. the domestic cat, Felis catus)",
+        "Noun | shamisen",
+        "Noun | geisha",
+        "Noun | wheelbarrow",
+        "Noun | clay bed-warmer",
+        "Noun | bottom, submissive partner of a homosexual relationship"
+      ],
+      "sentences": []
+    },
+    "居間": {
+      "word": [
+        "居間",
+        "いま"
+      ],
+      "definition": [
+        "Noun | living room (Western style), sitting room"
+      ],
+      "sentences": []
+    },
+    "下": {
+      "word": [
+        "下",
+        "した"
+      ],
+      "definition": [
+        "Noun | below, down, under, younger (e.g. daughter)",
+        "Noun | bottom",
+        "Noun | beneath, underneath",
+        "Noun | just after, right after",
+        "Noun | inferiority, one's inferior (i.e. one's junior)",
+        "Noun | trade-in",
+        "Noun - used as a prefix | preliminary, preparatory"
+      ],
+      "sentences": []
+    },
+    "上": {
+      "word": [
+        "上",
+        "うえ"
+      ],
+      "definition": [
+        "Noun | above, up, over, elder (e.g. daughter)",
+        "Noun | top, summit, head (e.g. of a staircase)",
+        "Noun | surface",
+        "Noun | before, previous",
+        "Noun | superiority, one's superior, one's elder",
+        "Adverbial noun | on top of that, besides, what's more, not only ... but",
+        "Adverbial noun | upon (further inspection, etc.), based on (and occurring after)",
+        "Adverbial noun | matters concerning ..., as concerns ...",
+        "Adverbial noun | since (i.e. \"for that reason\")",
+        "Noun - used as a suffix | honorable, venerable",
+        "Noun - used as a suffix | place of one's superior (e.g. the throne)",
+        "Noun - used as a suffix | emperor, sovereign, shogun, daimyo",
+        "Noun - used as a suffix | noblewoman (esp. the wife of a nobleman)"
+      ],
+      "sentences": []
+    },
+    "前": {
+      "word": [
+        "前",
+        "ぜん"
+      ],
+      "definition": [
+        "Noun - used as a prefix | the last (i.e. immediately preceding) (e.g. \"the last mayor\"), previous, one-time, former",
+        "Noun - used as a prefix | pre- (e.g. \"premodern\")",
+        "No-adjective | before, earlier"
+      ],
+      "sentences": []
+    },
+    "後ろ": {
+      "word": [
+        "後ろ",
+        "うしろ"
+      ],
+      "definition": [
+        "Noun | back, behind, rear"
+      ],
+      "sentences": []
+    },
+    "箱": {
+      "word": [
+        "箱",
+        "はこ"
+      ],
+      "definition": [
+        "Noun | box, case, chest, package, pack, crate",
+        "Noun | car (of a train, etc.)",
+        "Noun | shamisen case, shamisen",
+        "Noun | public building, community building",
+        "Noun | man who carries a geisha's shamisen",
+        "Noun | receptacle for human waste, feces (faeces)",
+        "Suffix | counter for boxes (or boxed objects)"
+      ],
+      "sentences": []
+    },
+    "ベッド": {
+      "word": [
+        "ベッド",
+        "ベッド"
+      ],
+      "definition": [
+        "Noun | bed"
+      ],
+      "sentences": []
+    },
+    "隣": {
+      "word": [
+        "隣",
+        "となり"
+      ],
+      "definition": [
+        "No-adjective | next (to), adjoining, adjacent",
+        "Noun | house next door, neighbouring house, next-door neighbour, next-door neighbor"
+      ],
+      "sentences": []
+    },
+    "薬": {
+      "word": [
+        "薬",
+        "くすり"
+      ],
+      "definition": [
+        "Noun | medicine, pharmaceuticals, (legal) drugs, pill, ointment, salve",
+        "Noun | efficacious chemical (gunpowder, pesticide, etc.)",
+        "Noun | (pottery) glaze",
+        "Noun | (illegal) drug, narcotic",
+        "Noun | small bribe"
+      ],
+      "sentences": []
+    },
+    "中": {
+      "word": [
+        "中",
+        "ちゅう"
+      ],
+      "definition": [
+        "Noun | medium, average, middle",
+        "Noun | moderation",
+        "Noun | middle school",
+        "Noun | China",
+        "Noun | volume two (of three)",
+        "Noun - used as a suffix | during (a certain time when one did or is doing something), under (construction, etc.), while",
+        "Noun - used as a suffix | in, out of, of the"
+      ],
+      "sentences": []
+    },
+    "ビール": {
+      "word": [
+        "ビール",
+        "ビール"
+      ],
+      "definition": [
+        "Noun | beer",
+        "Place | Biel (Switzerland), Bir (India), Beal, Beale, Bier"
+      ],
+      "sentences": []
+    },
+    "リンゴ": {
+      "word": [
+        "リンゴ",
+        "りんご"
+      ],
+      "definition": [
+        "Noun | apple (fruit)",
+        "Noun | apple tree (Malus pumila)"
+      ],
+      "sentences": []
+    },
+    "冷蔵庫": {
+      "word": [
+        "冷蔵庫",
+        "れいぞうこ"
+      ],
+      "definition": [
+        "Noun | refrigerator, fridge"
+      ],
+      "sentences": []
+    },
+    "紅茶": {
+      "word": [
+        "紅茶",
+        "こうちゃ"
+      ],
+      "definition": [
+        "Noun | black tea"
+      ],
+      "sentences": []
+    },
+    "茶碗": {
+      "word": [
+        "茶碗",
+        "ちゃわん"
+      ],
+      "definition": [
+        "Noun | rice bowl, tea cup, teacup"
+      ],
+      "sentences": []
+    },
+    "グラス": {
+      "word": [
+        "グラス",
+        "グラス"
+      ],
+      "definition": [
+        "Noun | glass (drinking vessel)",
+        "Noun | glass (material)",
+        "Noun | glasses (eyewear)"
+      ],
+      "sentences": []
+    },
+    "外": {
+      "word": [
+        "外",
+        "そと"
+      ],
+      "definition": [
+        "Noun | outside, exterior",
+        "Noun | the open (air)",
+        "Noun | other place, somewhere else, outside one's group (family, company, etc.)",
+        "Place | To"
+      ],
+      "sentences": []
+    },
+    "横": {
+      "word": [
+        "横",
+        "よこ"
+      ],
+      "definition": [
+        "Noun | horizontal (as opposed to vertical), lying down",
+        "Noun | side-to-side (as opposed to front-to-back), width, breadth",
+        "Noun | side (of a box, etc.)",
+        "Noun | beside, aside, next to",
+        "Noun | unconnected"
+      ],
+      "sentences": []
+    },
+    "車": {
+      "word": [
+        "車",
+        "くるま"
+      ],
+      "definition": [
+        "Noun | car, automobile, vehicle",
+        "Noun | wheel"
+      ],
+      "sentences": []
+    },
+    "家": {
+      "word": [
+        "家",
+        "いえ"
+      ],
+      "definition": [
+        "Noun | house, residence, dwelling",
+        "Noun | family, household",
+        "Noun | lineage, family name"
+      ],
+      "sentences": []
+    },
+    "木": {
+      "word": [
+        "木",
+        "き"
+      ],
+      "definition": [
+        "Noun | tree, shrub, bush",
+        "Noun | wood, timber"
+      ],
+      "sentences": []
+    },
+    "魚": {
+      "word": [
+        "魚",
+        "さかな"
+      ],
+      "definition": [
+        "Noun | fish"
+      ],
+      "sentences": []
+    },
+    "鳥": {
+      "word": [
+        "鳥",
+        "とり"
+      ],
+      "definition": [
+        "Noun | bird",
+        "Noun | bird meat (esp. chicken meat), fowl, poultry"
+      ],
+      "sentences": []
+    },
+    "ペン": {
+      "word": [
+        "ペン",
+        "ペン"
+      ],
+      "definition": [
+        "Noun | pen"
+      ],
+      "sentences": []
+    },
+    "ペット": {
+      "word": [
+        "ペット",
+        "ペット"
+      ],
+      "definition": [
+        "Noun | pet",
+        "Noun | trumpet"
+      ],
+      "sentences": []
+    },
+    "消しゴム": {
+      "word": [
+        "消しゴム",
+        "けしゴム"
+      ],
+      "definition": [
+        "Noun | eraser, rubber"
+      ],
+      "sentences": []
+    },
+    "社長": {
+      "word": [
+        "社長",
+        "しゃちょう"
+      ],
+      "definition": [
+        "Noun | company president, manager, director"
+      ],
+      "sentences": []
+    },
+    "財布": {
+      "word": [
+        "財布",
+        "さいふ"
+      ],
+      "definition": [
+        "Noun | purse, handbag, wallet"
+      ],
+      "sentences": []
+    },
+    "一": {
+      "word": [
+        "一",
+        "いち"
+      ],
+      "definition": [
+        "Numeric | one",
+        "No-adjective | best",
+        "No-adjective | first, foremost",
+        "Noun | beginning, start",
+        "Noun - used as a prefix | a (single), one (of many)",
+        "Noun | ace (playing card)",
+        "Noun | bottom string (on a shamisen, etc.)"
+      ],
+      "sentences": []
+    },
+    "二": {
+      "word": [
+        "二",
+        "に"
+      ],
+      "definition": [
+        "Numeric | two"
+      ],
+      "sentences": []
+    },
+    "三": {
+      "word": [
+        "三",
+        "さん"
+      ],
+      "definition": [
+        "Numeric | three",
+        "Prefix | tri-"
+      ],
+      "sentences": []
+    },
+    "四": {
+      "word": [
+        "四",
+        "し"
+      ],
+      "definition": [
+        "Numeric | four"
+      ],
+      "sentences": []
+    },
+    "五": {
+      "word": [
+        "五",
+        "ご"
+      ],
+      "definition": [
+        "Numeric | five"
+      ],
+      "sentences": []
+    },
+    "六": {
+      "word": [
+        "六",
+        "ろく"
+      ],
+      "definition": [
+        "Numeric | six"
+      ],
+      "sentences": []
+    },
+    "七": {
+      "word": [
+        "七",
+        "しち"
+      ],
+      "definition": [
+        "Numeric | seven",
+        "Prefix | hepta-"
+      ],
+      "sentences": []
+    },
+    "八": {
+      "word": [
+        "八",
+        "はち"
+      ],
+      "definition": [
+        "Numeric | eight"
+      ],
+      "sentences": []
+    },
+    "九": {
+      "word": [
+        "九",
+        "きゅう"
+      ],
+      "definition": [
+        "Numeric | nine"
+      ],
+      "sentences": []
+    },
+    "十": {
+      "word": [
+        "十",
+        "じゅう"
+      ],
+      "definition": [
+        "Numeric | ten",
+        "Noun | ten years of age"
+      ],
+      "sentences": []
+    },
+    "二十九": {
+      "word": [
+        "二十九",
+        "にじゅうくにち"
+      ],
+      "definition": [
+        "Noun | twenty-ninth day of the month",
+        "Noun | twenty-nine days"
+      ],
+      "sentences": []
+    },
+    "六十五": {
+      "word": [
+        "六十五",
+        "ろくじゅう"
+      ],
+      "definition": [
+        "Numeric | sixty, 60"
+      ],
+      "sentences": []
+    },
+    "十一": {
+      "word": [
+        "十一",
+        "じゅういち"
+      ],
+      "definition": [
+        "Numeric | eleven, 11",
+        "Noun | jack (playing card)",
+        "Noun | Hodgson's hawk-cuckoo (Cuculus fugax), Horsfield's hawk cuckoo"
+      ],
+      "sentences": []
+    },
+    "三十八": {
+      "word": [
+        "三十八",
+        "さんじゅうはちどせん"
+      ],
+      "definition": [
+        "Noun | the 38th Parallel"
+      ],
+      "sentences": []
+    },
+    "七十四": {
+      "word": [
+        "七十四",
+        "しちじゅう"
+      ],
+      "definition": [
+        "Numeric | seventy, 70"
+      ],
+      "sentences": []
+    },
+    "午前": {
+      "word": [
+        "午前",
+        "ごぜん"
+      ],
+      "definition": [
+        "Adverbial noun | morning, a.m."
+      ],
+      "sentences": []
+    },
+    "午後": {
+      "word": [
+        "午後",
+        "ごご"
+      ],
+      "definition": [
+        "Adverbial noun | afternoon, p.m."
+      ],
+      "sentences": []
+    },
+    "一時": {
+      "word": [
+        "一時",
+        "いちじ"
+      ],
+      "definition": [
+        "Temporal noun | one o'clock",
+        "Adverbial noun | once, at one time, formerly, before",
+        "Adverbial noun | for a time, for a while, for the time being, for the present, for the moment, temporarily",
+        "Noun | a time, one time, once"
+      ],
+      "sentences": []
+    },
+    "四時": {
+      "word": [
+        "四時",
+        "よじ"
+      ],
+      "definition": [
+        "Noun | four o'clock"
+      ],
+      "sentences": []
+    },
+    "七時": {
+      "word": [
+        "七時",
+        "しちじ"
+      ],
+      "definition": [
+        "Noun | seven o'clock"
+      ],
+      "sentences": []
+    },
+    "九時": {
+      "word": [
+        "九時",
+        "くじ"
+      ],
+      "definition": [
+        "Noun | nine o'clock"
+      ],
+      "sentences": []
+    },
+    "一分": {
+      "word": [
+        "一分",
+        "いっぷん"
+      ],
+      "definition": [
+        "Noun | (a) minute"
+      ],
+      "sentences": []
+    },
+    "二分": {
+      "word": [
+        "二分",
+        "にぶん"
+      ],
+      "definition": [
+        "Noun | halving, dividing (into two parts), bisection",
+        "Noun | the two equinoxes (vernal and autumnal)"
+      ],
+      "sentences": []
+    },
+    "三分": {
+      "word": [
+        "三分",
+        "さんぶん"
+      ],
+      "definition": [
+        "Suru verb | to divide into three (parts), to trisect"
+      ],
+      "sentences": []
+    },
+    "四分": {
+      "word": [
+        "四分",
+        "しぶん"
+      ],
+      "definition": [
+        "Noun | divide into four pieces, one fourth"
+      ],
+      "sentences": []
+    },
+    "六分": {
+      "word": [
+        "六分",
+        "ろっぷん"
+      ],
+      "definition": [
+        "Temporal noun | six minutes"
+      ],
+      "sentences": []
+    },
+    "八分": {
+      "word": [
+        "八分",
+        "はちぶ"
+      ],
+      "definition": [
+        "Noun | eight-tenths",
+        "Noun | casting someone out",
+        "Noun | type of baggy tobi trousers with the baggy part taking up eight-tenths of the full length of the trouser leg"
+      ],
+      "sentences": []
+    },
+    "十分": {
+      "word": [
+        "十分",
+        "じゅうぶん"
+      ],
+      "definition": [
+        "Na-adjective | enough, sufficient, plenty, adequate, satisfactory",
+        "Adverb | sufficiently, fully, thoroughly, well, perfectly",
+        "Noun | division into ten"
+      ],
+      "sentences": []
+    },
+    "二時十分": {
+      "word": [
+        "二時十分",
+        "undefined"
+      ],
+      "definition": [
+        "Error: undefined"
+      ],
+      "sentences": []
+    },
+    "十時半": {
+      "word": [
+        "十時半",
+        "undefined"
+      ],
+      "definition": [
+        "Error: undefined"
+      ],
+      "sentences": []
+    },
+    "月曜日": {
+      "word": [
+        "月曜日",
+        "げつようび"
+      ],
+      "definition": [
+        "Adverbial noun | Monday"
+      ],
+      "sentences": []
+    },
+    "火曜日": {
+      "word": [
+        "火曜日",
+        "かようび"
+      ],
+      "definition": [
+        "Adverbial noun | Tuesday"
+      ],
+      "sentences": []
+    },
+    "水曜日": {
+      "word": [
+        "水曜日",
+        "すいようび"
+      ],
+      "definition": [
+        "Adverbial noun | Wednesday"
+      ],
+      "sentences": []
+    },
+    "木曜日": {
+      "word": [
+        "木曜日",
+        "もくようび"
+      ],
+      "definition": [
+        "Adverbial noun | Thursday"
+      ],
+      "sentences": []
+    },
+    "金曜日": {
+      "word": [
+        "金曜日",
+        "きんようび"
+      ],
+      "definition": [
+        "Adverbial noun | Friday"
+      ],
+      "sentences": []
+    },
+    "土曜日": {
+      "word": [
+        "土曜日",
+        "どようび"
+      ],
+      "definition": [
+        "Adverbial noun | Saturday"
+      ],
+      "sentences": []
+    },
+    "日曜日": {
+      "word": [
+        "日曜日",
+        "にちようび"
+      ],
+      "definition": [
+        "Adverbial noun | Sunday"
+      ],
+      "sentences": []
+    },
+    "今日": {
+      "word": [
+        "今日",
+        "きょう"
+      ],
+      "definition": [
+        "Temporal noun | today, this day",
+        "Temporal noun | these days, recently, nowadays"
+      ],
+      "sentences": []
+    },
+    "明日": {
+      "word": [
+        "明日",
+        "あした"
+      ],
+      "definition": [
+        "Temporal noun | tomorrow",
+        "Temporal noun | near future"
+      ],
+      "sentences": []
+    },
+    "明後日": {
+      "word": [
+        "明後日",
+        "あさって"
+      ],
+      "definition": [
+        "Adverbial noun | day after tomorrow"
+      ],
+      "sentences": []
+    },
+    "百": {
+      "word": [
+        "百",
+        "ひゃく"
+      ],
+      "definition": [
+        "Numeric | 100, hundred",
+        "Place | Hyaku"
+      ],
+      "sentences": []
+    },
+    "三百": {
+      "word": [
+        "三百",
+        "さんびゃく"
+      ],
+      "definition": [
+        "Numeric | 300, three hundred",
+        "Noun | 300 mon, trifling amount, two-bit item",
+        "Noun | shyster"
+      ],
+      "sentences": []
+    },
+    "六百": {
+      "word": [
+        "六百",
+        "ろっぴゃく"
+      ],
+      "definition": [
+        "Numeric | 600, six hundred"
+      ],
+      "sentences": []
+    },
+    "八百": {
+      "word": [
+        "八百",
+        "はっぴゃく"
+      ],
+      "definition": [
+        "Numeric | 800, eight hundred",
+        "Noun | multitude, large number"
+      ],
+      "sentences": []
+    },
+    "千": {
+      "word": [
+        "千",
+        "せん"
+      ],
+      "definition": [
+        "Numeric | 1, 000, thousand"
+      ],
+      "sentences": []
+    },
+    "三千": {
+      "word": [
+        "三千",
+        "さんぜん"
+      ],
+      "definition": [
+        "Numeric | 3000, three thousand",
+        "Noun | many"
+      ],
+      "sentences": []
+    },
+    "八千": {
+      "word": [
+        "八千",
+        "はっせん"
+      ],
+      "definition": [
+        "Numeric | 8000, eight thousand",
+        "Noun | many"
+      ],
+      "sentences": []
+    },
+    "万": {
+      "word": [
+        "万",
+        "まん"
+      ],
+      "definition": [
+        "Numeric | 10, 000, ten thousand",
+        "Noun | myriad",
+        "Adverbial noun | everything, all",
+        "Noun | various"
+      ],
+      "sentences": []
+    },
+    "円": {
+      "word": [
+        "円",
+        "えん"
+      ],
+      "definition": [
+        "Noun | yen (Japanese monetary unit)",
+        "Noun | circle"
+      ],
+      "sentences": []
+    },
+    "幾ら": {
+      "word": [
+        "幾ら",
+        "いくら"
+      ],
+      "definition": [
+        "Adverb | how much",
+        "Noun - used as a suffix | something over, and something, -odd",
+        "Adverb | however (much), no matter how"
+      ],
+      "sentences": []
+    },
+    "お母さん": {
+      "word": [
+        "お母さん",
+        "おかあさん"
+      ],
+      "definition": [
+        "Noun | mother, mom, mum, ma",
+        "Noun | wife"
+      ],
+      "sentences": []
+    },
+    "お父さん": {
+      "word": [
+        "お父さん",
+        "おとうさん"
+      ],
+      "definition": [
+        "Noun | father, dad, papa, pa, pop, daddy, dada",
+        "Noun | husband",
+        "Pronoun | you, he, him"
+      ],
+      "sentences": []
+    },
+    "お爺さん": {
+      "word": [
+        "お爺さん",
+        "おじいさん"
+      ],
+      "definition": [
+        "Noun | grandfather",
+        "Noun | male senior-citizen"
+      ],
+      "sentences": []
+    },
+    "お婆さん": {
+      "word": [
+        "お婆さん",
+        "おばあさん"
+      ],
+      "definition": [
+        "Noun | grandmother",
+        "Noun | old woman, female senior citizen"
+      ],
+      "sentences": []
+    },
+    "お姉さん": {
+      "word": [
+        "お姉さん",
+        "おねえさん"
+      ],
+      "definition": [
+        "Noun | older sister, elder sister",
+        "Noun | young lady",
+        "Noun | miss",
+        "Noun | ma'am",
+        "Noun | older girl"
+      ],
+      "sentences": []
+    },
+    "お兄さん": {
+      "word": [
+        "お兄さん",
+        "おにいさん"
+      ],
+      "definition": [
+        "Noun | older brother, elder brother",
+        "Noun | young man, buddy, fella, laddie"
+      ],
+      "sentences": []
+    },
+    "母": {
+      "word": [
+        "母",
+        "はは"
+      ],
+      "definition": [
+        "Noun | mother"
+      ],
+      "sentences": []
+    },
+    "父": {
+      "word": [
+        "父",
+        "ちち"
+      ],
+      "definition": [
+        "Noun | father"
+      ],
+      "sentences": []
+    },
+    "姐": {
+      "word": [
+        "姐",
+        "あね"
+      ],
+      "definition": [
+        "Noun | older sister, elder sister",
+        "Place | Ane"
+      ],
+      "sentences": []
+    },
+    "兄": {
+      "word": [
+        "兄",
+        "あに"
+      ],
+      "definition": [
+        "Noun | older brother, elder brother"
+      ],
+      "sentences": []
+    },
+    "娘": {
+      "word": [
+        "娘",
+        "むすめ"
+      ],
+      "definition": [
+        "Noun | daughter",
+        "Noun | girl (i.e. a young, unmarried woman)"
+      ],
+      "sentences": []
+    },
+    "息子": {
+      "word": [
+        "息子",
+        "むすこ"
+      ],
+      "definition": [
+        "Noun | son",
+        "Noun | penis"
+      ],
+      "sentences": []
+    }
+  }
+}

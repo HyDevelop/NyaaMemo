@@ -2,9 +2,13 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import {Book, Chapter, Dictionary, Word} from "../src/logic/models.ts";
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 import {books} from "../src/logic/dictionary-prototype.ts";
 
 console.log("Generating dictionary json from prototypes and jisho.org")
+
+// Remember to replace /,(?!\n| )/g with ', '
 
 // Create dictionary
 const dictionary: Dictionary = {
