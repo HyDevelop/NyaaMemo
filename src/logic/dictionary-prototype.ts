@@ -1,3 +1,6 @@
+// Use this import statement when using deno:
+// import {Book, Dictionary} from "./models.ts";
+
 import {Book, Dictionary} from "@/logic/models";
 
 const book: Book = {
@@ -62,10 +65,6 @@ const book2: Book = {
     chapters: []
 }
 
-export const books: Book[] = [book, book2]
-
-// console.log(JSON.stringify(book))
-
 export const dictionary: Dictionary = {
     name: "Hy's Personal Dictionary",
     description: "Created for my own use, not really accurate",
@@ -84,3 +83,8 @@ export const dictionary: Dictionary = {
         }
     }
 }
+
+export const books: Book[] = [book, book2]
+
+// console.log(JSON.stringify(book))
+
