@@ -1,3 +1,8 @@
+<!-- This component credit to Vuesax (https://vuesax.com/docs/components/Input.html#label)
+    I had to recreate (or copy) this component from Vuesax because, as of now (Mar 10, 2020),
+    Vuesax does not support Vue 3, which I'm currently using.
+ -->
+
 <template>
     <div class="hy-input-container">
         <div class="hy-input">
