@@ -58,3 +58,11 @@ export interface Chapter
     subchapters?: Chapter[];
     words?: string[];
 }
+
+/**
+ * How difficult is it to remember a word
+ */
+export enum RememberDifficulty
+{
+    easy, hard, forgot
+}
