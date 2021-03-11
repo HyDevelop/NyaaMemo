@@ -2,6 +2,7 @@
 // import {Book, Dictionary} from "./models.ts";
 
 import {Book, Dictionary} from "@/logic/models";
+import jisho from "@/logic/jisho-filtered.json"
 
 const book: Book = {
     name: "LingoDeer Japanese 1 Words",
@@ -85,6 +86,7 @@ export const dictionary: Dictionary = {
 }
 
 export const books: Book[] = [book, book2]
+export const dictionaries: Dictionary[] = [dictionary, jisho]
 
 // console.log(JSON.stringify(book))
 

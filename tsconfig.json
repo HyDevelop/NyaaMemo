@@ -25,7 +25,10 @@
             "dom",
             "dom.iterable",
             "scripthost"
-        ]
+        ],
+
+        // Custom
+        "resolveJsonModule": true
     },
     "include": [
         "src/**/*.ts",
