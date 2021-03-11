@@ -59,6 +59,21 @@ export interface Chapter
     words?: string[];
 }
 
+export interface WordProgress
+{
+    word: string;
+    dayLog: [];
+}
+
+/**
+ * Log point for one word on one day
+ */
+export interface DayLogPoint
+{
+    date: number; // IMPORTANT! Date is a number that represents the number of days since 2021-Jan-1
+    rd: RememberDifficulty;
+}
+
 /**
  * How difficult is it to remember a word
  */
