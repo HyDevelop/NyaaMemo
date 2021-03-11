@@ -1,9 +1,4 @@
 
-export interface Deck
-{
-    cards: Word[];
-    wordIndex: [];
-}
 /**
  * A dictionary contains words and its definitions
  */
@@ -19,6 +14,10 @@ export interface Dictionary
     words: {[id: string]: Word};
 }
 
+/**
+ * A word contains different forms of the word, different definitions, sample sentences,
+ * and other acceptable answers beside from the word forms
+ */
 export interface Word
 {
     word: string[];
@@ -27,6 +26,9 @@ export interface Word
     otherAnswers?: string[];
 }
 
+/**
+ * A sample sentence contains a sentence and the translation for that sentence
+ */
 export interface SampleSentence
 {
     s: string; // Sentence
@@ -45,6 +47,9 @@ export interface Book
     chapters: Chapter[];
 }
 
+/**
+ * Chapter in a book contains subchapters or words
+ */
 export interface Chapter
 {
     name: string;
