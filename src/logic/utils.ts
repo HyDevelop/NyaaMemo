@@ -51,6 +51,13 @@ export function okuriganaToFurigana(okurigana: string)
             // Get the index of the ending bracket
             const endI = okurigana.indexOf(')', i)
 
+            // No end bracket found, probably it wasn't properly formatted
+            if (endI == -1)
+            {
+                console.log(`[Kanji] An error occurred when processing ${okurigana} - Ending bracket not found at ${i}`)
+                return result + kanjiCache + okurigana.substring(i + 1)
+            }
+
             // Get the hiragana pronunciation between the brackets
             const inner = okurigana.substring(i + 1, endI)
 
