@@ -59,6 +59,14 @@ export interface Chapter
     words?: string[];
 }
 
+/**
+ * Long-term word list for a user
+ */
+export type LTWordList = WordProgress[]
+
+/**
+ * User memorization progress for a word
+ */
 export interface WordProgress
 {
     word: string;
