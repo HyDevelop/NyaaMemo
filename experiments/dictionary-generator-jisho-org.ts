@@ -15,6 +15,38 @@ const dictionary: Dictionary = {
     words: {}
 }
 
+// All words
+const words: string[] = []
+
+/**
+ * Add chapters to the word list
+ */
+function scanChapter(c: Chapter)
+{
+    // Add words to the list
+    if (c.words)
+    {
+        words.push(...c.words)
+    }
+
+    // Scan all sub-chapters
+    if (c.subchapters)
+    {
+        c.subchapters.forEach((it: Chapter) => scanChapter(it))
+    }
+}
+
+/**
+ * Scan all words in all books into the word list
+ */
+for (const book of books)
+{
+    for (const chapter of book.chapters)
+    {
+        scanChapter(chapter)
+    }
+}
+
 /**
  * Download a single word into the dictionary
  */
@@ -26,18 +58,16 @@ async function downloadWord(w: string)
     const txt = await res.text()
     const obj = JSON.parse(txt)
 
-    // const dataList = obj.data.filter((it: any) => it.slug == w)
-    //
-    // if (dataList.size == 0)
-    // {
-    //     console.log(`Data for ${w} not found.`)
-    //     return
-    // }
-
     const data = obj.data[0]
 
     if (data == undefined)
     {
+        dictionary.words[w] = {
+            word: [w, 'undefined'],
+            definition: ['Error: undefined'],
+            sentences: []
+        }
+
         console.log(`Data for ${w} is undefined`)
         return
     }
@@ -48,36 +78,13 @@ async function downloadWord(w: string)
         definition: data.senses.map((it: any) => it.parts_of_speech[0] + " | " + it.english_definitions),
         sentences: [],
     }
-    console.log(JSON.stringify(dictionary))
 }
 
-/**
- * Download words in a chapter
- */
-async function scanChapter(c: Chapter)
+for (const w of words)
 {
-    // Scan all sub-chapters first
-    if (c.subchapters)
-    {
-        c.subchapters.forEach((it: Chapter) => scanChapter(it))
-    }
-
-    // Download individual words
-    if (c.words)
-    {
-        for (const it of c.words)
-        {
-            await downloadWord(it);
-        }
-    }
-}
-
-for (const book of books)
-{
-    for (const chapter of book.chapters)
-    {
-        await scanChapter(chapter)
-    }
+    await downloadWord(w)
 }
 
 
+// Done
+console.log(JSON.stringify(dictionary))
