@@ -31,6 +31,9 @@ export function okuriganaToFurigana(okurigana: string)
     // Already processed
     if (okurigana.includes("<ruby>")) return okurigana
 
+    // Replace full-width brackets
+    okurigana = okurigana.replaceAll("（", "(").replaceAll("）", ")")
+
     let result = ""
     let kanjiCache = ""
 
