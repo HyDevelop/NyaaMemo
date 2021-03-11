@@ -95,7 +95,7 @@ export default class Review extends Vue.with(Props)
     // Vertical Flex Alignment
     display: flex;
     flex-flow: column;
-    height: 100vh;
+    height: 100%;
 
     // Min height so that when the content size cannot fit on this screen,
     //   the middle session would be compressed before anything else.

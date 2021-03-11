@@ -37,7 +37,7 @@ export default class App extends Vue
     // Vertical Flex Alignment
     display: flex;
     flex-flow: column;
-    height: 100vh;
+    height: 100%;
 
     background-color: #fff1f140;
 }
