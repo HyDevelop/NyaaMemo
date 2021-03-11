@@ -1,9 +1,11 @@
 <template>
-    <div id="hy-input">
-        <input id="hy-input-inner" class="hy-input-inner tr" :modelValue="modelValue"
-               @input="passInput($event.target.value)"/>
-        <div class="hy-input-placeholder tr">
-            <label for="hy-input-inner">{{ placeholder }}</label>
+    <div class="hy-input-container">
+        <div class="hy-input">
+            <input id="hy-input-inner" class="hy-input-inner tr" :modelValue="modelValue"
+                   @input="passInput($event.target.value)"/>
+            <div class="hy-input-placeholder tr">
+                <label for="hy-input-inner">{{ placeholder }}</label>
+            </div>
         </div>
     </div>
 </template>
@@ -32,7 +34,7 @@ export default {
 .tr
     transition: all .25s ease
 
-#hy-input
+.hy-input
     position: relative
 
 input
@@ -64,6 +66,8 @@ input:focus
 
     // Fill the entire input box
     position: absolute
+    top: 0
+    left: 15px
     width: 100%
     height: 100%
 
@@ -76,12 +80,18 @@ input:focus
     user-select: none
     pointer-events: none
 
-    left: 15px
     font-size: .8rem
     opacity: .4
     text-align: left
 
+// Placeholder move up when input is focused (From Vuesax)
 input:focus~.hy-input-placeholder
     left: 21px
+    opacity: 1
+    visibility: visible
+    pointer-events: auto
+    transform: translate(-2%,-77%)
+    font-size: .75rem
+
 
 </style>
