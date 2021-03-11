@@ -6,8 +6,8 @@
 <template>
     <div class="hy-input-container">
         <div class="hy-input">
-            <input id="hy-input-inner" class="hy-input-inner tr" :modelValue="modelValue"
-                   @input="passInput($event.target.value)"/>
+            <input id="hy-input-inner" class="hy-input-inner tr" :value="modelValue"
+                   @input="passInput($event.target.value)" v-bind="$attrs"/>
             <div class="hy-input-placeholder tr" :class="modelValue ? 'has-text' : ''">
                 <label for="hy-input-inner">{{ placeholder }}</label>
             </div>
@@ -31,7 +31,7 @@ export default {
             this.$emit('update:modelValue', value)
             this.$emit('input', value)
         }
-    }
+    },
 }
 </script>
 
@@ -95,10 +95,10 @@ input:focus~.hy-input-placeholder, .has-text
     opacity: .8
     visibility: visible
     pointer-events: auto
-    transform: translate(-2%,-70%)
+    transform: translate(-10px,-70%)
     font-size: .75rem
 
-.has-text
-    transform: translate(-2%,-80%)
+.hy-input-placeholder.has-text
+    transform: translate(-10px,-80%)
 
 </style>
