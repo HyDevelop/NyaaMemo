@@ -19,7 +19,7 @@
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
-                    <div class="lower-row">
+                    <div class="lower-row flex-h">
                         <span class="description">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
@@ -95,6 +95,7 @@ export default class WordSelection extends Vue
 
         .description
             margin-right: 5px
+            flex: 1 0
 
 
 </style>
