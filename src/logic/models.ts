@@ -42,7 +42,7 @@ export interface Book
 {
     name: string;
     description: string;
-    publication: string;
+    publication?: string;
 
     chapters: Chapter[];
 }

@@ -85,7 +85,7 @@ export const dictionary: Dictionary = {
     }
 }
 
-export const books: Book[] = [book, book2]
+export const books: Book[] = [book, book2, { name: "标准日本语", description: "TODO", chapters: [] }]
 export const dictionaries: Dictionary[] = [dictionary, jisho]
 
 // console.log(JSON.stringify(book))

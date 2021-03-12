@@ -11,7 +11,6 @@
         </div>
 
         <div class="hy-card">
-            w
         </div>
     </div>
 </template>
@@ -42,10 +41,4 @@ export default class WordSelection extends Vue
 #page-desc
     margin-bottom: 20px
 
-.hy-card
-    width: 100%
-    height: 100%
-    background-color: #edf1f2
-    border-radius: 15px
-    margin: 20px 0
 </style>
