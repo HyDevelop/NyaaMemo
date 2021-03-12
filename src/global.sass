@@ -61,12 +61,18 @@ button
 .w100
   width: 100%
 
-.flex-vcenter
+@mixin flex-vcenter
   // Vertical Flex Center
   display: flex
   flex-flow: column
-  align-items: center
   justify-content: center
+
+.flex-center
+  @include flex-vcenter
+  align-items: center
+
+.flex-vcenter
+  @include flex-vcenter
 
 .nowrap
   overflow: hidden
