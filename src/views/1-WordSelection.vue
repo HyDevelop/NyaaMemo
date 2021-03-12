@@ -79,6 +79,8 @@ export default class WordSelection extends Vue
     height: 50px
     margin: 0 20px
     border-bottom: 1px solid rgb(black, .1)
+    text-align: left
+    font-size: small
 
     .icon
         margin-right: 10px
