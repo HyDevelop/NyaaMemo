@@ -114,11 +114,14 @@ export default class WordSelection extends Vue
         for (const dict of dictionaries)
         {
             // Find exact matches
-            if (!added.has(term) && dict.words[term]) addWord(term, 100)
+            if (!added.has(term) && dict.words[term]) addWord(term, 120)
 
             // Find word-form matches
             for (const [s, word] of Object.entries(dict.words))
             {
+                // Word already included
+                if (added.has(s)) continue
+
                 // Search word's forms
                 for (const form of word.word)
                 {
