@@ -42,6 +42,7 @@ import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter, Word} from "@/logic/models";
+import {similarity} from "@/logic/utils";
 
 interface SearchResult
 {
@@ -124,7 +125,11 @@ export default class WordSelection extends Vue
                     // Contains keyword
                     if (form.includes(term))
                     {
+                        // Exact match
                         if (form == term) addWord(s, 119)
+
+                        // Not exact match, find similarity
+                        else addWord(s, 100 * similarity(form, term))
                     }
                 }
             }
