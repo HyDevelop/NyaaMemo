@@ -10,8 +10,8 @@ import {toRomaji} from "wanakana";
  */
 export interface SearchResult
 {
-    title: string;
-    desc: string;
+    word: Word;
+    matchingForm: string;
     match: number;
 }
 
@@ -43,8 +43,12 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
 
     // Create result word array
     const added = new Set<string>([])
-    const resultWords: { word: string; match: number }[] = []
-    function addWord(w: string, m: number) { added.add(w); resultWords.push({ word: w, match: m }) }
+    const resultWords: SearchResult[] = []
+    function addWord(w: Word, f: string, m: number)
+    {
+        added.add(w.word[0]);
+        resultWords.push({ word: w, matchingForm: f, match: m })
+    }
 
     // Romaji mode
     const romajiMode = isAlpnum(term)
@@ -53,7 +57,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
     for (const dict of dictionaries)
     {
         // Find exact matches
-        if (!added.has(term) && dict.words[term]) addWord(term, 120)
+        if (!added.has(term) && dict.words[term]) addWord(dict.words[term], term, 120)
 
         // Find word-form matches
         for (const [s, word] of Object.entries(dict.words))
@@ -71,8 +75,8 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                 if (form.includes(term))
                 {
                     // Exact match or find similarity
-                    if (form == term) addWord(s, 119)
-                    else addWord(s, 100 * similarity(form, term))
+                    if (form == term) addWord(word, form, 110)
+                    else addWord(word, form, 100 * similarity(form, term))
                     break
                 }
             }
@@ -82,10 +86,5 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
     // Sort descending
     resultWords.sort((a, b) => b.match - a.match)
 
-    // Convert word list to search result lists
-    return resultWords.map(it =>
-    {
-        const d = getDefinition(it.word, dictionaries)
-        return { title: it.word, desc: d.definition[0], match: it.match }
-    })
+    return resultWords
 }
