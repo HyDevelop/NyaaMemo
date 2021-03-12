@@ -48,6 +48,16 @@ interface SearchResult
     match: number;
 }
 
+/**
+ * Get the definition of a word in the list of dictionaries
+ */
+function getDefinition(word: string): Word
+{
+    for (const d of dictionaries) if (d.words[word]) return d.words[word]
+    console.error(`Word for ${word} not found`)
+    return null as never as Word
+}
+
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
 {
