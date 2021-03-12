@@ -32,8 +32,8 @@
         <div v-if="search" id="word-search" class="hy-card">
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
                 <div class="upper">
-                    <span class="term">{{w.word.word[0]}}</span>
                     <span v-if="w.word.word[0] !== w.matchingForm" class="matching" v-html="w.mf"></span>
+                    <span class="term" :class="w.match === 120 ? 'color-highlight':''">{{w.word.word[0]}}</span>
                 </div>
                 <div class="desc secondary">{{w.word.definition[0]}}</div>
             </div>
