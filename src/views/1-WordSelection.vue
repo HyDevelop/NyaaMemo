@@ -17,6 +17,7 @@
                 <div class="upper-row">
                     <span class="title">{{ book.name }}</span>
                 </div>
+                {{ allWords(book).length }}
             </div>
         </div>
     </div>
@@ -33,6 +34,21 @@ export default class WordSelection extends Vue
 {
     search = ""
     books = books
+
+    /**
+     * Get all of the words from this book
+     */
+    allWords(book: Book): string[]
+    {
+        const words: string[] = []
+        function scanChapter(c: Chapter)
+        {
+            if (c.words) words.push(...c.words)
+            if (c.subchapters) c.subchapters.forEach(it => scanChapter(it))
+        }
+        book.chapters.forEach(c => scanChapter(c))
+        return words
+    }
 
     icon(book: Book): string
     {
