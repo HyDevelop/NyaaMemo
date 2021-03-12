@@ -41,6 +41,13 @@ import HyInput from "@/components/HyInput.vue";
 import {books} from "@/logic/dictionary-prototype";
 import {Book, Chapter, Word} from "@/logic/models";
 
+interface SearchResult
+{
+    title: string;
+    desc: string;
+    match: number;
+}
+
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
 {
