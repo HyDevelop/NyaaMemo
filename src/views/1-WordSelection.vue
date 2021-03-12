@@ -104,15 +104,13 @@ export default class WordSelection extends Vue
     color: gray
 
 .ws-container
+    height: 50px
     margin: 0 20px
     border-bottom: 1px solid rgb(black, .1)
     text-align: left
     font-size: small
 
 .ws-container.books
-    height: 50px
-    font-size: small
-
     .details
         flex: 1 0
 
@@ -125,8 +123,6 @@ export default class WordSelection extends Vue
         flex: 1 0
 
 .ws-container.words
-    height: 40px
-
     .term
         margin-right: 5px
         flex: 1 0
