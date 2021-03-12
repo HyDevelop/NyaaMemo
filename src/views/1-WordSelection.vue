@@ -99,7 +99,7 @@ export default class WordSelection extends Vue
      */
     get searchedWords(): SearchResult[]
     {
-        const term = this.search
+        const term = this.search.toLowerCase()
 
         // No input
         if (!term) return []
@@ -114,6 +114,20 @@ export default class WordSelection extends Vue
         {
             // Find exact matches
             if (!added.has(term) && dict.words[term]) addWord(term, 100)
+
+            // Find word-form matches
+            for (const [s, word] of Object.entries(dict.words))
+            {
+                // Search word's forms
+                for (const form of word.word)
+                {
+                    // Contains keyword
+                    if (form.includes(term))
+                    {
+                        if (form == term) addWord(s, 119)
+                    }
+                }
+            }
         }
 
         // Convert word list to search result lists
