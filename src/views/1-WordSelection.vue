@@ -31,10 +31,11 @@
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
-                <div class="details flex-h">
+                <div class="upper">
                     <span class="term">{{w.word.word[0]}}</span>
-                    <span class="desc">{{w.word.definition[0]}}</span>
+                    <span class="matching">({{w.matchingForm}})</span>
                 </div>
+                <div class="desc secondary">{{w.word.definition[0]}}</div>
             </div>
         </div>
     </div>
