@@ -79,6 +79,9 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
         }
     }
 
+    // Sort descending
+    resultWords.sort((a, b) => b.match - a.match)
+
     // Convert word list to search result lists
     return resultWords.map(it =>
     {
