@@ -11,9 +11,10 @@
         </div>
 
         <div id="books" class="hy-card">
-            <div v-for="book in books" :key="book.name"
-                 class="book-container">
-                <i :class="icon(book)"></i>
+            <div v-for="book in books" :key="book.name" class="book-container flex-h">
+                <div class="icon flex-vcenter">
+                    <i :class="icon(book)"></i>
+                </div>
                 <div class="upper-row">
                     <span class="title">{{ book.name }}</span>
                 </div>
