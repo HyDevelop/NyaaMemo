@@ -42,6 +42,8 @@ import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter, Word} from "@/logic/models";
+import {isAlpnum, similarity} from "@/logic/utils";
+import {toRomaji} from "wanakana";
 
 interface SearchResult
 {
@@ -109,6 +111,9 @@ export default class WordSelection extends Vue
         const resultWords: { word: string; match: number }[] = []
         function addWord(w: string, m: number) { added.add(w); resultWords.push({ word: w, match: m }) }
 
+        // Romaji mode
+        const romajiMode = isAlpnum(term)
+
         // Loop through all dictionaries
         for (const dict of dictionaries)
         {
@@ -122,8 +127,11 @@ export default class WordSelection extends Vue
                 if (added.has(s)) continue
 
                 // Search word's forms
-                for (const form of word.word)
+                for (let form of word.word)
                 {
+                    // Romaji mode, convert word form to romaji
+                    if (romajiMode) form = toRomaji(form)
+
                     // Contains keyword
                     if (form.includes(term))
                     {
