@@ -145,7 +145,7 @@ export function similarity(s1: string, s2: string)
 /**
  * Check if a string only contains english alphanumeric or not
  */
-export function isEnglish(s: string)
+export function isAlpnum(s: string)
 {
     return /^[a-z0-9 -]*$/.test(s.toLowerCase())
 }
