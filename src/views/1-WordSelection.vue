@@ -35,7 +35,7 @@
                     <span class="term" v-html="w.w"></span>
                     <span class="matching" v-html="w.mf"></span>
                 </div>
-                <div class="desc secondary">{{w.word.definition[0]}}</div>
+                <div class="desc secondary nowrap e">{{w.word.definition[0]}}</div>
             </div>
         </div>
     </div>
