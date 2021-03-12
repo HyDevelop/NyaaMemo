@@ -6,8 +6,13 @@
                 You can either find words through direct searching or by adding them through a book.</p>
         </div>
 
-        <HyInput placeholder="Search..." v-model="search"></HyInput>
-        
+        <div class="input-container">
+            <HyInput placeholder="Search..." v-model="search"></HyInput>
+        </div>
+
+        <div class="hy-card">
+            w
+        </div>
     </div>
 </template>
 
@@ -29,6 +34,18 @@ export default class WordSelection extends Vue
     width: $app-width
     margin: 0 auto
 
+    // Vertical flex
+    display: flex
+    flex-flow: column
+    height: 100%
+
 #page-desc
-    margin-bottom: 40px
+    margin-bottom: 20px
+
+.hy-card
+    width: 100%
+    height: 100%
+    background-color: #edf1f2
+    border-radius: 15px
+    margin: 20px 0
 </style>
