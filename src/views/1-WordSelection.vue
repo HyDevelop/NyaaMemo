@@ -128,7 +128,7 @@ export default class WordSelection extends Vue
     margin-bottom: 20px
 
 .hy-card
-    overflow-y: scroll
+    overflow-y: auto
 
 .secondary
     font-size: smaller
