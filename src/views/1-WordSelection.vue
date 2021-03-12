@@ -1,5 +1,5 @@
 <template>
-    <div id="WordSelection" class="flex-v">
+    <div id="WordSelection" class="flex-v mh0">
         <div id="page-desc">
             <h2>Word Selection</h2>
             <p>You can select words and add them to your list on this screen.
@@ -16,7 +16,7 @@
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
-                <div class="details flex-vcenter">
+                <div class="details flex-vcenter mw0">
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
@@ -126,6 +126,9 @@ export default class WordSelection extends Vue
 
 #page-desc
     margin-bottom: 20px
+
+.hy-card
+    overflow-y: scroll
 
 .secondary
     font-size: smaller
