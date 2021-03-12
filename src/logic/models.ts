@@ -43,7 +43,7 @@ export interface Book
     name: string;
     description: string;
     publication?: string;
-    type: string;
+    type?: string;
 
     chapters: Chapter[];
 }
