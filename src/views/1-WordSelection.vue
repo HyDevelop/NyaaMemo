@@ -78,4 +78,8 @@ export default class WordSelection extends Vue
     margin: 0 20px
     border-bottom: 1px solid rgb(black, .1)
 
+    .icon
+        margin-right: 10px
+
+
 </style>
