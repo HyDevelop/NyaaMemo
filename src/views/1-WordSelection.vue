@@ -33,7 +33,7 @@
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
                 <div class="upper">
                     <span class="term">{{w.word.word[0]}}</span>
-                    <span class="matching" v-html="w.matchingForm"></span>
+                    <span v-if="w.word.word[0] !== w.matchingForm" class="matching" v-html="w.mf"></span>
                 </div>
                 <div class="desc secondary">{{w.word.definition[0]}}</div>
             </div>
@@ -47,6 +47,11 @@ import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
+
+interface SR2 extends SearchResult
+{
+    mf?: string;
+}
 
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
@@ -82,16 +87,18 @@ export default class WordSelection extends Vue
         }
     }
 
-    get searchedWords(): SearchResult[]
+    get searchedWords(): SR2[]
     {
         // Search
         const searchTerm = this.search.toLowerCase()
         const searchResults = searchWords(searchTerm, dictionaries)
 
         // Highlight matching places
-        searchResults.forEach(it =>
+        searchResults.map(it =>
         {
-            it.matchingForm = '(' + it.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`) + ')'
+            const sr: SR2 = it as SR2
+            sr.mf = '(' + it.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`) + ')'
+            return sr
         })
         console.log(searchResults)
         return searchResults
