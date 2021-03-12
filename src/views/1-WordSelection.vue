@@ -33,7 +33,7 @@
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
                 <div class="upper">
                     <span class="term">{{w.word.word[0]}}</span>
-                    <span class="matching">({{w.matchingForm}})</span>
+                    <span class="matching" v-html="w.matchingForm"></span>
                 </div>
                 <div class="desc secondary">{{w.word.definition[0]}}</div>
             </div>
@@ -84,7 +84,17 @@ export default class WordSelection extends Vue
 
     get searchedWords(): SearchResult[]
     {
-        return searchWords(this.search, dictionaries)
+        // Search
+        const searchTerm = this.search.toLowerCase()
+        const searchResults = searchWords(searchTerm, dictionaries)
+
+        // Highlight matching places
+        searchResults.forEach(it =>
+        {
+            it.matchingForm = '(' + it.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`) + ')'
+        })
+        console.log(searchResults)
+        return searchResults
     }
 }
 </script>
