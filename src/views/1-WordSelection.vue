@@ -32,8 +32,8 @@
         <div v-if="search" id="word-search" class="hy-card">
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
                 <div class="upper">
-                    <span v-if="w.word.word[0] !== w.matchingForm" class="matching" v-html="w.mf"></span>
-                    <span class="term" :class="w.match === 120 ? 'color-highlight':''">{{w.word.word[0]}}</span>
+                    <span class="term" v-html="w.w"></span>
+                    <span class="matching" v-html="w.mf"></span>
                 </div>
                 <div class="desc secondary">{{w.word.definition[0]}}</div>
             </div>
@@ -50,6 +50,7 @@ import {SearchResult, searchWords} from "@/logic/search";
 
 interface SR2 extends SearchResult
 {
+    w?: string;
     mf?: string;
 }
 
@@ -97,7 +98,17 @@ export default class WordSelection extends Vue
         searchResults.map(it =>
         {
             const sr: SR2 = it as SR2
-            sr.mf = '(' + it.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`) + ')'
+            sr.w = sr.word.word[0]
+            sr.mf = sr.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`)
+
+            // Only display matching form separately if matching form differs from the word
+            if (sr.matchingForm == sr.w)
+            {
+                sr.w = sr.mf
+                sr.mf = ''
+            }
+            else sr.mf = `(${sr.mf})`
+
             return sr
         })
         console.log(searchResults)
