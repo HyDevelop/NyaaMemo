@@ -8,6 +8,7 @@ const book: Book = {
     name: "LingoDeer Japanese 1 Words",
     description: "Around n5",
     publication: "",
+    type: 'platform',
     chapters: [
         {
             name: 'Section 1',
@@ -63,6 +64,7 @@ const book2: Book = {
     name: "LingoDeer Japanese 2 Words",
     description: "Around n4",
     publication: "",
+    type: 'platform',
     chapters: []
 }
 
@@ -85,7 +87,7 @@ export const dictionary: Dictionary = {
     }
 }
 
-export const books: Book[] = [book, book2, { name: "标准日本语", description: "TODO", chapters: [] }]
+export const books: Book[] = [book, book2, { name: "标准日本语", description: "TODO", type: 'book', chapters: [] }]
 export const dictionaries: Dictionary[] = [dictionary, jisho]
 
 // console.log(JSON.stringify(book))
