@@ -41,9 +41,7 @@
 import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
-import {Book, Chapter, Word} from "@/logic/models";
-import {isAlpnum, similarity} from "@/logic/utils";
-import {toRomaji} from "wanakana";
+import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
 
 @Options({components: {HyInput}})
