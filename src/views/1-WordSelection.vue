@@ -123,5 +123,7 @@ export default class WordSelection extends Vue
             margin-right: 5px
             flex: 1 0
 
+.ws-container.words
+    height: 40px
 
 </style>
