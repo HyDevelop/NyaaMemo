@@ -44,7 +44,7 @@ import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter, Word} from "@/logic/models";
 import {isAlpnum, similarity} from "@/logic/utils";
 import {toRomaji} from "wanakana";
-import {searchWords} from "@/logic/search";
+import {SearchResult, searchWords} from "@/logic/search";
 
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue

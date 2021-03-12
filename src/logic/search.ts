@@ -8,7 +8,7 @@ import {toRomaji} from "wanakana";
 /**
  * Search result data class
  */
-interface SearchResult
+export interface SearchResult
 {
     title: string;
     desc: string;
