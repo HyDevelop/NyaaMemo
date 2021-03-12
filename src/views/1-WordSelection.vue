@@ -30,8 +30,11 @@
 
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
-                {{w.title}} {{w.desc}}
             <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
+                <div class="details flex-h">
+                    <span class="term">{{w.title}}</span>
+                    <span class="desc">{{w.desc}}</span>
+                </div>
             </div>
         </div>
     </div>
