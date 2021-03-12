@@ -10,7 +10,11 @@
             <HyInput placeholder="Search..." v-model="search"></HyInput>
         </div>
 
-        <div class="hy-card">
+        <div id="books" class="hy-card">
+            <div v-for="book in books" :key="book.name"
+                 class="book-container">
+                {{book.name}}
+            </div>
         </div>
     </div>
 </template>
@@ -18,11 +22,13 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
+import {books} from "@/logic/dictionary-prototype";
 
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
 {
     search = ""
+    books = books
 }
 </script>
 
@@ -40,5 +46,8 @@ export default class WordSelection extends Vue
 
 #page-desc
     margin-bottom: 20px
+
+.book-container
+    height: 50px
 
 </style>
