@@ -15,7 +15,7 @@
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
-                <div class="details w100 flex-vcenter">
+                <div class="details flex-vcenter">
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
@@ -84,6 +84,9 @@ export default class WordSelection extends Vue
     border-bottom: 1px solid rgb(black, .1)
     text-align: left
     font-size: small
+
+    .details
+        flex: 1 0
 
     .icon
         margin-right: 15px
