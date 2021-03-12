@@ -15,10 +15,12 @@
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
-                <div class="upper-row">
-                    <span class="title">{{ book.name }}</span>
+                <div class="details w100 flex-vcenter">
+                    <div class="upper-row">
+                        <span class="title">{{ book.name }}</span>
+                    </div>
+                    {{ allWords(book).length }}
                 </div>
-                {{ allWords(book).length }}
             </div>
         </div>
     </div>
