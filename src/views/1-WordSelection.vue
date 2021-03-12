@@ -30,7 +30,9 @@
 
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
-            :3
+            <div v-for="w of searchedWords" :key="w.title">
+                {{w.title}} {{w.desc}}
+            </div>
         </div>
     </div>
 </template>
@@ -38,7 +40,7 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
-import {books} from "@/logic/dictionary-prototype";
+import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter, Word} from "@/logic/models";
 
 interface SearchResult
