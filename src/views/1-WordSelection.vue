@@ -10,7 +10,8 @@
             <HyInput placeholder="Search..." v-model="search"></HyInput>
         </div>
 
-        <div id="books" class="hy-card">
+        <!-- Only show when search bar is empty -->
+        <div v-if="!search" id="books" class="hy-card">
             <div v-for="book in books" :key="book.name" class="book-container flex-h">
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
@@ -26,6 +27,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- Only show when search bar is not empty -->
+        <div v-if="search" id="word-search" class="hy-card">
+            :3
+        </div>
     </div>
 </template>
 
@@ -33,7 +39,7 @@
 import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
 import {books} from "@/logic/dictionary-prototype";
-import {Book, Chapter} from "@/logic/models";
+import {Book, Chapter, Word} from "@/logic/models";
 
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
@@ -56,6 +62,9 @@ export default class WordSelection extends Vue
         return words
     }
 
+    /**
+     * Get the element UI icon of a book
+     */
     icon(book: Book): string
     {
         switch (book.type)
