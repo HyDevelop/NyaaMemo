@@ -12,7 +12,7 @@
 
         <!-- Only show when search bar is empty -->
         <div v-if="!search" id="books" class="hy-card">
-            <div v-for="book in books" :key="book.name" class="book-container flex-h">
+            <div v-for="book in books" :key="book.name" class="ws-container books flex-h">
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
@@ -30,8 +30,8 @@
 
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
-            <div v-for="w of searchedWords" :key="w.title">
                 {{w.title}} {{w.desc}}
+            <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
             </div>
         </div>
     </div>
@@ -95,11 +95,14 @@ export default class WordSelection extends Vue
 #page-desc
     margin-bottom: 20px
 
-.book-container
-    height: 50px
+.ws-container
     margin: 0 20px
     border-bottom: 1px solid rgb(black, .1)
     text-align: left
+    font-size: small
+
+.ws-container.books
+    height: 50px
     font-size: small
 
     .details
