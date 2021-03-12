@@ -89,7 +89,7 @@ export function okuriganaToFurigana(okurigana: string)
  * Find the number of changes required for one string to become another string
  * https://stackoverflow.com/a/36566052/7346633
  */
-function editDistance(s1: string, s2: string)
+export function editDistance(s1: string, s2: string)
 {
     s1 = s1.toLowerCase();
     s2 = s2.toLowerCase();
@@ -126,7 +126,7 @@ function editDistance(s1: string, s2: string)
  * Find the similarity proportion between two strings
  * https://stackoverflow.com/a/36566052/7346633
  */
-function similarity(s1: string, s2: string)
+export function similarity(s1: string, s2: string)
 {
     let longer = s1;
     let shorter = s2;
@@ -140,4 +140,12 @@ function similarity(s1: string, s2: string)
     const longerLength = longer.length;
     if (longerLength == 0) return 1.0;
     return (longerLength - editDistance(longer, shorter)) / longerLength;
+}
+
+/**
+ * Check if a string only contains english alphanumeric or not
+ */
+export function isEnglish(s: string)
+{
+    return /^[a-z0-9 -]*$/.test(s.toLowerCase())
 }
