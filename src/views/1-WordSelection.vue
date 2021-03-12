@@ -13,7 +13,10 @@
         <div id="books" class="hy-card">
             <div v-for="book in books" :key="book.name"
                  class="book-container">
-                {{book.name}}
+                <i :class="icon(book)"></i>
+                <div class="upper-row">
+                    <span class="title">{{ book.name }}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -23,12 +26,23 @@
 import {Options, Vue} from 'vue-class-component';
 import HyInput from "@/components/HyInput.vue";
 import {books} from "@/logic/dictionary-prototype";
+import {Book, Chapter} from "@/logic/models";
 
 @Options({components: {HyInput}})
 export default class WordSelection extends Vue
 {
     search = ""
     books = books
+
+    icon(book: Book): string
+    {
+        switch (book.type)
+        {
+            case 'book': return 'el-icon-collection'
+            case 'platform': return 'el-icon-mobile'
+            default: return 'el-icon-files'
+        }
+    }
 }
 </script>
 
