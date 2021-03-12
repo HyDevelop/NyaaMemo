@@ -20,7 +20,7 @@
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
-                    <div class="lower-row flex-h">
+                    <div class="lower-row flex-h secondary">
                         <span class="description nowrap e">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
@@ -98,6 +98,10 @@ export default class WordSelection extends Vue
 #page-desc
     margin-bottom: 20px
 
+.secondary
+    font-size: smaller
+    color: gray
+
 .ws-container
     margin: 0 20px
     border-bottom: 1px solid rgb(black, .1)
@@ -115,13 +119,9 @@ export default class WordSelection extends Vue
         margin-right: 15px
         font-size: medium
 
-    .lower-row
-        font-size: smaller
-        color: gray
-
-        .description
-            margin-right: 5px
-            flex: 1 0
+    .description
+        margin-right: 5px
+        flex: 1 0
 
 .ws-container.words
     height: 40px
