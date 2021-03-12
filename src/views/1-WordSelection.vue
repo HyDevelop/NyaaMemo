@@ -20,7 +20,7 @@
                         <span class="title">{{ book.name }}</span>
                     </div>
                     <div class="lower-row flex-h">
-                        <span class="description">{{ book.description }}</span>
+                        <span class="description nowrap e">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
                 </div>
