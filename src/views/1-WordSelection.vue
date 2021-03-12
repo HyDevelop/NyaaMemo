@@ -91,6 +91,36 @@ export default class WordSelection extends Vue
             default: return 'el-icon-files'
         }
     }
+
+    /**
+     * Search the word in the dictionary.
+     */
+    get searchedWords(): SearchResult[]
+    {
+        const term = this.search
+
+        // No input
+        if (!term) return []
+
+        // Create result word array
+        const added = new Set<string>([])
+        const resultWords: { word: string; match: number }[] = []
+        function addWord(w: string, m: number) { added.add(w); resultWords.push({ word: w, match: m }) }
+
+        // Loop through all dictionaries
+        for (const dict of dictionaries)
+        {
+            // Find exact matches
+            if (!added.has(term) && dict.words[term]) addWord(term, 100)
+        }
+
+        // Convert word list to search result lists
+        return resultWords.map(it =>
+        {
+            const d = getDefinition(it.word)
+            return { title: it.word, desc: d.definition[0], match: it.match }
+        })
+    }
 }
 </script>
 
