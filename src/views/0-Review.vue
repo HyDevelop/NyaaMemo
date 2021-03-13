@@ -7,7 +7,7 @@
         </div>
 
         <!-- Middle section -->
-        <div id="div-middle" class="f-grow1">
+        <div id="div-middle" class="f-grow1 mh0">
             <div v-if="answerShown" class="div-answer">
                 <div class="ans-title">Definition</div>
                 <div v-for="def in card.definition" :key="def" v-html="def"></div>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable fbox-center" @click="revealAnswer">
+            <div v-if="!answerShown" id="div-before-answer" class="clickable fbox-center h100" @click="revealAnswer">
                 <div id="div-ba-inside">
                     <div style="color: gray">Please say the definition out loud.</div>
                     <div class="color-highlight">Click the screen to show the answer.</div>
@@ -136,7 +136,6 @@ export default class Review extends Vue.with(Props)
             font-size: small;
             text-transform: uppercase;
             margin-bottom: 10px;
-            width: 100%;
             border-bottom: 2px solid #f5dab1;
         }
 
@@ -153,12 +152,9 @@ export default class Review extends Vue.with(Props)
     {
         // Vertical scroll on this one section only
         overflow-y: auto;
-        min-height: 0;
 
         #div-before-answer
         {
-            height: 100%;
-
             // Dynamic font size: max=24px, min=16px, middle=2.3vw
             font-size: min(24px, max(16px, 3vw));
         }
@@ -178,8 +174,6 @@ export default class Review extends Vue.with(Props)
         // Three buttons fill container width equally (https://stackoverflow.com/a/23345079/7346633)
         #div-buttons
         {
-            margin: auto;
-
             // Alignment
             button.el-button
             {
