@@ -5,7 +5,7 @@
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
 
-        <div id="div-middle">
+        <div id="div-middle" class="f-grow1">
             <div v-if="answerShown" class="div-answer">
                 <div class="ans-title">Definition</div>
                 <div v-for="def in card.definition" :key="def" v-html="def"></div>
@@ -148,8 +148,6 @@ export default class Review extends Vue.with(Props)
     // "Click the screen to show the answer" screen
     #div-middle
     {
-        flex: 1 2 auto;
-
         // Vertical scroll on this one section only
         overflow-y: auto;
         min-height: 0;
@@ -166,8 +164,6 @@ export default class Review extends Vue.with(Props)
     // Input field and buttons on the bottom
     #div-bottom
     {
-        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=0)
-        flex: 0 1 0;
         margin-bottom: 5vh;
 
         // Input field
