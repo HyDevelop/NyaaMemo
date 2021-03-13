@@ -42,77 +42,69 @@ export default class App extends Vue
 }
 </script>
 
-<style lang="scss" scoped>
-@import "css/global";
-
-#ReviewScreen
-{
-    background-color: #fff1f140;
-}
-
-// Progress bar on the top
-#div-progress
-{
-    // Height
-    height: max(6vh, 40px);
-
-    // Shadow
-    background-color: white;
-    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
-    margin-bottom: 20px;
-
-    // Buttons
-    .clickable
-    {
-        transition: all 1s ease;
-
-        // Alignment
-        height: 100%;
-        width: 70px;
-
-        // Counteract the styles for <a> tag
-        text-decoration: none;
-        color: #2c3e50;
-
-        // Size
-        font-size: max(2vh, 14px);
-
-        // Bottom Border
-        border-bottom: 3px solid #ffebc4;
-        box-sizing: border-box;
-    }
-
-    #lbl-progress
-    {
-        margin-left: 5px;
-        display: none;
-        font-size: 14px;
-    }
-
-    // Hover animation
-    i, div, span { transition: all .25s ease !important }
-    .clickable:hover i, .clickable:hover div { transform: translateY(-3px) !important }
-
-    // Active button
-    .clickable.router-link-exact-active
-    {
-        color: $c-highlight;
-        border-bottom: 3px solid $c-highlight;
-
-        flex: 1 0 auto;
-
-        // Unhide debug view
-        display: flex !important;
-
-        // Show progress only when active
-        #lbl-progress { display: inline-block }
-    }
-}
-</style>
-
-
 <style lang="sass">
 @import "css/global"
 @import "css/animations"
 @import "css/patches"
+</style>
+
+<style lang="sass" scoped>
+@import "css/global"
+
+#ReviewScreen
+    background-color: #fff1f140
+
+// Progress bar on the top
+#div-progress
+    // Height
+    height: max(6vh, 40px)
+
+    // Shadow
+    background-color: white
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%)
+    margin-bottom: 20px
+
+    // Buttons
+    .clickable
+        transition: all 1s ease
+
+        // Alignment
+        height: 100%
+        width: 70px
+
+        // Counteract the styles for <a> tag
+        text-decoration: none
+        color: #2c3e50
+
+        // Size
+        font-size: max(2vh, 14px)
+
+        // Bottom Border
+        border-bottom: 3px solid #ffebc4
+        box-sizing: border-box
+
+    #lbl-progress
+        margin-left: 5px
+        display: none
+        font-size: 14px
+
+    // Hover animation
+    i, div, span
+        transition: all .25s ease !important
+    .clickable:hover i, .clickable:hover div
+        transform: translateY(-3px) !important
+
+    // Active button
+    .clickable.router-link-exact-active
+        color: $c-highlight
+        border-bottom: 3px solid $c-highlight
+
+        flex: 1 0 auto
+
+        // Unhide debug view
+        display: flex !important
+
+        // Show progress only when active
+        #lbl-progress
+            display: inline-block
 </style>
