@@ -30,12 +30,17 @@
 
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
-            <div v-for="w of searchedWords" :key="w.title" class="ws-container words flex-vcenter">
-                <div class="upper">
-                    <span class="term" v-html="w.w"></span>
-                    <span class="matching" v-html="w.mf"></span>
+            <div v-for="w of searchedWords" :key="w.title" class="ws-container words f-h">
+                <div class="word-left flex-vcenter f-h-expand">
+                    <div class="upper">
+                        <span class="term f-h-expand" v-html="w.w"></span>
+                        <span class="matching" v-html="w.mf"></span>
+                    </div>
+                    <div class="desc secondary nowrap e" v-html="w.d"></div>
                 </div>
-                <div class="desc secondary nowrap e" v-html="w.d"></div>
+                <div class="word-right flex-vcenter">
+                    <div class="add-button">+</div>
+                </div>
             </div>
         </div>
     </div>
@@ -152,6 +157,8 @@ export default class WordSelection extends Vue
 .ws-container.words
     .term
         margin-right: 5px
-        flex: 1 0
+
+    .add-button
+
 
 </style>
