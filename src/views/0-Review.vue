@@ -115,7 +115,7 @@ export default class Review extends Vue.with(Props)
         #wordForm2
         {
             color: gray;
-            font-size: large;
+            font-size: medium;
         }
     }
 
@@ -125,12 +125,12 @@ export default class Review extends Vue.with(Props)
         // Container properties
         text-align: left;
         margin: 0 auto 30px;
-        font-size: x-large;
+        font-size: large;
 
         // Title of the answer container ("Definition" or "Sentences")
         .ans-title
         {
-            font-size: medium;
+            font-size: small;
             text-transform: uppercase;
             margin-bottom: 10px;
             width: 100%;
@@ -140,7 +140,7 @@ export default class Review extends Vue.with(Props)
         // Translation for the sample sentences
         .translation
         {
-            font-size: large;
+            font-size: medium;
             margin-bottom: 10px;
         }
     }
