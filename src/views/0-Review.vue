@@ -109,7 +109,7 @@ export default class Review extends Vue.with(Props)
     #div-title
     {
         padding-bottom: 20px;
-        margin: 0 20vw 10px;
+        margin-bottom: 10px;
 
         #word { font-size: xx-large }
         #wordForm2
