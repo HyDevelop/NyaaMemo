@@ -11,16 +11,27 @@ div.el-message-box
 div.el-message-box__message
   text-align: center
 
+// Message box buttons
 div.el-message-box__btns
-
   button.el-button.el-button--primary
     // Yes button
     color: #67C23A
     background: #f0f9eb
     border-color: #c2e7b0
 
+// Alert messages
 div.el-message
   min-width: 0
   width: calc(100vw - 40px) // 20px margin
   max-width: 380px
   box-shadow: 0 10px 20px -10px rgb(0 0 0 / 24%)
+
+// Button floating effect
+button.el-button.el-button--success:hover
+  box-shadow: 0 20px 20px -10px rgba(#67C23A, .8)
+
+button.el-button.el-button--warning:hover
+  box-shadow: 0 20px 20px -10px rgba(#E6A23C, .8)
+
+button.el-button.el-button--danger:hover
+  box-shadow: 0 20px 20px -10px rgba(#F56C6C, .8)

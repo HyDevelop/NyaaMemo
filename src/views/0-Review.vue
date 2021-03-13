@@ -188,11 +188,6 @@ export default class Review extends Vue.with(Props)
                 width: 100%;
             }
             button:last-child { margin-right: 0 }
-
-            // Float shadow effect
-            button:first-child:hover { box-shadow: 0 20px 20px -10px rgba(#67C23A, .8); }
-            button:hover { box-shadow: 0 20px 20px -10px rgba(#E6A23C, .8); }
-            button:last-child:hover { box-shadow: 0 20px 20px -10px rgba(#F56C6C, .8); }
         }
     }
 }
