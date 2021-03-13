@@ -62,7 +62,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
         if (!added.has(term) && dict.words[term]) addWord(dict.words[term], term, 120, false)
 
         // Find word-form matches
-        for (const [s, word] of Object.entries(dict.words))
+        outer:for (const [s, word] of Object.entries(dict.words))
         {
             // Word already included
             if (added.has(s)) continue
@@ -92,6 +92,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                 {
                     // Exact match
                     if (new RegExp(`.*[^a-z]${term}(s|[^a-z]).*`).test(def)) addWord(word, def, 105, true)
+                    continue outer
                 }
             }
         }
