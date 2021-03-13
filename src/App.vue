@@ -43,6 +43,8 @@ export default class App extends Vue
 </script>
 
 <style lang="scss" scoped>
+@import "css/global";
+
 #ReviewScreen
 {
     // Vertical Flex Alignment
@@ -105,9 +107,8 @@ export default class App extends Vue
     // Active button
     .clickable.router-link-exact-active
     {
-        //width: 100%;
-        color: #fb8080;
-        border-bottom: 3px solid #fb8080;
+        color: $c-highlight;
+        border-bottom: 3px solid $c-highlight;
 
         flex: 1 0 auto;
 
