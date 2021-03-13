@@ -25,6 +25,7 @@ import {Options, Vue} from 'vue-class-component';
 import CardInput from "@/views/0-Review.vue";
 import {splash} from "@/logic/constants";
 import {info} from "@/logic/utils";
+import store from "@/store";
 
 @Options({components: {CardInput}})
 export default class App extends Vue
@@ -32,6 +33,9 @@ export default class App extends Vue
     beforeCreate()
     {
         info('App starting...')
+
+        // Check user data
+        console.log(store.state.longTermWords)
     }
 
     mounted()

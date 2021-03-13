@@ -63,6 +63,20 @@ export interface Chapter
 }
 
 /**
+ * Local user data
+ */
+export interface LocalData
+{
+    /** Is user logged in */
+    loggedIn: boolean;
+
+    /** Long-term word list */
+    longTermWords: LTWordList;
+
+
+}
+
+/**
  * Long-term word list for a user
  */
 export type LTWordList = WordProgress[]
@@ -73,7 +87,7 @@ export type LTWordList = WordProgress[]
 export interface WordProgress
 {
     word: string;
-    dayLog: [];
+    dayLog: DayLogPoint[];
 }
 
 /**

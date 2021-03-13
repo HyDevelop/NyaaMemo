@@ -1,8 +1,23 @@
 import {createStore} from 'vuex'
+import VuexPersistence from "vuex-persist";
+import {LocalData} from "@/logic/models";
 
-export default createStore({
-    state: {},
+const vuexLocal = new VuexPersistence<LocalData>({
+    storage: window.localStorage
+})
+
+const store = createStore<LocalData>({
+    state: {
+        loggedIn: false,
+        longTermWords: []
+    },
     mutations: {},
     actions: {},
-    modules: {}
+    modules: {},
+    getters: {
+        getLongTermWords(state) { return state.longTermWords }
+    },
+    plugins: [vuexLocal.plugin]
 })
+
+export default store
