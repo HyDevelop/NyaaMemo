@@ -13,6 +13,8 @@ export interface SearchResult
     word: Word;
     matchingForm: string;
     match: number;
+
+    matchInDefinition: boolean;
 }
 
 /**
@@ -44,10 +46,10 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
     // Create result word array
     const added = new Set<string>([])
     const resultWords: SearchResult[] = []
-    function addWord(w: Word, f: string, m: number)
+    function addWord(w: Word, f: string, m: number, md: boolean)
     {
         added.add(w.word[0]);
-        resultWords.push({ word: w, matchingForm: f, match: m })
+        resultWords.push({ word: w, matchingForm: f, match: m, matchInDefinition: md })
     }
 
     // Romaji mode
@@ -57,7 +59,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
     for (const dict of dictionaries)
     {
         // Find exact matches
-        if (!added.has(term) && dict.words[term]) addWord(dict.words[term], term, 120)
+        if (!added.has(term) && dict.words[term]) addWord(dict.words[term], term, 120, false)
 
         // Find word-form matches
         for (const [s, word] of Object.entries(dict.words))
@@ -75,9 +77,21 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                 if (form.includes(term))
                 {
                     // Exact match or find similarity
-                    if (form == term) addWord(word, form, 110)
-                    else addWord(word, form, 100 * similarity(form, term))
-                    break
+                    if (form == term) addWord(word, form, 110, false)
+                    else addWord(word, form, 100 * similarity(form, term), false)
+                    continue outer
+                }
+            }
+
+            // Search in definition
+            if (!romajiMode) continue
+            for (const def of word.definition)
+            {
+                // Contains keyword
+                if (def.includes(term))
+                {
+                    // Exact match
+                    if (new RegExp(`.*[^a-z]${term}(s|[^a-z]).*`).test(def)) addWord(word, def, 105, true)
                 }
             }
         }
