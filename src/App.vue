@@ -124,4 +124,5 @@ export default class App extends Vue
 <style lang="sass">
 @import "css/global"
 @import "css/animations"
+@import "css/patches"
 </style>
