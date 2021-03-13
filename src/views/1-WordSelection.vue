@@ -35,7 +35,7 @@
                     <span class="term" v-html="w.w"></span>
                     <span class="matching" v-html="w.mf"></span>
                 </div>
-                <div class="desc secondary nowrap e">{{w.word.definition[0]}}</div>
+                <div class="desc secondary nowrap e" v-html="w.d"></div>
             </div>
         </div>
     </div>
@@ -47,11 +47,13 @@ import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
+import {highlight} from "@/logic/utils";
 
 interface SR2 extends SearchResult
 {
     w?: string;
     mf?: string;
+    d?: string;
 }
 
 @Options({components: {HyInput}})
@@ -99,15 +101,13 @@ export default class WordSelection extends Vue
         {
             const sr: SR2 = it as SR2
             sr.w = sr.word.word[0]
-            sr.mf = sr.matchingForm.replaceAll(searchTerm, `<span class="color-highlight">${searchTerm}</span>`)
+            sr.d = sr.word.definition[0]
+            sr.mf = ''
 
             // Only display matching form separately if matching form differs from the word
-            if (sr.matchingForm == sr.w)
-            {
-                sr.w = sr.mf
-                sr.mf = ''
-            }
-            else sr.mf = `(${sr.mf})`
+            if (sr.matchingForm == sr.w) sr.w = highlight(sr.w, searchTerm)
+            else if (sr.matchInDefinition) sr.d = highlight(sr.d, searchTerm)
+            else sr.mf = `(${highlight(sr.matchingForm, searchTerm)})`
 
             return sr
         })
