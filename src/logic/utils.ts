@@ -149,3 +149,11 @@ export function isAlpnum(s: string)
 {
     return /^[a-z0-9 -]*$/.test(s.toLowerCase())
 }
+
+/**
+ * Highlight a string
+ */
+export function highlight(s: string, sub: string)
+{
+    return s.replaceAll(sub, `<span class="color-highlight">${sub}</span>`)
+}
