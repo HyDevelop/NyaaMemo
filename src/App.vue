@@ -1,7 +1,7 @@
 <template>
     <div id="ReviewScreen">
         <div id="div-progress">
-            <router-link class="clickable flex-center" to="/">
+            <router-link class="clickable f-center" to="/">
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
                     <span id="lbl-progress" class="fade-in-left">
@@ -9,12 +9,12 @@
                     </span>
                 </div>
             </router-link>
-            <router-link class="clickable flex-center" to="/words"><i class="el-icon-s-unfold"></i></router-link>
-            <router-link class="clickable flex-center" to="/stats"><i class="el-icon-s-data"></i></router-link>
-            <router-link class="clickable flex-center" to="/settings"><i class="el-icon-s-tools"></i></router-link>
-            <router-link class="clickable flex-center" to="/create"><i class="el-icon-plus"></i></router-link>
+            <router-link class="clickable f-center" to="/words"><i class="el-icon-s-unfold"></i></router-link>
+            <router-link class="clickable f-center" to="/stats"><i class="el-icon-s-data"></i></router-link>
+            <router-link class="clickable f-center" to="/settings"><i class="el-icon-s-tools"></i></router-link>
+            <router-link class="clickable f-center" to="/create"><i class="el-icon-plus"></i></router-link>
 
-            <router-link class="clickable flex-center" style="display: none" to="/debaggu"><i class="el-icon-cpu"></i></router-link>
+            <router-link class="clickable f-center" style="display: none" to="/debaggu"><i class="el-icon-cpu"></i></router-link>
         </div>
         <router-view/>
     </div>

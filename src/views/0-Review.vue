@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable flex-center" @click="revealAnswer">
+            <div v-if="!answerShown" id="div-before-answer" class="clickable unselectable f-center" @click="revealAnswer">
                 <div id="div-ba-inside">
                     <div style="color: gray">Please say the definition out loud.</div>
                     <div class="color-highlight">Click the screen to show the answer.</div>

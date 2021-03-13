@@ -44,8 +44,8 @@ button
 .hov-float:hover
   transform: translateY(-5px) !important
 
-.flex-v
-  // Vertical flex
+// Vertical flex
+.f-v
   display: flex
   flex-flow: column
   height: 100%
@@ -53,14 +53,15 @@ button
 .mh0
   min-height: 0
 
-.flex-h
-  // Horizontal flex
+// Horizontal flex
+.f-h
   display: flex
   flex-flow: row
 
 .mw0
   min-width: 0
 
+// Flex properties
 .f-no-grow
   flex-grow: 0
 
@@ -89,19 +90,22 @@ button
 .w100
   width: 100%
 
+// Vertical Flex Center
 @mixin flex-vcenter
-  // Vertical Flex Center
   display: flex
   flex-flow: column
   justify-content: center
 
-.flex-center
+// Center both horizontally and vertically
+.f-center
   @include flex-vcenter
   align-items: center
 
+// Center vertically only
 .flex-vcenter
   @include flex-vcenter
 
+// No wrap text
 .nowrap
   overflow: hidden
   white-space: nowrap

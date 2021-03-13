@@ -1,5 +1,5 @@
 <template>
-    <div id="WordSelection" class="flex-v mh0">
+    <div id="WordSelection" class="f-v mh0">
         <div id="page-desc">
             <h2>Word Selection</h2>
             <p>You can select words and add them to your list on this screen.
@@ -12,7 +12,7 @@
 
         <!-- Only show when search bar is empty -->
         <div v-if="!search" id="books" class="hy-card">
-            <div v-for="book in books" :key="book.name" class="ws-container books flex-h">
+            <div v-for="book in books" :key="book.name" class="ws-container books f-h">
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
@@ -20,7 +20,7 @@
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
-                    <div class="lower-row flex-h secondary">
+                    <div class="lower-row f-h secondary">
                         <span class="description nowrap e f-h-expand">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
