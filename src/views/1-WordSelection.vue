@@ -106,7 +106,7 @@ export default class WordSelection extends Vue
 
             // Only display matching form separately if matching form differs from the word
             if (sr.matchingForm == sr.w) sr.w = highlight(sr.w, searchTerm)
-            else if (sr.matchInDefinition) sr.d = highlight(sr.d, searchTerm)
+            else if (sr.matchInDefinition) sr.d = highlight(sr.matchingForm, searchTerm)
             else sr.mf = `(${highlight(sr.matchingForm, searchTerm)})`
 
             return sr
