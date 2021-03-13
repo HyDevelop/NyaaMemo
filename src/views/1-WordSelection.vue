@@ -39,7 +39,7 @@
                     <div class="desc secondary nowrap e" v-html="w.d"></div>
                 </div>
                 <div class="word-right flex-vcenter">
-                    <div class="add-button">+</div>
+                    <i class="el-icon-circle-plus-outline"/>
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@ export default class WordSelection extends Vue
     .term
         margin-right: 5px
 
-    .add-button
-
+    i
+        font-size: medium
 
 </style>
