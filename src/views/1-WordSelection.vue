@@ -53,7 +53,8 @@ import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
-import {highlight, removeAll} from "@/logic/utils";
+import {highlight} from "@/logic/utils";
+import {local} from "@/store";
 
 interface SR2 extends SearchResult
 {
@@ -67,8 +68,6 @@ export default class WordSelection extends Vue
 {
     search = ""
     books = books
-
-    tempList = ['猫']
 
     /**
      * Get all of the words from this book
@@ -130,7 +129,7 @@ export default class WordSelection extends Vue
     isAdded(word: SR2)
     {
         // TODO: Implement this after user word list is implemented
-        return this.tempList.includes(word.word.word[0])
+        return local().hasWord(word.word.word[0])
     }
 
     /**
@@ -141,7 +140,7 @@ export default class WordSelection extends Vue
         const w = word.word.word[0]
 
         // Add
-        if (!this.tempList.includes(w)) this.tempList.push(w)
+        if (!local().hasWord(w)) local().addWord(w)
 
         // Remove
         else
@@ -152,7 +151,7 @@ export default class WordSelection extends Vue
                 confirmButtonText: 'はい',
                 cancelButtonText: 'いいえ'
             }).then(() => {
-                removeAll(this.tempList, w)
+                local().removeWord(w)
 
                 // @ts-ignore Send out success notification
                 this.$message({
