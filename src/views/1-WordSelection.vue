@@ -99,7 +99,7 @@ export default class WordSelection extends Vue
         {
             const sr: SR2 = it as SR2
             sr.w = sr.word.word[0]
-            sr.mf = sr.matchingForm.replace(searchTerm, `<span class="color-highlight">${searchTerm}</span>`)
+            sr.mf = sr.matchingForm.replaceAll(searchTerm, `<span class="color-highlight">${searchTerm}</span>`)
 
             // Only display matching form separately if matching form differs from the word
             if (sr.matchingForm == sr.w)
