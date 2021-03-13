@@ -68,8 +68,10 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
             if (added.has(s)) continue
 
             // Search word's forms
-            for (let form of word.word.reverse())
+            for (let i = word.word.length - 1; i >= 0; i--)
             {
+                let form = word.word[i]
+
                 // Romaji mode, convert word form to romaji
                 if (romajiMode) form = toRomaji(form)
 
