@@ -90,9 +90,28 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                 // Contains keyword
                 if (def.includes(term))
                 {
-                    // Exact match
-                    if (new RegExp(`.*[^a-z](${term}|${term}s)[^a-z].*`).test(def.toLowerCase())) addWord(word, def, 105, true)
-                    continue outer
+                    let maxSimilarity = 0
+
+                    // Split definition into words
+                    for (const wordInDef of def.toLowerCase().split(/[^a-z]/g))
+                    {
+                        // Exact match
+                        if (wordInDef == term)
+                        {
+                            addWord(word, def, 105, true)
+                            continue outer
+                        }
+
+                        // Partial match, find max similarity
+                        if (wordInDef.includes(term)) maxSimilarity = Math.max(maxSimilarity, similarity(wordInDef, term))
+                    }
+
+                    // Add partial match word
+                    if (maxSimilarity != 0)
+                    {
+                        addWord(word, def, maxSimilarity, true)
+                        continue outer
+                    }
                 }
             }
         }
