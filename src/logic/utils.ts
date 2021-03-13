@@ -151,6 +151,32 @@ export function isAlpnum(s: string)
 }
 
 /**
+ * Remove one item from an array
+ * https://stackoverflow.com/a/5767357/7346633
+ */
+export function removeOne<T>(arr: T[], value: T)
+{
+    const index = arr.indexOf(value);
+    if (index > -1) arr.splice(index, 1);
+    return arr;
+}
+
+/**
+ * Remove all matching items from an array
+ * https://stackoverflow.com/a/5767357/7346633
+ */
+export function removeAll<T>(arr: T[], value: T)
+{
+    let i = 0;
+    while (i < arr.length)
+    {
+        if (arr[i] === value) arr.splice(i, 1);
+        else ++i;
+    }
+    return arr;
+}
+
+/**
  * Highlight a string
  */
 export function highlight(s: string, sub: string)
