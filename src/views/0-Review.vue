@@ -110,6 +110,8 @@ export default class Review extends Vue.with(Props)
     // Min height so that when the content size cannot fit on this screen,
     //   the middle session would be compressed before anything else.
     min-height: 0;
+    width: $app-width;
+    margin: auto;
 
     // Title (aka. word)
     #div-title
@@ -133,7 +135,6 @@ export default class Review extends Vue.with(Props)
     {
         // Container properties
         text-align: left;
-        width: $app-width;
         margin: 0 auto 30px;
         font-size: x-large;
 
@@ -176,8 +177,6 @@ export default class Review extends Vue.with(Props)
     // Input field and buttons on the bottom
     #div-bottom
     {
-        width: 100vw;
-
         // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=0)
         flex: 0 1 0;
         margin-bottom: 5vh;
@@ -185,7 +184,6 @@ export default class Review extends Vue.with(Props)
         // Input field
         #div-input
         {
-            width: $app-width;
             margin: 0 auto 20px;
         }
 
@@ -194,7 +192,6 @@ export default class Review extends Vue.with(Props)
         {
             margin: auto;
             display: flex;
-            width: $app-width;
 
             // Alignment
             button.el-button
