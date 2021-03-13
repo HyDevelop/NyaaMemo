@@ -33,9 +33,6 @@ export default class App extends Vue
     beforeCreate()
     {
         info('App starting...')
-
-        // Check user data
-        console.log(store.state.longTermWords)
     }
 
     mounted()

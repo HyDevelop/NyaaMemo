@@ -1,10 +1,12 @@
 <template>
     <div id="word-input" class="fbox-v h100 mh0">
+        <!-- Top section - The word -->
         <div id="div-title" class="f-no-shrink">
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
 
+        <!-- Middle section -->
         <div id="div-middle" class="f-grow1">
             <div v-if="answerShown" class="div-answer">
                 <div class="ans-title">Definition</div>
@@ -27,6 +29,7 @@
             </div>
         </div>
 
+        <!-- Bottom section - Buttons -->
         <div id="div-bottom">
             <div id="div-input">
                 <el-input v-if="!answerShown && false /* TODO */" id="input" v-model="input"></el-input>
