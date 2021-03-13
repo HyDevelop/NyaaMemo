@@ -16,12 +16,12 @@
                 <div class="icon flex-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
-                <div class="details flex-vcenter mw0">
+                <div class="details flex-vcenter f-h-expand">
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
                     <div class="lower-row flex-h secondary">
-                        <span class="description nowrap e">{{ book.description }}</span>
+                        <span class="description nowrap e f-h-expand">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
                 </div>
@@ -142,16 +142,12 @@ export default class WordSelection extends Vue
     font-size: small
 
 .ws-container.books
-    .details
-        flex: 1 0
-
     .icon
         margin-right: 15px
         font-size: medium
 
     .description
         margin-right: 5px
-        flex: 1 0
 
 .ws-container.words
     .term
