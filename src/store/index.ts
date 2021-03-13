@@ -18,12 +18,27 @@ const vuexLocal = new VuexPersistence<LocalData>({
     storage: window.localStorage
 })
 
+/**
+ * Create vuex store
+ */
 const store = createStore<LocalData>({
     state: {
         loggedIn: false,
         longTermWords: []
     },
-    mutations: {},
+    mutations: {
+
+        /**
+         * Add a word to the long-term storage list
+         */
+        addWord(state: LocalData, w: string)
+        {
+            // Make sure it doesn't already exist
+            if (hasWord(state, w)) return
+
+            state.longTermWords.push({dayLog: [], word: w})
+        }
+    },
     actions: {},
     modules: {},
     plugins: [vuexLocal.plugin]
