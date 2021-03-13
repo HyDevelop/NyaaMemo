@@ -103,7 +103,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                         }
 
                         // Partial match, find max similarity
-                        if (wordInDef.includes(term)) maxSimilarity = Math.max(maxSimilarity, similarity(wordInDef, term))
+                        if (wordInDef.includes(term)) maxSimilarity = Math.max(maxSimilarity, similarity(wordInDef, term) * .5)
                     }
 
                     // Add partial match word
