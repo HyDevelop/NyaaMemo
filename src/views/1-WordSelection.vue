@@ -53,7 +53,7 @@ import HyInput from "@/components/HyInput.vue";
 import {books, dictionaries} from "@/logic/dictionary-prototype";
 import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
-import {highlight} from "@/logic/utils";
+import {highlight, removeAll} from "@/logic/utils";
 
 interface SR2 extends SearchResult
 {
@@ -140,7 +140,30 @@ export default class WordSelection extends Vue
      */
     addWord(word: SR2)
     {
-        this.tempList.push(word.word.word[0])
+        const w = word.word.word[0]
+
+        // Add
+        if (!this.tempList.includes(w)) this.tempList.push(w)
+
+        // Remove
+        else
+        {
+            // @ts-ignore Send out confirmation message
+            this.$confirm(`Are you sure you want to remove the word ${w} from your study list?
+                This cannot be undone (unless you're a time traveler).`, '_(:з」∠)_', {
+                confirmButtonText: 'はい',
+                cancelButtonText: 'いいえ',
+                type: 'warning'
+            }).then(() => {
+                removeAll(this.tempList, w)
+
+                // @ts-ignore Send out success notification
+                this.$message({
+                    type: 'success',
+                    message: 'You removed the word'
+                });
+            }).catch();
+        }
     }
 }
 </script>
