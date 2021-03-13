@@ -44,8 +44,9 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import {Word, SampleSentence} from "@/logic/models";
-import {blurAll, okuriganaToFurigana, rand} from "@/logic/utils";
+import {blurAll, hyDate, okuriganaToFurigana, rand} from "@/logic/utils";
 import {dictionary} from "@/logic/dictionary-prototype";
+import {local} from "@/store";
 
 class Props
 {
@@ -82,6 +83,15 @@ export default class Review extends Vue.with(Props)
         blurAll()
         console.log(difficulty)
         this.answerShown = false
+    }
+
+    /**
+     * Count total words to review
+     */
+    get countTotal()
+    {
+        const currentHyDate = hyDate(new Date())
+        return local().longTermWords.filter(it => it.dayLog[0].hyDate < currentHyDate)
     }
 }
 </script>

@@ -95,7 +95,7 @@ export interface WordProgress
  */
 export interface DayLogPoint
 {
-    date: number; // IMPORTANT! Date is a number that represents the number of days since 2021-Jan-1
+    hyDate: number; // IMPORTANT! Date is a number that represents the number of days since 2021-Jan-1
     rd: RememberDifficulty;
 }
 
