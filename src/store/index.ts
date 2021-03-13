@@ -1,6 +1,7 @@
 import {createStore, Store} from 'vuex'
 import VuexPersistence from "vuex-persist";
 import {LocalData} from "@/logic/models";
+import {removeIf} from "@/logic/utils";
 
 /**
  * Vuex automated persistence using localStorage
@@ -21,6 +22,12 @@ const store = createStore<LocalData>({
         _addWord(state: LocalData, w: string)
         {
             state.longTermWords.push({dayLog: [], word: w})
+        },
+
+        _removeWord(state: LocalData, w: string)
+        {
+            w = w.toLowerCase()
+            state.longTermWords = removeIf(state.longTermWords, it => it.word.toLowerCase() == w)
         }
     },
     actions: {},
@@ -61,6 +68,14 @@ class StateUtils
 
         // Add word
         this.store.commit('_addWord', w)
+    }
+
+    /**
+     * Remove word
+     */
+    removeWord(w: string)
+    {
+        this.store.commit('_removeWord', w)
     }
 
     /**
