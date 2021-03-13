@@ -16,7 +16,7 @@ export default class Settings extends Vue
 </script>
 
 <style lang="sass" scoped>
-@import "../global"
+@import "src/css/global"
 
 #Settings
     width: $app-width

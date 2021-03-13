@@ -169,7 +169,7 @@ export default class WordSelection extends Vue
 </script>
 
 <style lang="sass" scoped>
-@import "../global"
+@import "src/css/global"
 
 #WordSelection
     width: $app-width

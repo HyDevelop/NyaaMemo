@@ -88,7 +88,7 @@ export default class Review extends Vue.with(Props)
 
 <!-- Scoped styles -->
 <style lang="scss" scoped>
-@import "../global";
+@import "src/css/global";
 
 #word-input
 {

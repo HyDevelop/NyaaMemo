@@ -17,7 +17,7 @@ export default class Stats extends Vue
 </script>
 
 <style lang="sass" scoped>
-@import "../global"
+@import "src/css/global"
 
 #Stats
     width: $app-width

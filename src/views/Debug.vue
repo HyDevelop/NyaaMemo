@@ -29,7 +29,7 @@ export default class Debug extends Vue
 </script>
 
 <style lang="sass">
-@import "../global"
+@import "src/css/global"
 
 #Debug
     width: $app-width

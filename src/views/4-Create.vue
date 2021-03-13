@@ -19,7 +19,7 @@ export default class Create extends Vue
 </script>
 
 <style lang="sass" scoped>
-@import "../global"
+@import "src/css/global"
 
 #Create
     width: $app-width
