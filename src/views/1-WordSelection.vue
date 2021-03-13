@@ -108,7 +108,7 @@ export default class WordSelection extends Vue
         const searchResults = searchWords(searchTerm, dictionaries)
 
         // Highlight matching places
-        searchResults.map(it =>
+        return searchResults.map(it =>
         {
             const sr: SR2 = it as SR2
             sr.w = sr.word.word[0]
@@ -122,8 +122,6 @@ export default class WordSelection extends Vue
 
             return sr
         })
-        console.log(searchResults)
-        return searchResults
     }
 
     /**
