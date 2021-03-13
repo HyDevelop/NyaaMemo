@@ -100,89 +100,69 @@ export default class Review extends Vue.with(Props)
 </script>
 
 <!-- Scoped styles -->
-<style lang="scss" scoped>
-@import "src/css/global";
+<style lang="sass" scoped>
+@import "src/css/global"
 
 #word-input
-{
-    width: $app-width;
-    margin: auto;
+    width: $app-width
+    margin: auto
 
     // Title (aka. word)
     #div-title
-    {
-        padding-bottom: 20px;
-        margin-bottom: 10px;
+        padding-bottom: 20px
+        margin-bottom: 10px
 
-        #word { font-size: xx-large }
+        #word
+            font-size: xx-large
+
         #wordForm2
-        {
-            color: gray;
-            font-size: medium;
-        }
-    }
+            color: gray
+            font-size: medium
 
     // Answer container
     .div-answer
-    {
         // Container properties
-        text-align: left;
-        margin: 0 auto 30px;
-        font-size: large;
+        text-align: left
+        margin-bottom: 30px
+        font-size: large
 
         // Title of the answer container ("Definition" or "Sentences")
         .ans-title
-        {
-            font-size: small;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #f5dab1;
-        }
+            font-size: small
+            text-transform: uppercase
+            margin-bottom: 10px
+            border-bottom: 2px solid #f5dab1
 
         // Translation for the sample sentences
         .translation
-        {
-            font-size: medium;
-            margin-bottom: 10px;
-        }
-    }
+            font-size: medium
+            margin-bottom: 10px
 
     // "Click the screen to show the answer" screen
     #div-middle
-    {
         // Vertical scroll on this one section only
-        overflow-y: auto;
+        overflow-y: auto
 
         #div-before-answer
-        {
             // Dynamic font size: max=24px, min=16px, middle=2.3vw
-            font-size: min(24px, max(16px, 3vw));
-        }
-    }
+            font-size: min(24px, max(16px, 3vw))
 
     // Input field and buttons on the bottom
     #div-bottom
-    {
-        margin-bottom: 5vh;
+        margin-bottom: 5vh
 
         // Input field
         #div-input
-        {
-            margin: 0 auto 20px;
-        }
+            margin: 0 auto 20px
 
         // Three buttons fill container width equally (https://stackoverflow.com/a/23345079/7346633)
         #div-buttons
-        {
             // Alignment
             button.el-button
-            {
-                margin-left: 0;
-                margin-right: 20px;
-                width: 100%;
-            }
-            button:last-child { margin-right: 0 }
-        }
-    }
-}
+                margin-left: 0
+                margin-right: 20px
+                width: 100%
+
+            button:last-child
+                margin-right: 0
 </style>
