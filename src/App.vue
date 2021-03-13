@@ -1,6 +1,6 @@
 <template>
-    <div id="ReviewScreen">
-        <div id="div-progress">
+    <div id="ReviewScreen" class="f-v h100">
+        <div id="div-progress" class="f-h f-no-shrink">
             <router-link class="clickable f-center" to="/">
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
@@ -47,20 +47,12 @@ export default class App extends Vue
 
 #ReviewScreen
 {
-    // Vertical Flex Alignment
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-
     background-color: #fff1f140;
 }
 
 // Progress bar on the top
 #div-progress
 {
-    // Vertical Flex Alignment: flex(grow=0, shrink=0, basis=auto)
-    flex: 0 0 auto;
-
     // Height
     height: max(6vh, 40px);
 
@@ -68,9 +60,6 @@ export default class App extends Vue
     background-color: white;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin-bottom: 20px;
-
-    // Horizontal flexbox
-    display: flex;
 
     // Buttons
     .clickable
