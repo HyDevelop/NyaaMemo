@@ -20,18 +20,22 @@ $c-highlight: #ff7878
 .color-highlight
   color: $c-highlight
 
-// Clickable text
-.clickable:hover
-  cursor: pointer
-
 // Non-selectable text
-.unselectable
+@mixin unselectable
   -webkit-touch-callout: none
   -webkit-user-select: none
   -khtml-user-select: none
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
+
+.unselectable
+  @include unselectable
+
+// Clickable text
+.clickable:hover
+  cursor: pointer
+  @include unselectable
 
 // Vertical flex
 .fbox-v
