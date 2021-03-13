@@ -200,7 +200,7 @@ export function highlight(s: string, sub: string)
     return s.replaceAll(sub, `<span class="color-highlight">${sub}</span>`)
 }
 
-const hyDateStart = moment('2021-01-01', 'YYYY-MM-DD', true)
+const hyDateStart = moment('2021-01-01', 'YYYY-MM-DD')
 
 /**
  * Yay! I've created my own date format!
@@ -213,8 +213,9 @@ export function hyDate(date: Date): number
     const month = date.getMonth() + 1; // Months from 1-12
     const day = date.getDate();
     const year = date.getFullYear();
+    const m = moment(`${year}-${month}-${day}`, 'YYYY-MM-DD')
 
-    return hyDateStart.diff(moment(`${year}-${month}-${day}`, 'YYYY-MM-DD', true), 'days')
+    return m.diff(hyDateStart, 'days')
 }
 
 
