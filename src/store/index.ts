@@ -14,10 +14,16 @@ const store = createStore<LocalData>({
     mutations: {},
     actions: {},
     modules: {},
-    getters: {
-        getLongTermWords(state) { return state.longTermWords }
-    },
     plugins: [vuexLocal.plugin]
 })
 
 export default store
+
+/**
+ * For some reason IntelliJ wouldn't autocomplete if I just typed store.state,
+ * so I'll have to encapsulate it here and specify the type.
+ */
+export function getLocal(): LocalData
+{
+    return store.state as LocalData
+}
