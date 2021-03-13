@@ -52,6 +52,18 @@ class StateUtils
     }
 
     /**
+     * Add a word to the list
+     */
+    addWord(w: string)
+    {
+        // Make sure it doesn't already exist
+        if (this.hasWord(w)) return
+
+        // Add word
+        this.store.commit('_addWord', w)
+    }
+
+    /**
      * Getters for the original state
      */
     get state() { return this.store.state as LocalData }
