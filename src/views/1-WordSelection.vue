@@ -185,7 +185,7 @@ export default class WordSelection extends Vue
 
     // Add (+) button
     .word-right
-        font-size: medium
+        font-size: large
         color: gray
         padding-left: 10px
         text-align: right
