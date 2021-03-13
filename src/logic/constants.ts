@@ -6,5 +6,5 @@ export const splash = `%c
 |__|__|_|_|_,_|_|_|___|_____|
 
 -- Version %s
--- Made with ❤ by HyDEV
+-- Made with 🌸 by HyDEV
 `

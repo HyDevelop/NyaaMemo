@@ -23,11 +23,22 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import CardInput from "@/views/0-Review.vue";
+import {splash} from "@/logic/constants";
+import {info} from "@/logic/utils";
 
 @Options({components: {CardInput}})
 export default class App extends Vue
 {
+    beforeCreate()
+    {
+        info('App starting...')
+    }
 
+    mounted()
+    {
+        console.log(splash, `font-size: 18px; color: #fb8080;`, 'α-0.0.0-preview-01')
+        info('App started.')
+    }
 }
 </script>
 
