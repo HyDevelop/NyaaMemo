@@ -1,15 +1,6 @@
-import {createStore} from 'vuex'
+import {createStore, Store} from 'vuex'
 import VuexPersistence from "vuex-persist";
 import {LocalData} from "@/logic/models";
-
-/**
- * Check if a word is already added to the long-term storage list.
- */
-export function hasWord(state: LocalData, w: string): boolean
-{
-    w = w.toLowerCase()
-    return state.longTermWords.some(it => it.word.toLowerCase() == w)
-}
 
 /**
  * Vuex automated persistence using localStorage
@@ -27,15 +18,8 @@ const store = createStore<LocalData>({
         longTermWords: []
     },
     mutations: {
-
-        /**
-         * Add a word to the long-term storage list
-         */
-        addWord(state: LocalData, w: string)
+        _addWord(state: LocalData, w: string)
         {
-            // Make sure it doesn't already exist
-            if (hasWord(state, w)) return
-
             state.longTermWords.push({dayLog: [], word: w})
         }
     },
@@ -47,10 +31,39 @@ const store = createStore<LocalData>({
 export default store
 
 /**
+ * Why is vuex so unnecessarily complicated ;-;
+ */
+class StateUtils
+{
+    store: Store<LocalData>
+
+    constructor(store: Store<LocalData>)
+    {
+        this.store = store
+    }
+
+    /**
+     * Check if a word is already added to the long-term storage list.
+     */
+    hasWord(w: string): boolean
+    {
+        w = w.toLowerCase()
+        return this.state.longTermWords.some(it => it.word.toLowerCase() == w)
+    }
+
+    /**
+     * Getters for the original state
+     */
+    get state() { return this.store.state as LocalData }
+    get loggedIn() { return this.state.loggedIn }
+    get longTermWords() { return this.state.longTermWords }
+}
+
+/**
  * For some reason IntelliJ wouldn't autocomplete if I just typed store.state,
  * so I'll have to encapsulate it here and specify the type.
  */
-export function getLocal(): LocalData
+export function local(): StateUtils
 {
-    return store.state as LocalData
+    return new StateUtils(store)
 }
