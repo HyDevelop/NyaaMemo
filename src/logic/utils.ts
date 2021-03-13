@@ -1,4 +1,5 @@
 import * as wanakana from 'wanakana';
+import moment from 'moment';
 
 // https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array
 export function rand<T>(array: T[], n: number)
@@ -197,6 +198,23 @@ export function removeIf<T>(arr: T[], callback: (val: T, i: number) => boolean)
 export function highlight(s: string, sub: string)
 {
     return s.replaceAll(sub, `<span class="color-highlight">${sub}</span>`)
+}
+
+const hyDateStart = moment('2021-01-01', 'YYYY-MM-DD', true)
+
+/**
+ * Yay! I've created my own date format!
+ * Basically, a HyDate is the number of days since 2021 Jan 01 (It can be negative)
+ * This way, comparing two dates is as simple as subtracting two numbers!
+ * And also, you don't have to worry about timezones because they don't exist in HyDate! (?
+ */
+export function hyDate(date: Date): number
+{
+    const month = date.getMonth() + 1; // Months from 1-12
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    return hyDateStart.diff(moment(`${year}-${month}-${day}`, 'YYYY-MM-DD', true), 'days')
 }
 
 
