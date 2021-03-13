@@ -38,8 +38,9 @@
                     </div>
                     <div class="desc secondary nowrap e" v-html="w.d"></div>
                 </div>
-                <div class="word-right flex-vcenter">
-                    <i class="el-icon-circle-plus-outline"/>
+                <div class="word-right flex-vcenter" @click="addWord(w)">
+                    <i v-if="!isAdded(w)" class="el-icon-circle-plus-outline"/>
+                    <i v-else class="el-icon-success" style="color: #88d88b"/>
                 </div>
             </div>
         </div>
@@ -168,6 +169,7 @@ export default class WordSelection extends Vue
     text-align: left
     font-size: small
 
+// Book list
 .ws-container.books
     .icon
         margin-right: 15px
@@ -176,11 +178,16 @@ export default class WordSelection extends Vue
     .description
         margin-right: 5px
 
+// Search result
 .ws-container.words
     .term
         margin-right: 5px
 
-    i
+    // Add (+) button
+    .word-right
         font-size: medium
+        color: gray
+        padding-left: 10px
+        text-align: right
 
 </style>
