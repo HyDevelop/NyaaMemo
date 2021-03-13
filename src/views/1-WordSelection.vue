@@ -67,6 +67,8 @@ export default class WordSelection extends Vue
     search = ""
     books = books
 
+    tempList = ['猫']
+
     /**
      * Get all of the words from this book
      */
@@ -95,6 +97,9 @@ export default class WordSelection extends Vue
         }
     }
 
+    /**
+     * Get search results
+     */
     get searchedWords(): SR2[]
     {
         // Search
@@ -118,6 +123,23 @@ export default class WordSelection extends Vue
         })
         console.log(searchResults)
         return searchResults
+    }
+
+    /**
+     * Check if a word is already added to the list
+     */
+    isAdded(word: SR2)
+    {
+        // TODO: Implement this after user word list is implemented
+        return this.tempList.includes(word.word.word[0])
+    }
+
+    /**
+     * Add a word to the user's study list
+     */
+    addWord(word: SR2)
+    {
+        this.tempList.push(word.word.word[0])
     }
 }
 </script>
