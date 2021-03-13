@@ -187,8 +187,9 @@ export default class Review extends Vue.with(Props)
             width: $app-width;
 
             // Alignment
-            button
+            button.el-button
             {
+                margin-left: 0;
                 margin-right: 20px;
                 width: 100%;
             }
