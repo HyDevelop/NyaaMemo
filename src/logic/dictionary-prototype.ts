@@ -73,6 +73,8 @@ export const dictionary: Dictionary = {
     description: "Created for my own use, not really accurate",
     author: "Hykilpikonna",
     license: "CC0",
+    wordLanguage: "japanese",
+    definitionLanguage: "english",
     words: {
         '猫': {
             word: ["猫", "ねこ"],

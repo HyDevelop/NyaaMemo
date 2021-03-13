@@ -3,6 +3,8 @@
   "author": "Jisho.org",
   "description": "",
   "license": "",
+  "wordLanguage": "japanese",
+  "definitionLanguage": "english",
   "words": {
     "韓国人": {
       "word": [

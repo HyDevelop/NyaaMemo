@@ -8,6 +8,8 @@ export interface Dictionary
     description: string;
     author: string;
     license: string;
+    wordLanguage: string;
+    definitionLanguage: string;
 
     // words['word (main form)'] = Word
     // Indexes should be built subsequently on client side
