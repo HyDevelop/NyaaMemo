@@ -91,7 +91,7 @@ export function searchWords(term: string, dictionaries: Dictionary[]): SearchRes
                 if (def.includes(term))
                 {
                     // Exact match
-                    if (new RegExp(`.*[^a-z]${term}(s|[^a-z]).*`).test(def)) addWord(word, def, 105, true)
+                    if (new RegExp(`.*[^a-z](${term}|${term}s)[^a-z].*`).test(def.toLowerCase())) addWord(word, def, 105, true)
                     continue outer
                 }
             }
