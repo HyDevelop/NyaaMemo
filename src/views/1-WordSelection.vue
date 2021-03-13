@@ -1,5 +1,5 @@
 <template>
-    <div id="WordSelection" class="f-v mh0">
+    <div id="WordSelection" class="fbox-v mh0">
         <div id="page-desc">
             <h2>Word Selection</h2>
             <p>You can select words and add them to your list on this screen.
@@ -12,15 +12,15 @@
 
         <!-- Only show when search bar is empty -->
         <div v-if="!search" id="books" class="hy-card">
-            <div v-for="book in books" :key="book.name" class="ws-container books f-h">
-                <div class="icon flex-vcenter">
+            <div v-for="book in books" :key="book.name" class="ws-container books fbox-h">
+                <div class="icon fbox-vcenter">
                     <i :class="icon(book)"></i>
                 </div>
-                <div class="details flex-vcenter f-h-expand">
+                <div class="details fbox-vcenter f-h-expand">
                     <div class="upper-row">
                         <span class="title">{{ book.name }}</span>
                     </div>
-                    <div class="lower-row f-h secondary">
+                    <div class="lower-row fbox-h secondary">
                         <span class="description nowrap e f-h-expand">{{ book.description }}</span>
                         <span class="word-count">({{ allWords(book).length }} words)</span>
                     </div>
@@ -30,15 +30,15 @@
 
         <!-- Only show when search bar is not empty -->
         <div v-if="search" id="word-search" class="hy-card">
-            <div v-for="w of searchedWords" :key="w.title" class="ws-container words f-h">
-                <div class="word-left flex-vcenter f-h-expand">
+            <div v-for="w of searchedWords" :key="w.title" class="ws-container words fbox-h">
+                <div class="word-left fbox-vcenter f-h-expand">
                     <div class="upper">
                         <span class="term f-h-expand" v-html="w.w"></span>
                         <span class="matching" v-html="w.mf"></span>
                     </div>
                     <div class="desc secondary nowrap e" v-html="w.d"></div>
                 </div>
-                <div class="word-right flex-vcenter" @click="addWord(w)">
+                <div class="word-right fbox-vcenter" @click="addWord(w)">
                     <i v-if="!isAdded(w)" class="el-icon-circle-plus-outline"/>
                     <i v-else class="el-icon-success" style="color: #88d88b"/>
                 </div>
