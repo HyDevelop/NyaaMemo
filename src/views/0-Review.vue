@@ -1,6 +1,6 @@
 <template>
-    <div id="word-input">
-        <div id="div-title">
+    <div id="word-input" class="fbox-v h100 mh0">
+        <div id="div-title" class="f-no-shrink">
             <div id="word">{{ card.word[0] }}</div>
             <div id="wordForm2">{{ card.word[1] }}</div>
         </div>
@@ -32,7 +32,7 @@
                 <el-input v-if="!answerShown && false /* TODO */" id="input" v-model="input"></el-input>
             </div>
 
-            <div id="div-buttons">
+            <div id="div-buttons" class="fbox-h">
                 <el-button class="hov-float" type="success" plain @click="clickDone(0)">簡単</el-button>
                 <el-button class="hov-float" type="warning" plain @click="clickDone(1)">難い</el-button>
                 <el-button class="hov-float" type="danger"  plain @click="clickDone(2)">忘れた</el-button>
@@ -102,14 +102,6 @@ export default class Review extends Vue.with(Props)
 
 #word-input
 {
-    // Vertical Flex Alignment
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-
-    // Min height so that when the content size cannot fit on this screen,
-    //   the middle session would be compressed before anything else.
-    min-height: 0;
     width: $app-width;
     margin: auto;
 
@@ -118,9 +110,6 @@ export default class Review extends Vue.with(Props)
     {
         padding-bottom: 20px;
         margin: 0 20vw 10px;
-
-        // Vertical Flex Alignment: flex(grow=0, shrink=1, basis=auto)
-        flex: 0 1 auto;
 
         #word { font-size: xx-large }
         #wordForm2
@@ -191,7 +180,6 @@ export default class Review extends Vue.with(Props)
         #div-buttons
         {
             margin: auto;
-            display: flex;
 
             // Alignment
             button.el-button
