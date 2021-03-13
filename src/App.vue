@@ -9,10 +9,10 @@
                     </span>
                 </div>
             </router-link>
-            <router-link class="clickable fbox-center" to="/words"><i class="el-icon-s-unfold"></i></router-link>
-            <router-link class="clickable fbox-center" to="/stats"><i class="el-icon-s-data"></i></router-link>
-            <router-link class="clickable fbox-center" to="/settings"><i class="el-icon-s-tools"></i></router-link>
-            <router-link class="clickable fbox-center" to="/create"><i class="el-icon-plus"></i></router-link>
+            <router-link class="clickable fbox-center" to="/words"><div><i class="el-icon-s-unfold"></i></div></router-link>
+            <router-link class="clickable fbox-center" to="/stats"><div><i class="el-icon-s-data"></i></div></router-link>
+            <router-link class="clickable fbox-center" to="/settings"><div><i class="el-icon-s-tools"></i></div></router-link>
+            <router-link class="clickable fbox-center" to="/create"><div><i class="el-icon-plus"></i></div></router-link>
 
             <router-link class="clickable fbox-center" style="display: none" to="/debaggu"><i class="el-icon-cpu"></i></router-link>
         </div>
@@ -86,20 +86,19 @@ export default class App extends Vue
     #lbl-progress
         margin-left: 5px
         display: none
-        font-size: 14px
+        font-size: 12px
 
     // Hover animation
     i, div, span
         transition: all .25s ease !important
-    .clickable:hover i, .clickable:hover div
+    .clickable:hover div
         transform: translateY(-3px) !important
 
     // Active button
     .clickable.router-link-exact-active
         color: $c-highlight
         border-bottom: 3px solid $c-highlight
-
-        flex: 1 0 auto
+        flex-grow: 1
 
         // Unhide debug view
         display: flex !important
