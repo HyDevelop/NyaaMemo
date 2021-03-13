@@ -149,11 +149,10 @@ export default class WordSelection extends Vue
         else
         {
             // @ts-ignore Send out confirmation message
-            this.$confirm(`Are you sure you want to remove the word ${w} from your study list?
-                This cannot be undone (unless you're a time traveler).`, '_(:з」∠)_', {
+            this.$confirm(`Are you sure you want to remove the word from your study list?
+                This cannot be undone (unless you're a time traveler).`, {
                 confirmButtonText: 'はい',
-                cancelButtonText: 'いいえ',
-                type: 'warning'
+                cancelButtonText: 'いいえ'
             }).then(() => {
                 removeAll(this.tempList, w)
 
