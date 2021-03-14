@@ -32,7 +32,10 @@ const store = createStore<LocalData>({
         {
             w = w.toLowerCase()
             state.longTermProgress = removeIf(state.longTermProgress, it => it.word.toLowerCase() == w)
-        }
+        },
+
+        _setDailyProgress(state: LocalData, dp: DailyProgress) { state.dailyProgress = dp },
+        _setSettings(state: LocalData, s: Settings) { state.settings = s }
     },
     actions: {},
     modules: {},
@@ -83,11 +86,15 @@ class StateUtils
     }
 
     /**
-     * Getters for the original state
+     * Getters and setters for the original state
      */
     get state() { return this.store.state as LocalData }
     get loggedIn() { return this.state.loggedIn }
     get longTermProgress() { return this.state.longTermProgress }
+    get dailyProgress() { return this.state.dailyProgress }
+    set dailyProgress(value: DailyProgress | undefined) { this.store.commit('_setDailyProgress', value) }
+    get settings() { return this.state.settings }
+    set settings(value: Settings) { this.store.commit('_setSettings', value) }
 }
 
 /**
