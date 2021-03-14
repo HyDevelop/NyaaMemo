@@ -83,9 +83,6 @@ export function checkDailyProgress()
     // Loop through all words in long-term list
     for (const word of l.longTermProgress)
     {
-        // dayLog[0] is always the latest if it exists.
-        const dl0 = word.dayLog[0]
-
         // Get how much the word needs to be reviewed
         const importance = needToBeReviewed(word, today, lsSrsP)
 
