@@ -66,11 +66,13 @@ export function checkDailyProgress()
             l.dailyProgress = undefined
         }
 
-        // If the max per day is larger than the current max per day, we're going to expand the current word list,
-        // And if the max per day is smaller than the current max per day, we're going to regenerate it
-        if (l.dailyProgress && limit > l.dailyProgress.limit)
+        // If the max per day changed, just change the value, we don't have to regenerate anything
+        if (l.dailyProgress && limit != l.dailyProgress.limit)
         {
-            l.dailyProgress = undefined
+            const dp = l.dailyProgress
+            dp.limit = limit
+            l.dailyProgress = dp
+            return
         }
     }
 
