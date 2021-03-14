@@ -20,7 +20,14 @@ const store = createStore<LocalData>({
         loggedIn: false,
         longTermProgress: [],
         dailyProgress: undefined,
-        settings: { maxPerDay: 20 }
+
+        /**
+         * Default values for settings
+         */
+        settings: {
+            maxPerDay: 20,
+            ltSrsPattern: [3, 5, 7, 10, 14, 30, 60, 90, 180],
+        }
     },
     mutations: {
         _addWord(state: LocalData, w: string)
