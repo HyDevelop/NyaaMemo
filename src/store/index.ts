@@ -16,18 +16,18 @@ const vuexLocal = new VuexPersistence<LocalData>({
 const store = createStore<LocalData>({
     state: {
         loggedIn: false,
-        longTermWords: []
+        longTermProgress: []
     },
     mutations: {
         _addWord(state: LocalData, w: string)
         {
-            state.longTermWords.push({dayLog: [], word: w})
+            state.longTermProgress.push({dayLog: [], word: w})
         },
 
         _removeWord(state: LocalData, w: string)
         {
             w = w.toLowerCase()
-            state.longTermWords = removeIf(state.longTermWords, it => it.word.toLowerCase() == w)
+            state.longTermProgress = removeIf(state.longTermProgress, it => it.word.toLowerCase() == w)
         }
     },
     actions: {},
@@ -55,7 +55,7 @@ class StateUtils
     hasWord(w: string): boolean
     {
         w = w.toLowerCase()
-        return this.state.longTermWords.some(it => it.word.toLowerCase() == w)
+        return this.state.longTermProgress.some(it => it.word.toLowerCase() == w)
     }
 
     /**
@@ -83,7 +83,7 @@ class StateUtils
      */
     get state() { return this.store.state as LocalData }
     get loggedIn() { return this.state.loggedIn }
-    get longTermWords() { return this.state.longTermWords }
+    get longTermProgress() { return this.state.longTermProgress }
 }
 
 /**

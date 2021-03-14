@@ -71,31 +71,64 @@ export interface LocalData
     loggedIn: boolean;
 
     /** Long-term word list */
-    longTermWords: LTWordList;
+    longTermProgress: LTProgress;
 
+    /** Daily progress */
+    dailyProgress?: DailyProgress;
+}
 
+/**
+ * Progress data for today. Completed words are immediately transferred to a DayLogPoint in longTermWords.
+ *
+ * 1. If the day was not completed after the day ended, or if the user switched algorithms,
+ *   - add the completed words to long-term list and
+ *   - ignore the non-completed words, then start a new day
+ */
+export interface DailyProgress
+{
+    day: number; // Day in the form of HyDate (number of days since 2021-Jan-1)
+    algorithm: string;
+    wordsInProgress: DailyWordProgress[];
+}
+
+/**
+ * Memorization progress for one word on this day
+ */
+export interface DailyWordProgress
+{
+    word: string;
+    timeLog: DailyLogPoint;
+}
+
+/**
+ * Log point for one word on a specific time
+ */
+export interface DailyLogPoint
+{
+    time: Date;
+    rd: RememberDifficulty;
 }
 
 /**
  * Long-term word list for a user
  */
-export type LTWordList = WordProgress[]
+export type LTProgress = LTWordProgress[]
 
 /**
  * User memorization progress for a word
  */
-export interface WordProgress
+export interface LTWordProgress
 {
     word: string;
-    dayLog: DayLogPoint[];
+    dayLog: LTLogPoint[];
 }
 
 /**
  * Log point for one word on one day
  */
-export interface DayLogPoint
+export interface LTLogPoint
 {
-    hyDate: number; // IMPORTANT! Date is a number that represents the number of days since 2021-Jan-1
+    hyDate: number;
     rd: RememberDifficulty;
 }
 

@@ -94,7 +94,7 @@ export default class Review extends Vue.with(Props)
     get countTotal()
     {
         const currentHyDate = hyDate(new Date())
-        return local().longTermWords.filter(it => it.dayLog[0].hyDate < currentHyDate)
+        return local().longTermProgress.filter(it => it.dayLog[0].hyDate < currentHyDate)
     }
 }
 </script>
