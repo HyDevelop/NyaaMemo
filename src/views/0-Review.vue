@@ -130,6 +130,7 @@ export default class Review extends Vue.with(Props)
     .div-answer
         // Container properties
         text-align: left
+        text-transform: capitalize
         margin-bottom: 30px
         font-size: large
 
