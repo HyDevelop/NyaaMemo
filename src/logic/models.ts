@@ -103,7 +103,8 @@ export interface DailyProgress
 export interface DailyWordProgress
 {
     word: string;
-    timeLog: DailyLogPoint; // timeLog[0] is always the latest if it exists
+    importance: number; // How important is reviewing this specific word
+    timeLog: DailyLogPoint[]; // timeLog[0] is always the latest if it exists
 }
 
 /**
