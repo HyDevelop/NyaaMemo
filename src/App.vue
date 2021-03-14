@@ -79,8 +79,7 @@ export default class App extends Vue
 // Progress bar on the top
 #div-progress
     // Height
-    $h: max(6vh, 40px)
-    height: $h
+    height: max(6vh, 40px)
 
     // Shadow
     background-color: white
