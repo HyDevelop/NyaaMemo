@@ -1,7 +1,8 @@
-
 /**
  * A dictionary contains words and its definitions
  */
+import Settings from "@/logic/settings";
+
 export interface Dictionary
 {
     name: string;
@@ -75,6 +76,9 @@ export interface LocalData
 
     /** Daily progress */
     dailyProgress?: DailyProgress;
+
+    /** User settings */
+    settings: Settings;
 }
 
 /**
