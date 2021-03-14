@@ -48,7 +48,9 @@ function needToBeReviewed(word: LTWordProgress, today?: number, ltSrsP?: number[
     return -1;
 }
 
-
+/**
+ * Check and generate daily progress
+ */
 export function checkDailyProgress()
 {
     const l = local()

@@ -47,9 +47,10 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import {Word, SampleSentence} from "@/logic/models";
-import {blurAll, hyDate, okuriganaToFurigana, rand} from "@/logic/utils";
+import {blurAll, hyDate, info, okuriganaToFurigana, rand} from "@/logic/utils";
 import {dictionary} from "@/logic/dictionary-prototype";
 import {local} from "@/store";
+import {checkDailyProgress} from "@/logic/algorithm";
 
 class Props
 {
@@ -61,6 +62,12 @@ export default class Review extends Vue.with(Props)
 {
     input = ""
     answerShown = false
+
+    created()
+    {
+        info('Preparing review...')
+        checkDailyProgress()
+    }
 
     card: Word = dictionary.words['猫']
 
