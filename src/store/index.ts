@@ -27,6 +27,7 @@ const store = createStore<LocalData>({
         settings: {
             maxPerDay: 20,
             ltSrsPattern: [3, 5, 7, 10, 14, 30, 60, 90, 180],
+            shuffleDailyWords: true
         }
     },
     mutations: {

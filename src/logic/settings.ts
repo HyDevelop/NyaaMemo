@@ -14,4 +14,7 @@ export default interface Settings
      * ltSRddPattern[x] = y
      */
     ltSrsPattern: number[];
+
+    /** Should the daily words be shuffled before presented? */
+    shuffleDailyWords: boolean;
 }
