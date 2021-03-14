@@ -5,7 +5,7 @@
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
                     <div id="lbl-progress" class="fade-in-left sub-text">
-                        <span>32</span> / <span>16</span> / <span>2</span>
+                        <span>{{ dayDone }}</span> / <span>{{ dayTodo }}</span>
                     </div>
                 </div>
             </router-link>
@@ -50,12 +50,16 @@ export default class App extends Vue
         info('App started.')
     }
 
+    get dayMax() { return local().settings.maxPerDay }
+    get dayDone() { return local().dailyProgress?.done || 0 }
+    get dayTodo() { return local().dailyProgress?.progress.length || 0 }
+
     /**
      * Get how many words does the user need to add to fulfill the daily word goal
      */
     get needToAdd(): number
     {
-        return local().settings.maxPerDay - (local().dailyProgress?.done || 0) - (local().dailyProgress?.progress.length || 0)
+        return this.dayMax - this.dayDone - this.dayTodo
     }
 }
 </script>
