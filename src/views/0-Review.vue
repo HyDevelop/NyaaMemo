@@ -52,13 +52,8 @@ import {local} from "@/store";
 import {getDefinition} from "@/logic/search";
 import {dictionaries} from "@/logic/dictionary-prototype";
 
-class Props
-{
-    // card = prop<Card>({required: true})
-}
-
 @Options({components: {}})
-export default class Review extends Vue.with(Props)
+export default class Review extends Vue
 {
     input = ""
     answerShown = false
