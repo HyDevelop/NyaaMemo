@@ -75,7 +75,8 @@ export default class App extends Vue
 // Progress bar on the top
 #div-progress
     // Height
-    height: max(6vh, 40px)
+    $h: max(6vh, 40px)
+    height: $h
 
     // Shadow
     background-color: white
@@ -124,4 +125,14 @@ export default class App extends Vue
         // Show progress only when active
         #lbl-progress
             display: inline-block
+
+    .words
+        position: relative
+
+        .need-to-add
+            position: absolute
+            top: $h - 20px
+            font-size: x-small
+            width: 100%
+            left: 0
 </style>
