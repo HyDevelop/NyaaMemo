@@ -1,5 +1,5 @@
 import {local} from "@/store";
-import {hyDate} from "@/logic/utils";
+import {hyDate, shuffle} from "@/logic/utils";
 import {DailyProgress, DailyWordProgress, LTWordProgress, RememberDifficulty as RD} from "@/logic/models";
 
 /**
@@ -46,4 +46,58 @@ function needToBeReviewed(word: LTWordProgress, today?: number, ltSrsP?: number[
 
     // It doesn't need to be reviewed
     return -1;
+}
+
+
+export function checkDailyProgress()
+{
+    const l = local()
+    const limit = l.settings.maxPerDay
+    const today = hyDate(new Date())
+    const lsSrsP = l.settings.ltSrsPattern
+
+    // Daily progress exists
+    if (l.dailyProgress)
+    {
+        // If the daily progress is not from today,
+        //   or if it is not generated using the current long-term algorithm, remove it
+        if (l.dailyProgress.day != today || l.dailyProgress.algorithm != 'anki-ng')
+        {
+            l.dailyProgress = undefined
+        }
+
+        // If the max per day is larger than the current max per day, we're going to expand the current word list,
+        // And if the max per day is smaller than the current max per day, we're going to regenerate it
+        if (l.dailyProgress && limit > l.dailyProgress.limit)
+        {
+            l.dailyProgress = undefined
+        }
+    }
+
+    // If daily progress doesn't exist, generate new daily progress list.
+    const dp: DailyProgress = l.dailyProgress || { day: today, algorithm: 'anki-ng', limit: limit, done: 0, progress: [] }
+    let dps: DailyWordProgress[] = []
+
+    // Loop through all words in long-term list
+    for (const word of l.longTermProgress)
+    {
+        // dayLog[0] is always the latest if it exists.
+        const dl0 = word.dayLog[0]
+
+        // Get how much the word needs to be reviewed
+        const importance = needToBeReviewed(word, today, lsSrsP)
+
+        // Add to list
+        if (importance != -1) dps.push({importance: importance, timeLog: [], word: word.word})
+    }
+
+    // Shuffle
+    dps = shuffle(dps)
+
+    // Sort by importance, descending
+    dps.sort((a, b) => b.importance - a.importance)
+
+    // Set dp
+    dp.progress = dps
+    l.dailyProgress = dp
 }

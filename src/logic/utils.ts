@@ -194,9 +194,9 @@ export function removeIf<T>(arr: T[], callback: (val: T, i: number) => boolean)
 
 /**
  * Shuffle array
- * https://stackoverflow.com/a/2450976/7346633  
+ * https://stackoverflow.com/a/2450976/7346633
  */
-function shuffle<T>(array: T[])
+export function shuffle<T>(array: T[])
 {
     let currentIndex = array.length, temporaryValue, randomIndex;
 
