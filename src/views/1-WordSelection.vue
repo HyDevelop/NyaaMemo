@@ -55,6 +55,7 @@ import {Book, Chapter} from "@/logic/models";
 import {SearchResult, searchWords} from "@/logic/search";
 import {highlight} from "@/logic/utils";
 import {local} from "@/store";
+import {checkDailyProgress} from "@/logic/algorithm";
 
 interface SR2 extends SearchResult
 {
@@ -140,7 +141,11 @@ export default class WordSelection extends Vue
         const w = word.word.word[0]
 
         // Add
-        if (!local().hasWord(w)) local().addWord(w)
+        if (!local().hasWord(w))
+        {
+            local().addWord(w)
+            checkDailyProgress()
+        }
 
         // Remove
         else
@@ -152,6 +157,7 @@ export default class WordSelection extends Vue
                 cancelButtonText: 'いいえ'
             }).then(() => {
                 local().removeWord(w)
+                checkDailyProgress()
 
                 // @ts-ignore Send out success notification
                 this.$message({

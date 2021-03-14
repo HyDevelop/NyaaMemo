@@ -2,7 +2,6 @@ import {createStore, Store} from 'vuex'
 import VuexPersistence from "vuex-persist";
 import {DailyProgress, LocalData} from "@/logic/models";
 import {removeIf} from "@/logic/utils";
-import SettingsView from "@/views/3-Settings.vue";
 import Settings from "@/logic/settings";
 
 /**
