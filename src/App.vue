@@ -2,17 +2,17 @@
     <div id="ReviewScreen" class="fbox-v h100">
         <div id="div-progress" class="fbox-h f-no-shrink">
             <router-link class="clickable fbox-center" to="/">
-                <div class="nowrap fbox-vcenter">
+                <div class="nowrap">
                     <i class="el-icon-s-management"></i>
-                    <span id="lbl-progress" class="fade-in-left">
+                    <div id="lbl-progress" class="fade-in-left sub-text">
                         <span>32</span> / <span>16</span> / <span>2</span>
-                    </span>
+                    </div>
                 </div>
             </router-link>
-            <router-link class="clickable fbox-center words" to="/words">
+            <router-link class="clickable fbox-center" to="/words">
                 <div>
                     <i class="el-icon-s-unfold"></i>
-                    <div class="need-to-add">{{ needToAdd }}</div>
+                    <div class="sub-text">{{ needToAdd }}</div>
                 </div>
             </router-link>
             <router-link class="clickable fbox-center" to="/stats"><div><i class="el-icon-s-data"></i></div></router-link>
@@ -102,10 +102,14 @@ export default class App extends Vue
         border-bottom: 3px solid #ffebc4
         box-sizing: border-box
 
-    #lbl-progress
-        margin-left: 5px
-        display: none
-        font-size: 12px
+        // Sub-text alignment
+        position: relative
+        .sub-text
+            position: absolute
+            margin-top: -5px
+            font-size: x-small
+            width: 100%
+            left: 0
 
     // Hover animation
     i, div, span
@@ -121,18 +125,4 @@ export default class App extends Vue
 
         // Unhide debug view
         display: flex !important
-
-        // Show progress only when active
-        #lbl-progress
-            display: inline-block
-
-    .words
-        position: relative
-
-        .need-to-add
-            position: absolute
-            top: $h - 20px
-            font-size: x-small
-            width: 100%
-            left: 0
 </style>
