@@ -1,7 +1,9 @@
 import {createStore, Store} from 'vuex'
 import VuexPersistence from "vuex-persist";
-import {LocalData} from "@/logic/models";
+import {DailyProgress, LocalData} from "@/logic/models";
 import {removeIf} from "@/logic/utils";
+import SettingsView from "@/views/3-Settings.vue";
+import Settings from "@/logic/settings";
 
 /**
  * Vuex automated persistence using localStorage
@@ -16,7 +18,9 @@ const vuexLocal = new VuexPersistence<LocalData>({
 const store = createStore<LocalData>({
     state: {
         loggedIn: false,
-        longTermProgress: []
+        longTermProgress: [],
+        dailyProgress: undefined,
+        settings: { maxPerDay: 20 }
     },
     mutations: {
         _addWord(state: LocalData, w: string)

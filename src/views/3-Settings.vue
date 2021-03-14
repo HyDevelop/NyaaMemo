@@ -9,7 +9,7 @@
 import {Options, Vue} from 'vue-class-component';
 
 @Options({components: {}})
-export default class Settings extends Vue
+export default class SettingsView extends Vue
 {
 
 }
