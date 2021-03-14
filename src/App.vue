@@ -9,7 +9,12 @@
                     </span>
                 </div>
             </router-link>
-            <router-link class="clickable fbox-center" to="/words"><div><i class="el-icon-s-unfold"></i></div></router-link>
+            <router-link class="clickable fbox-center words" to="/words">
+                <div>
+                    <i class="el-icon-s-unfold"></i>
+                    <div class="need-to-add">{{ needToAdd }}</div>
+                </div>
+            </router-link>
             <router-link class="clickable fbox-center" to="/stats"><div><i class="el-icon-s-data"></i></div></router-link>
             <router-link class="clickable fbox-center" to="/settings"><div><i class="el-icon-s-tools"></i></div></router-link>
             <router-link class="clickable fbox-center" to="/create"><div><i class="el-icon-plus"></i></div></router-link>
@@ -25,6 +30,8 @@ import {Options, Vue} from 'vue-class-component';
 import CardInput from "@/views/0-Review.vue";
 import {splash} from "@/logic/constants";
 import {info} from "@/logic/utils";
+import {checkDailyProgress} from "@/logic/algorithm";
+import {local} from "@/store";
 
 @Options({components: {CardInput}})
 export default class App extends Vue
@@ -32,12 +39,23 @@ export default class App extends Vue
     beforeCreate()
     {
         info('App starting...')
+
+        info('Preparing review...')
+        checkDailyProgress()
     }
 
     mounted()
     {
         console.log(splash, `font-size: 18px; color: #fb8080;`, 'α-0.0.0-preview-01')
         info('App started.')
+    }
+
+    /**
+     * Get how many words does the user need to add to fulfill the daily word goal
+     */
+    get needToAdd(): number
+    {
+        return local().settings.maxPerDay - (local().dailyProgress?.done || 0) - (local().dailyProgress?.progress.length || 0)
     }
 }
 </script>
