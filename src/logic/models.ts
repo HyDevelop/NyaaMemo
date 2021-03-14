@@ -92,7 +92,9 @@ export interface DailyProgress
 {
     day: number; // Day in the form of HyDate (number of days since 2021-Jan-1)
     algorithm: string;
-    wordsInProgress: DailyWordProgress[];
+    limit: number; // How many words per day did the user set when this daily progress object is generated.
+    done: number; // How many words has the user memorized today
+    progress: DailyWordProgress[];
 }
 
 /**
@@ -101,7 +103,7 @@ export interface DailyProgress
 export interface DailyWordProgress
 {
     word: string;
-    timeLog: DailyLogPoint;
+    timeLog: DailyLogPoint; // timeLog[0] is always the latest if it exists
 }
 
 /**
@@ -124,7 +126,7 @@ export type LTProgress = LTWordProgress[]
 export interface LTWordProgress
 {
     word: string;
-    dayLog: LTLogPoint[];
+    dayLog: LTLogPoint[]; // dayLog[0] is always the latest if it exists
 }
 
 /**
