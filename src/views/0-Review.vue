@@ -2,15 +2,15 @@
     <div id="word-input" class="fbox-v h100 mh0">
         <!-- Top section - The word -->
         <div id="div-title" class="f-no-shrink">
-            <div id="word">{{ card.word[0] }}</div>
-            <div id="wordForm2">{{ card.word[1] }}</div>
+            <div id="word">{{ w.word[0] }}</div>
+            <div id="wordForm2">{{ w.word[1] }}</div>
         </div>
 
         <!-- Middle section -->
         <div id="div-middle" class="f-grow1 mh0">
             <div v-if="answerShown" class="div-answer">
                 <div class="ans-title">Definition</div>
-                <div v-for="def in card.definition" :key="def" v-html="def"></div>
+                <div v-for="def in w.definition" :key="def" v-html="def"></div>
             </div>
 
             <div v-if="answerShown" class="div-answer">
@@ -47,9 +47,10 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import {Word, SampleSentence} from "@/logic/models";
-import {blurAll, hyDate, okuriganaToFurigana, rand} from "@/logic/utils";
-import {dictionary} from "@/logic/dictionary-prototype";
+import {blurAll, highlight, hyDate, okuriganaToFurigana, rand} from "@/logic/utils";
 import {local} from "@/store";
+import {getDefinition} from "@/logic/search";
+import {dictionaries} from "@/logic/dictionary-prototype";
 
 class Props
 {
@@ -62,16 +63,22 @@ export default class Review extends Vue.with(Props)
     input = ""
     answerShown = false
 
-    card: Word = dictionary.words['猫']
+    get w(): Word | undefined
+    {
+        const w = local().dailyProgress?.progress[0].word
+        if (!w) return undefined
+        return getDefinition(w, dictionaries)
+    }
 
     get filteredSentences(): SampleSentence[]
     {
-        return rand(this.card.sentences, 3).map(it =>
+        const w = this.w
+        if (!w) return []
+
+        return rand(w.sentences, 3).map(it =>
         {
             const n: SampleSentence = {...it}
-            this.card.word.forEach(w => n.s =
-                okuriganaToFurigana(n.s).replaceAll(w, `<span class="color-highlight">${w}</span>`)
-            )
+            w.word.forEach(wStr => n.s = highlight(okuriganaToFurigana(n.s), wStr))
             return n
         })
     }
