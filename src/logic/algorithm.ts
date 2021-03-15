@@ -179,6 +179,9 @@ export function findWordToReview(): string | undefined
 
         // Add today to the day log
         l.dayLog.unshift({hyDate: dp.day, rd: maxRd})
+
+        // Increment done
+        dp.done ++
     })
 
     // Update storage
