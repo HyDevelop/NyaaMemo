@@ -63,7 +63,7 @@ export function checkDailyProgress()
     {
         // If the daily progress is not from today,
         //   or if it is not generated using the current long-term algorithm, remove it
-        if (l.dailyProgress.day != today || l.dailyProgress.algorithm != 'anki-ng')
+        if (l.dailyProgress.day != today || l.dailyProgress.algorithm != 'nyaa-memo')
         {
             l.dailyProgress = undefined
         }
@@ -79,7 +79,7 @@ export function checkDailyProgress()
     }
 
     // If daily progress doesn't exist, generate new daily progress list.
-    const dp: DailyProgress = l.dailyProgress || { day: today, algorithm: 'anki-ng', limit: limit, done: 0, currentIndex: 0, progress: [] }
+    const dp: DailyProgress = l.dailyProgress || { day: today, algorithm: 'nyaa-memo', limit: limit, done: 0, currentIndex: 0, progress: [] }
     let dps: DailyWordProgress[] = []
 
     // Loop through all words in long-term list
