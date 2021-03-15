@@ -46,23 +46,37 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import {Word, SampleSentence} from "@/logic/models";
+import {Word, SampleSentence, RememberDifficulty as RD} from "@/logic/models";
 import {blurAll, highlight, hyDate, okuriganaToFurigana, rand} from "@/logic/utils";
 import {local} from "@/store";
-import {getDefinition} from "@/logic/search";
 import {dictionaries} from "@/logic/dictionary-prototype";
+import {findWordToReview} from "@/logic/algorithm";
+import {getDefinition} from "@/logic/search";
+
+const rdValues = [RD.easy, RD.hard, RD.forgot]
 
 @Options({components: {}})
 export default class Review extends Vue
 {
     input = ""
     answerShown = false
+    w?: Word
+    wordString = ""
 
-    get w(): Word | undefined
+    created()
     {
-        const w = local().dailyProgress?.progress[0].word
-        if (!w) return undefined
-        return getDefinition(w, dictionaries)
+        this.nextWord()
+    }
+
+    /**
+     * Switch to the next word
+     */
+    nextWord()
+    {
+        const word = findWordToReview()
+        if (word == undefined) this.w = undefined
+        else this.w = getDefinition(word, dictionaries)
+        this.wordString = this.w?.word[0] || ''
     }
 
     get filteredSentences(): SampleSentence[]
