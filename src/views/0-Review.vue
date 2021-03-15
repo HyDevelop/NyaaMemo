@@ -1,5 +1,5 @@
 <template>
-    <div id="word-input" class="fbox-v h100 mh0">
+    <div v-if="w" id="word-input" class="fbox-v h100 mh0">
         <!-- Top section - The word -->
         <div id="div-title" class="f-no-shrink">
             <div id="word">{{ w.word[0] }}</div>
@@ -41,6 +41,11 @@
                 <el-button type="danger"  plain @click="clickDone(2)">忘れた</el-button>
             </div>
         </div>
+    </div>
+
+    <div v-else id="no-words-left" class="fbox-vcenter h100 unselectable">
+        <div class="color-highlight">Congratulations!</div>
+        <div style="color: gray">You have memorized all of your words.</div>
     </div>
 </template>
 
