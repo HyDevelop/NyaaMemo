@@ -5,7 +5,7 @@
                 <div class="nowrap">
                     <i class="el-icon-s-management"></i>
                     <div id="lbl-progress" class="fade-in-left sub-text">
-                        <span>{{ dayDone }}</span> / <span>{{ dayTodo }}</span>
+                        <span>{{ dayDone }}</span> / <span>{{ dayDone + dayTodo }}</span>
                     </div>
                 </div>
             </router-link>
