@@ -1,5 +1,5 @@
 import {local} from "@/store";
-import {hyDate, shuffle} from "@/logic/utils";
+import {hyDate, removeOne, shuffle} from "@/logic/utils";
 import {DailyProgress, DailyWordProgress, LTWordProgress, RememberDifficulty as RD} from "@/logic/models";
 
 /**
@@ -157,6 +157,33 @@ export function findWordToReview(): string | undefined
 
         return false
     })
+
+    // Remove the to-remove words
+    toRemove.forEach(it =>
+    {
+        removeOne(p, it)
+
+        // Add it to long-term progress
+        let l = ltp.find(l => l.word == it.word)
+
+        // Create if null
+        if (l == undefined)
+        {
+            l = {dayLog: [], word: it.word}
+            ltp.push(l)
+        }
+
+        // Find the remember difficulty (it should be the highest of the day)
+        // Since RD enum is represented with numbers (Easy = 0, Hard = 1, Forgot = 2), we can use Math.max
+        const maxRd = Math.max(...it.timeLog.map(it => it.rd))
+
+        // Add today to the day log
+        l.dayLog.unshift({hyDate: dp.day, rd: maxRd})
+    })
+
+    // Update storage
+    local().dailyProgress = dp
+    local().longTermProgress = ltp
 
     // Return result
     if (match == -1) return undefined
