@@ -1,6 +1,6 @@
 import {createStore, Store} from 'vuex'
 import VuexPersistence from "vuex-persist";
-import {DailyProgress, LocalData} from "@/logic/models";
+import {DailyProgress, LocalData, LTProgress} from "@/logic/models";
 import {removeIf} from "@/logic/utils";
 import Settings from "@/logic/settings";
 
@@ -43,6 +43,7 @@ const store = createStore<LocalData>({
             state.longTermProgress = removeIf(state.longTermProgress, it => it.word.toLowerCase() == w)
         },
 
+        _setLongTermProgress(state: LocalData, ltp: LTProgress) { state.longTermProgress = ltp },
         _setDailyProgress(state: LocalData, dp: DailyProgress) { state.dailyProgress = dp },
         _setSettings(state: LocalData, s: Settings) { state.settings = s }
     },
@@ -100,6 +101,7 @@ class StateUtils
     get state() { return this.store.state as LocalData }
     get loggedIn() { return this.state.loggedIn }
     get longTermProgress() { return this.state.longTermProgress }
+    set longTermProgress(value: LTProgress) { this.store.commit('_setLongTermProgress', value) }
     get dailyProgress() { return this.state.dailyProgress }
     set dailyProgress(value: DailyProgress | undefined) { this.store.commit('_setDailyProgress', value) }
     get settings() { return this.state.settings }
