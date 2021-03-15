@@ -2,7 +2,7 @@
     <div id="ReviewScreen" class="fbox-v h100">
         <div id="div-progress" class="fbox-h f-no-shrink">
             <router-link class="clickable fbox-center" to="/">
-                <div class="nowrap">
+                <div>
                     <i class="el-icon-s-management"></i>
                     <div id="lbl-progress" class="fade-in-left sub-text">
                         <span>{{ dayDone }}</span> / <span>{{ dayDone + dayTodo }}</span>
