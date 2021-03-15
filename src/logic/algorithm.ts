@@ -102,3 +102,63 @@ export function checkDailyProgress()
     dp.progress = dps
     l.dailyProgress = dp
 }
+
+/**
+ * Find a word to review
+ */
+export function findWordToReview(): string | undefined
+{
+    const dp = local().dailyProgress
+    const ltp = local().longTermProgress
+    if (dp == undefined)
+    {
+        // TODO: Proper error handling
+        alert('Something is wrong... the progress object did not generate.')
+        return undefined
+    }
+    const p = dp.progress
+    const stSrsPH = local().settings.stSrsPatternHard
+    const stSrsPF = local().settings.stSrsPatternForgot
+
+    // The user already finished their word for today
+    if (dp.done >= dp.limit || p.length == 0) return undefined
+
+    // Find the first word matching the rules, also find entries to remove along the way
+    const toRemove: DailyWordProgress[] = []
+    const match = p.findIndex(it => {
+        const tl = it.timeLog
+
+        // If the user hasn't started memorizing the word
+        if (tl.length == 0) return true
+
+        // Find out how many words have passed since the user last found the word hard to remember or forgot.
+        const roundsSinceForgot = tl.findIndex(it => it.rd != RD.easy)
+
+        // If rounds == -1, it means that the user always found the word easy since the first answer
+        // Remove the word from the list and put it in the long-term list
+        if (roundsSinceForgot == -1)
+        {
+            toRemove.push(it)
+            return false
+        }
+
+        // Use the srs pattern in settings to determine how many words after the last remembrance
+        // If out of bounds, that means the user already memorized the word for this day
+        // Remove the word from the list
+        const srsP = tl[roundsSinceForgot].rd == RD.hard ? stSrsPH : stSrsPF
+        if (roundsSinceForgot >= srsP.length)
+        {
+            toRemove.push(it)
+            return false
+        }
+
+        // Check if it needs to be reviewed
+        if (dp.currentIndex - tl[0].index >= srsP[roundsSinceForgot]) return true
+
+        return false
+    })
+
+    // Return result
+    if (match == -1) return undefined
+    return p[match].word
+}
