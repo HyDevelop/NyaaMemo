@@ -144,6 +144,12 @@ export default class Review extends Vue
 <style lang="sass" scoped>
 @import "src/css/global"
 
+// Dynamic font size: max=24px, min=16px, middle=2.3vw
+$centerFontSize: min(24px, max(16px, 3vw))
+
+#no-words-left
+    font-size: $centerFontSize
+
 #word-input
     width: $app-width
     margin: auto
@@ -186,8 +192,7 @@ export default class Review extends Vue
         overflow-y: auto
 
         #div-before-answer
-            // Dynamic font size: max=24px, min=16px, middle=2.3vw
-            font-size: min(24px, max(16px, 3vw))
+            font-size: $centerFontSize
 
     // Input field and buttons on the bottom
     #div-bottom
