@@ -99,9 +99,29 @@ export default class Review extends Vue
 
     clickDone(difficulty: number)
     {
-        blurAll()
-        console.log(difficulty)
+        // Update UI
         this.answerShown = false
+        blurAll()
+
+        const rd = rdValues[difficulty]
+        const dp = local().dailyProgress
+        if (dp == undefined) return
+
+        // Add rd to time log
+        for (const it of dp.progress)
+        {
+            if (it.word == this.wordString)
+            {
+                it.timeLog.push({ time: new Date(), index: dp.currentIndex, rd: rd })
+                break
+            }
+        }
+
+        // Increment currentIndex
+        dp.currentIndex++
+
+        // Go to next word
+        this.nextWord()
     }
 
     /**
