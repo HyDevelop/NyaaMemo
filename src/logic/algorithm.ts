@@ -125,7 +125,7 @@ export function findWordToReview(): string | undefined
 
     // Find the first word matching the rules, also find entries to remove along the way
     const toRemove: DailyWordProgress[] = []
-    const match = p.findIndex(it => {
+    const matches = p.filter(it => {
         const tl = it.timeLog
 
         // If the user hasn't started memorizing the word
@@ -190,6 +190,6 @@ export function findWordToReview(): string | undefined
     local().longTermProgress = ltp
 
     // Return result
-    if (match == -1) return undefined
-    return p[match].word
+    if (matches.length == 0) return undefined
+    return matches[0].word
 }
