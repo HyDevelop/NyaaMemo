@@ -131,11 +131,12 @@ export function findWordToReview(): string | undefined
         // If the user hasn't started memorizing the word
         if (tl.length == 0) return true
 
-        // Find out how many words have passed since the user last found the word hard to remember or forgot.
+        // Find out how many times this word have been recalled since
+        //   the user last found the word hard to remember or forgot.
         const roundsSinceForgot = tl.findIndex(it => it.rd != RD.easy)
 
         // If rounds == -1, it means that the user always found the word easy since the first answer
-        // Remove the word from the list and put it in the long-term list
+        //   Remove the word from the list and put it in the long-term list
         if (roundsSinceForgot == -1)
         {
             toRemove.push(it)

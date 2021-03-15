@@ -112,7 +112,7 @@ export default class Review extends Vue
         {
             if (it.word == this.wordString)
             {
-                it.timeLog.push({ time: new Date(), index: dp.currentIndex, rd: rd })
+                it.timeLog.unshift({ time: new Date(), index: dp.currentIndex, rd: rd })
                 break
             }
         }
