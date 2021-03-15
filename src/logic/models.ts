@@ -94,6 +94,7 @@ export interface DailyProgress
     algorithm: string;
     limit: number; // How many words per day did the user set when this daily progress object is generated.
     done: number; // How many words has the user memorized today
+    currentIndex: number; // Current review index
     progress: DailyWordProgress[];
 }
 
@@ -114,6 +115,7 @@ export interface DailyLogPoint
 {
     time: Date;
     rd: RememberDifficulty;
+    index: number; // Review index
 }
 
 /**

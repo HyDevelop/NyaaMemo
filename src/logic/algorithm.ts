@@ -79,7 +79,7 @@ export function checkDailyProgress()
     }
 
     // If daily progress doesn't exist, generate new daily progress list.
-    const dp: DailyProgress = l.dailyProgress || { day: today, algorithm: 'anki-ng', limit: limit, done: 0, progress: [] }
+    const dp: DailyProgress = l.dailyProgress || { day: today, algorithm: 'anki-ng', limit: limit, done: 0, currentIndex: 0, progress: [] }
     let dps: DailyWordProgress[] = []
 
     // Loop through all words in long-term list
