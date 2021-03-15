@@ -189,6 +189,9 @@ export function findWordToReview(): string | undefined
     local().dailyProgress = dp
     local().longTermProgress = ltp
 
+    // Check empty again, because it might be that every word is removed.
+    if (p.length == 0) return undefined
+
     // If there aren't any results found but the list is not empty, that means they still have words to recall
     //   but there aren't any words left to create the spaced-repetition gap.
     if (matches.length == 0)
