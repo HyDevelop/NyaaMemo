@@ -50,9 +50,15 @@ const book: Book = {
                 { name: 'My Family', words: ['お母さん','お父さん','お爺さん','お婆さん','お姉さん','お兄さん', '母','父','姐','兄','娘','息子'] },
                 { name: 'Weather', words: ['天気','晴れ','曇り','雨','雪'] },
                 { name: 'Seasons', words: ['春','夏','秋','冬','温かい','暑い','涼しい','寒い','くない','かった','くなかった','東京'] },
-                { name: 'Animals 1', words: [''] },
-                { name: 'Animals 2', words: [''] },
-                { name: '', words: [''] },
+                { name: 'Animals 1', words: ['馬','虎','パンダ','小さい','大きい','軽い','重い','かわいい'] },
+                { name: 'Animals 2', words: ['猿','ライオン','象','ウサギ','荷物','動物'] },
+            ]
+        },
+        {
+            name: 'Section 4',
+            description: 'From Colors to Routines',
+            subchapters: [
+                { name: 'Colors', words: ['白い','黒い','黄色い','青い','赤い','色','ジュース','寿司','バナナ','刺身'] },
                 { name: '', words: [''] },
                 { name: '', words: [''] },
             ]
