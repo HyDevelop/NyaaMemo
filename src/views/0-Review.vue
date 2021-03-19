@@ -30,7 +30,7 @@
         </div>
 
         <!-- Bottom section - Buttons -->
-        <div id="div-bottom">
+        <div v-if="answerShown" id="div-bottom">
             <div id="div-input">
                 <el-input v-if="!answerShown && false /* TODO */" id="input" v-model="input"></el-input>
             </div>
