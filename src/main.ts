@@ -27,7 +27,12 @@ app.use(ElementPlus)
 
 // v-Calendar
 import VCalendar from 'v-calendar'
-app.use(VCalendar)
+app.use(VCalendar, {
+    screens: {
+        md: '560px',
+        lg: '880px',
+    },
+})
 
 // Cookies
 import VueCookies from 'vue3-cookies'
