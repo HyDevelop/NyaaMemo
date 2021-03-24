@@ -2,15 +2,15 @@
     <div id="ReviewScreen" class="fbox-v h100">
         <div id="div-progress" class="fbox-h f-no-shrink">
             <router-link class="clickable fbox-center" to="/">
-                <div>
+                <div class="w100">
                     <i class="el-icon-s-management"></i>
-                    <div id="lbl-progress" class="fade-in-left sub-text">
+                    <div id="lbl-progress" class="sub-text">
                         <span>{{ dayDone }}</span> / <span>{{ dayDone + dayTodo }}</span>
                     </div>
                 </div>
             </router-link>
             <router-link class="clickable fbox-center" to="/words">
-                <div>
+                <div class="w100">
                     <i class="el-icon-s-unfold"></i>
                     <div class="sub-text">{{ needToAdd }}</div>
                 </div>
