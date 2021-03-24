@@ -6,7 +6,7 @@
                 and how long it will take you to finish a book.</p>
         </div>
 
-        <v-calendar is-expanded/>
+        <v-calendar is-expanded :columns="$screens({ default: 1, md: 2, lg: 3})"/>
     </div>
 </template>
 
