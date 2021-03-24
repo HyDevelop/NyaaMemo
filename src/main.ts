@@ -25,6 +25,10 @@ import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 app.use(ElementPlus)
 
+// v-Calendar
+import VCalendar from 'v-calendar'
+app.use(VCalendar)
+
 // Cookies
 import VueCookies from 'vue3-cookies'
 // @ts-ignore
