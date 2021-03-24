@@ -1,8 +1,12 @@
 <template>
     <div id="Stats">
-        <h2>Statistics</h2>
-        <p>You can see your review statistics on this page. It will display how much you studied for the last few weeks,
-            and how long it will take you to finish a book.</p>
+        <div id="page-desc">
+            <h2>Statistics</h2>
+            <p>You can see your review statistics on this page. It will display how much you studied for the last few weeks,
+                and how long it will take you to finish a book.</p>
+        </div>
+
+        <v-calendar is-expanded/>
     </div>
 </template>
 
@@ -21,5 +25,5 @@ export default class Stats extends Vue
 
 #Stats
     width: $app-width
-    margin: auto
+    margin: 0 auto
 </style>
