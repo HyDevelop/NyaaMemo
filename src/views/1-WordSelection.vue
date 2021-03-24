@@ -177,9 +177,6 @@ export default class WordSelection extends Vue
     width: $app-width
     margin: 0 auto
 
-#page-desc
-    margin-bottom: 20px
-
 .hy-card
     overflow-y: auto
 
