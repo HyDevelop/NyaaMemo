@@ -12,6 +12,7 @@
         "core-js": "^3.6.5",
         "element-plus": "1.0.2-beta.33",
         "moment": "^2.29.1",
+        "v-calendar": "^3.0.0-alpha.3",
         "vue": "^3.0.0",
         "vue-class-component": "^8.0.0-0",
         "vue-router": "^4.0.0-0",
