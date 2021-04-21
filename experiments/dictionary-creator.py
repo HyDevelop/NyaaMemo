@@ -32,6 +32,7 @@ if __name__ == '__main__':
                 temp = '{}'
             out = json5.loads(temp)
 
+            # Make sure that all meta info keys exist
             print('Checking dictionary info...')
             for key in ['name', 'description', 'author', 'license', 'worldLanguage', 'definitionLanguage']:
                 if key not in out:
@@ -47,7 +48,8 @@ if __name__ == '__main__':
             # Missing words
             allWords = [getAllWords(chap) for chap in book['chapters']]
             allWords = [item for ls in allWords for item in ls]
-            print(allWords)
+            missingWords = [word for word in allWords if word not in out]
+            print(missingWords)
 
             # Done, save
             outFile.truncate(0)
