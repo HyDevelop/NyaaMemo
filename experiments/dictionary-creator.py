@@ -69,8 +69,18 @@ if __name__ == '__main__':
                 save()
             missingWords.clear()
 
+            # Prompt to input words without definitions
+            for word in wordsWithoutDefinitions:
+                while True:
+                    definition = input('Please input the definition of {} (type a single space to move on): '.format(word))
+                    if definition == ' ':
+                        break
+                    if definition.strip() != '':
+                        words[word]['definition'].append(definition)
+                        print('Definition added: ', definition)
+
+
             # Done, save
-            outFile.truncate(0)
-            json5.dump(out, outFile, indent=2)
+            save()
 
 
