@@ -54,8 +54,7 @@ if __name__ == '__main__':
             # Missing words
             allWords = [getAllWords(chap) for chap in book['chapters']]
             allWords = [item for ls in allWords for item in ls]
-            missingWords = [word for word in allWords if word not in out]
-            print(missingWords)
+            missingWords = [word for word in allWords if word not in words and word != '']
 
             # Done, save
             outFile.truncate(0)
