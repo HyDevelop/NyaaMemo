@@ -1,15 +1,17 @@
-import textwrap
 from datetime import datetime
 from typing import List, Dict
 
 import json5
 
 
-def allWords(chap) -> List[str]:
+def getAllWords(chap) -> List[str]:
     res = []
-    if chap["subchapters"]:
+    if 'subchapters' in chap:
         for sub in chap["subchapters"]:
-            res += allWords(sub)
+            res += getAllWords(sub)
+    if 'words' in chap:
+        res += chap["words"]
+    return res
 
 
 if __name__ == '__main__':
@@ -43,6 +45,9 @@ if __name__ == '__main__':
             words: Dict[str, Dict] = out['words']
 
             # Missing words
+            allWords = [getAllWords(chap) for chap in book['chapters']]
+            allWords = [item for ls in allWords for item in ls]
+            print(allWords)
 
             # Done, save
             json5.dump(out, outFile, indent=2)
