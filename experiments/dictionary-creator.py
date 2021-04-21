@@ -32,6 +32,12 @@ if __name__ == '__main__':
                 temp = '{}'
             out = json5.loads(temp)
 
+            # Save function
+            def save():
+                outFile.seek(0)
+                outFile.write(json5.dumps(out, indent=2, ensure_ascii=False))
+                outFile.truncate()
+
             # Make sure that all meta info keys exist
             print('Checking dictionary info...')
             for key in ['name', 'description', 'author', 'license', 'worldLanguage', 'definitionLanguage']:
