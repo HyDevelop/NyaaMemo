@@ -1,0 +1,97 @@
+{
+    name: "LingoDeer Japanese 1 Words",
+    description: "Around n5",
+    publication: "",
+    type: 'platform',
+    chapters: [
+        {
+            name: 'Section 1',
+            description: 'From Nationalities to Language.',
+            subchapters: [
+                { name: 'Nationalities', words: ['韓国人','アメリカ人','中国人','イギリス人','日本人'] },
+                { name: 'Profession', words: ['学生','医者','先生','留学生','会社員'] },
+                { name: 'People', words: ['女の人','男の人','女の子','男の子'] },
+                { name: 'Everyday Items', words: ['手紙','雑誌','新聞','本'] },
+                { name: 'My House', words: ['椅子','机','カメラ','テレビ'] },
+                { name: 'Language', words: ['英語','日本語','中国語','映画'] },
+            ]
+        },
+        {
+            name: 'Section 2',
+            description: 'From Possession 1 to Negation.',
+            subchapters: [
+                { name: 'Possession 1', words: ['傘','時計','かばん','パソコン','ハンカチ','辞書'] },
+                { name: 'At School', words: ['教室','会議室','トイレ','図書館','学校','事務室'] },
+                { name: 'Public Spaces', words: ['レストラン','映画館','銀行','本屋','病院','デパート','郵便局','喫茶店'] },
+                { name: 'Existence 1', words: ['公園','部屋','花','石','庭'] },
+                { name: 'Humans & Animals 1', words: ['子供','犬','猫','居間'] },
+                { name: 'Location', words: ['下','上','前','後ろ','箱','ベッド','隣','薬','中'] },
+                { name: 'Existence 2', words: ['ビール','リンゴ','冷蔵庫','紅茶','茶碗','グラス'] },
+                { name: 'Humans & Animals 2', words: ['外','横','車','家','木','魚','鳥'] },
+                { name: 'Negation', words: ['ペン','ペット','消しゴム','社長','財布'] },
+            ]
+        },
+        {
+            name: 'Section 3',
+            description: 'From Numbers to Animals 2',
+            subchapters: [
+                { name: 'Numbers', words: ['一','二','三','四','五','六','七','八','九','十',
+                    '二十九','六十五','十一','三十八','七十四'] },
+                { name: 'Time', words: ['午前','午後','一時','四時','七時','九時',
+                    '一分','二分','三分','四分','六分','八分','十分', '二時十分','十時半'] },
+                { name: 'The Week', words: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日', '今日','明日','明後日'] },
+                { name: 'Shopping', words: ['百','三百','六百','八百','千','三千','八千','万','円','幾ら'] },
+                { name: 'My Family', words: ['お母さん','お父さん','お爺さん','お婆さん','お姉さん','お兄さん', '母','父','姐','兄','娘','息子'] },
+                { name: 'Weather', words: ['天気','晴れ','曇り','雨','雪'] },
+                { name: 'Seasons', words: ['春','夏','秋','冬','温かい','暑い','涼しい','寒い','くない','かった','くなかった','東京'] },
+                { name: 'Animals 1', words: ['馬','虎','パンダ','小さい','大きい','軽い','重い','かわいい'] },
+                { name: 'Animals 2', words: ['猿','ライオン','象','ウサギ','荷物','動物'] },
+            ]
+        },
+        {
+            name: 'Section 4',
+            description: 'From Colors to Routines',
+            subchapters: [
+                { name: 'Colors', words: ['白い','黒い','黄色い','青い','赤い','緑','色','オランジ色',
+                    'ジュース','寿司','バナナ','刺身'] },
+                { name: 'Clothing', words: ['ツボン','ネクタイ','セーター','ジーンズ','コート','シャツ','靴下','靴', '上着','洋服',
+                    '短い','長い','高い','安い'] },
+                { name: 'Adjectives 1', words: ['簡単','便利','にぎやが','静か','コンビニ','町'] },
+                { name: 'Adjectives 2', words: ['人','お酒','料理','有名','きれい','親切'] },
+                { name: 'Verbs 1', words: ['牛乳','パン','音楽','コーヒー','ラジオ','お茶',
+                    'お主人','奥さん','妻','夫',
+                    '聞く','読む','買う','飲む','書く'] },
+                { name: 'Verbs 2', words: ['卵','朝ご飯','昼ご飯','晩ご飯',
+                    '起きる','出迎える','出かける','見る','寝る','食べる'] },
+                { name: 'Verbs 3', words: ['両親','友達','中国',
+                    '旅行する','ジョギングする','来る','掃除する','散歩する','出勤する'] },
+                { name: 'Routines', words: ['スーパー','プール','カレー','食堂',
+                    '働く','遊ぶ','勉強する','休む','泳ぐ'] },
+            ]
+        },
+        {
+            name: 'Section 5',
+            description: 'From Dining to Opinions',
+            subchapters: [
+                { name: 'Dining', words: ['ラーメン','ナイフ','箸','スプーン','スープ','鶏肉','紙',
+                    '作る','切る'] },
+                { name: 'Measure Words', words: ['はがき','兄弟','動物園','蛇', '出す',
+                    '一人','二人','一本','一回','一冊','一枚','一台','一頭','一匹','一杯','一個',
+                    '一つ','二つ','三つ','四つ','五つ','六つ','七つ','八つ','九つ','とお'] },
+                { name: 'Travel', words: ['イギリス','ドイツ','大坂','北京','フランス','オーストラリア','国',
+                    '家族','美術館',
+                    '帰る','行く'] },
+                { name: 'Modes Of Transport', words: ['ホテル','電車','バス','自転車','空港','駅','タクシー','船','飛行機','地下鉄','寮','お寺'] },
+                { name: 'Frequency', words: ['サッカー','スポーツ','フランス語','授業','アルバイト',
+                    'いつも','よく','時々','たまに','あまり','ほとんど','全然'] },
+                { name: 'Wishes', words: ['山','服','歌','鍋',
+                    '登る','歌う','運転する'] },
+                { name: 'Adjectives 3', words: ['字','地図',
+                    '分かる','使う'] },
+                { name: '', words: [''] },
+                { name: '', words: [''] },
+                { name: '', words: [''] },
+            ]
+        },
+    ],
+}

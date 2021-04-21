@@ -1,0 +1,27 @@
+{
+    name: "Hy's Personal Dictionary",
+    description: "Created for my own use, not really accurate",
+    author: "Hykilpikonna",
+    license: "CC0",
+    wordLanguage: "japanese",
+    definitionLanguage: "english",
+    words: {
+        '猫': {
+            word: ["猫", "ねこ"],
+            definition: ["n. Cat", "<strike>n. God :o</strike>"],
+            sentences: [
+                {s: "私(わたし)は猫(ねこ)です", tr: "I'm a cat :3"},
+                {s: "田中(たなか)さんは猫(ねこ)ではありません", tr: "Tanaka is not a cat"},
+                {s: "あそこの公園(こうえん)に猫(ねこ)がたくさんいます", tr: "That park over there has a lot of cats"},
+                {s: "猫(ねこ)は怖(こわ)くない", tr: "Cats are not scary"}
+            ]
+        },
+        '天気': {
+            word: ["天気", "てんき"],
+            definition: ["n. Weather"],
+            sentences: [
+                {s: "今日はいい天気ですね", tr: "Today's weather is great"},
+            ]
+        },
+    }
+}
