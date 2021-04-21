@@ -18,5 +18,8 @@ module.exports = {
         // Disable tslint ban
         "@typescript-eslint/ban-ts-ignore": "off",
         "@typescript-eslint/ban-ts-comment": "off",
+
+        // Disable require() ban
+        "typescript-eslint/no-var-requires": "off"
     }
 }
