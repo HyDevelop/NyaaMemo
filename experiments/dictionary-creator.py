@@ -55,6 +55,19 @@ if __name__ == '__main__':
             allWords = [getAllWords(chap) for chap in book['chapters']]
             allWords = [item for ls in allWords for item in ls]
             missingWords = [word for word in allWords if word not in words and word != '']
+            wordsWithoutDefinitions = [w for w in allWords if w in words and ('definition' not in words[w] or words[w]['definition'] == [])]
+            wordsWithoutSentences = [w for w in allWords if w in words and ('sentences' not in words[w] or words[w]['sentences'] == [])]
+
+            # TODO: Command/Function system
+
+            # Prompt to input missing words
+            for word in missingWords:
+                hiragana = input('Please input Hiragana for {}: '.format(word))
+                words[word] = {'word': [word, hiragana], 'definition': [], 'sentences': []}
+                wordsWithoutDefinitions.append(word)
+                wordsWithoutSentences.append(word)
+                save()
+            missingWords.clear()
 
             # Done, save
             outFile.truncate(0)
