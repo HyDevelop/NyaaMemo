@@ -49,7 +49,7 @@ if __name__ == '__main__':
             # Create word list if not exist
             if 'words' not in out:
                 out['words'] = {}
-            words: Dict[str, Dict] = out['words']
+            words: Dict[str, Dict[str, List]] = out['words']
 
             # Missing words
             allWords = [getAllWords(chap) for chap in book['chapters']]
