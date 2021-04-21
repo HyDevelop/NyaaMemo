@@ -50,6 +50,7 @@ if __name__ == '__main__':
             print(allWords)
 
             # Done, save
+            outFile.truncate(0)
             json5.dump(out, outFile, indent=2)
 
 
