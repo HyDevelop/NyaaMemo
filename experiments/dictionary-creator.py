@@ -4,6 +4,7 @@ from typing import List, Dict
 import json5
 
 
+# Get all words from a book
 def getAllWords(chap) -> List[str]:
     res = []
     if 'subchapters' in chap:
@@ -12,6 +13,19 @@ def getAllWords(chap) -> List[str]:
     if 'words' in chap:
         res += chap["words"]
     return res
+
+
+# Read json string from a file so that empty files would return {}
+def readJsonStr(file) -> str:
+    content = file.read()
+    return '{}' if content.strip() == '' else content
+
+
+# Override a file opened in r+ mode
+def override(file, jsonObj):
+    file.seek(0)
+    file.write(json5.dumps(jsonObj, indent=2, ensure_ascii=False))
+    file.truncate()
 
 
 if __name__ == '__main__':
@@ -27,16 +41,11 @@ if __name__ == '__main__':
 
         with open(output, 'r+') as outFile:
             # Read existing json
-            temp = outFile.read()
-            if temp.strip() == '':
-                temp = '{}'
-            out = json5.loads(temp)
+            out = json5.loads(readJsonStr(outFile))
 
             # Save function
             def save():
-                outFile.seek(0)
-                outFile.write(json5.dumps(out, indent=2, ensure_ascii=False))
-                outFile.truncate()
+                override(outFile, out)
 
             # Make sure that all meta info keys exist
             print('Checking dictionary info...')
