@@ -17,7 +17,7 @@ def getAllWords(chap) -> List[str]:
 if __name__ == '__main__':
     # Input paths
     book = input('Input book path: ')
-    output = input('Input output file name: ') + '.json5'
+    output = input('Input dictionary path: ')
 
     date = datetime.now().strftime('"%Y-%m-%d')
 
@@ -78,7 +78,6 @@ if __name__ == '__main__':
                     if definition.strip() != '':
                         words[word]['definition'].append(definition)
                         print('Definition added: ', definition)
-
 
             # Done, save
             save()
