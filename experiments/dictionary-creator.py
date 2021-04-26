@@ -114,8 +114,9 @@ if __name__ == '__main__':
 
         # Prompt to input words without definitions
         for word in wordsWithoutDefinitions:
+            print('Inputting definition for {} (enter a single space to move on to the next word):'.format(word))
             while True:
-                definition = input('Please input the definition of {} (type a single space to move on): '.format(word))
+                definition = input('> ')
                 if definition == ' ':
                     break
                 if definition.strip() != '':
