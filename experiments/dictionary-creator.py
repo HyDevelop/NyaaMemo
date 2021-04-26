@@ -38,66 +38,83 @@ def openRW(path: str):
 
 
 if __name__ == '__main__':
-    # Input paths
-    book = input('Input book path: ')
-    output = input('Input dictionary path: ')
+    date = datetime.now().strftime('%Y-%m-%d')
 
-    date = datetime.now().strftime('"%Y-%m-%d')
+    # Input paths
+    book = ''
+    output = ''
+
+    # Read last input paths
+    with openRW('.dic-creator.last-config') as lastCfgFile:
+        last = json5.loads(readJsonStr(lastCfgFile))
+        if 'date' in last:
+            book = last['bookPath']
+            output = last['outputPath']
+
+        # Book path
+        bookInput = input('Input book path' + (': ' if book == '' else ' (enter for {})'.format(book)))
+        outputInput = input('Input dictionary path' + (': ' if output == '' else ' (enter for {})'.format(output)))
+        book = book if bookInput == '' else bookInput
+        output = output if outputInput == '' else outputInput
+
+        # Save last path
+        last['date'] = date
+        last['bookPath'] = book
+        last['outputPath'] = output
+        override(lastCfgFile, last)
 
     # Open file
-    with open(book) as bookFile:
+    with open(book) as bookFile, openRW(output) as outFile:
+        # Read existing json
         book = json5.load(bookFile)
+        out = json5.loads(readJsonStr(outFile))
 
-        with open(output, 'r+') as outFile:
-            # Read existing json
-            out = json5.loads(readJsonStr(outFile))
+        # Save function
+        def save():
+            override(outFile, out)
 
-            # Save function
-            def save():
-                override(outFile, out)
+        # Make sure that all meta info keys exist
+        print('Checking dictionary info...')
+        for key in ['name', 'description', 'author', 'license', 'wordLanguage', 'definitionLanguage']:
+            if key not in out:
+                out[key] = input('> Dictionary {}: '.format(key))
+        print('Dictionary info checked.')
+        print()
 
-            # Make sure that all meta info keys exist
-            print('Checking dictionary info...')
-            for key in ['name', 'description', 'author', 'license', 'wordLanguage', 'definitionLanguage']:
-                if key not in out:
-                    out[key] = input('> Dictionary {}: '.format(key))
-            print('Dictionary info checked.')
-            print()
+        # Create word list if not exist
+        if 'words' not in out:
+            out['words'] = {}
+        words: Dict[str, Dict[str, List]] = out['words']
 
-            # Create word list if not exist
-            if 'words' not in out:
-                out['words'] = {}
-            words: Dict[str, Dict[str, List]] = out['words']
+        # Missing words
+        allWords = [getAllWords(chap) for chap in book['chapters']]
+        allWords = [item for ls in allWords for item in ls]
+        missingWords = [word for word in allWords if word not in words and word != '']
+        wordsWithoutDefinitions = [w for w in allWords if w in words and ('definition' not in words[w] or words[w]['definition'] == [])]
+        wordsWithoutSentences = [w for w in allWords if w in words and ('sentences' not in words[w] or words[w]['sentences'] == [])]
 
-            # Missing words
-            allWords = [getAllWords(chap) for chap in book['chapters']]
-            allWords = [item for ls in allWords for item in ls]
-            missingWords = [word for word in allWords if word not in words and word != '']
-            wordsWithoutDefinitions = [w for w in allWords if w in words and ('definition' not in words[w] or words[w]['definition'] == [])]
-            wordsWithoutSentences = [w for w in allWords if w in words and ('sentences' not in words[w] or words[w]['sentences'] == [])]
+        # TODO: Command/Function system
 
-            # TODO: Command/Function system
-
-            # Prompt to input missing words
-            for word in missingWords:
-                hiragana = input('Please input Hiragana for {}: '.format(word))
-                words[word] = {'word': [word, hiragana], 'definition': [], 'sentences': []}
-                wordsWithoutDefinitions.append(word)
-                wordsWithoutSentences.append(word)
-                save()
-            missingWords.clear()
-
-            # Prompt to input words without definitions
-            for word in wordsWithoutDefinitions:
-                while True:
-                    definition = input('Please input the definition of {} (type a single space to move on): '.format(word))
-                    if definition == ' ':
-                        break
-                    if definition.strip() != '':
-                        words[word]['definition'].append(definition)
-                        print('Definition added: ', definition)
-
-            # Done, save
+        # Prompt to input missing words
+        for word in missingWords:
+            hiragana = input('Please input Hiragana for {}: '.format(word))
+            words[word] = {'word': [word, hiragana], 'definition': [], 'sentences': []}
+            wordsWithoutDefinitions.append(word)
+            wordsWithoutSentences.append(word)
             save()
+        missingWords.clear()
+
+        # Prompt to input words without definitions
+        for word in wordsWithoutDefinitions:
+            while True:
+                definition = input('Please input the definition of {} (type a single space to move on): '.format(word))
+                if definition == ' ':
+                    break
+                if definition.strip() != '':
+                    words[word]['definition'].append(definition)
+                    print('Definition added: ', definition)
+
+        # Done, save
+        save()
 
 
