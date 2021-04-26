@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
             # Make sure that all meta info keys exist
             print('Checking dictionary info...')
-            for key in ['name', 'description', 'author', 'license', 'worldLanguage', 'definitionLanguage']:
+            for key in ['name', 'description', 'author', 'license', 'wordLanguage', 'definitionLanguage']:
                 if key not in out:
                     out[key] = input('> Dictionary {}: '.format(key))
             print('Dictionary info checked.')
