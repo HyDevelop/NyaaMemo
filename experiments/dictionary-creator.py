@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import List, Dict
+from pathlib import Path
 
 import json5
 
@@ -17,6 +18,7 @@ def getAllWords(chap) -> List[str]:
 
 # Read json string from a file so that empty files would return {}
 def readJsonStr(file) -> str:
+    file.seek(0)
     content = file.read()
     return '{}' if content.strip() == '' else content
 
@@ -26,6 +28,13 @@ def override(file, jsonObj):
     file.seek(0)
     file.write(json5.dumps(jsonObj, indent=2, ensure_ascii=False))
     file.truncate()
+
+
+# Open a file, and create one if it doesn't exist. (a+ wouldn't work)
+def openRW(path: str):
+    # Create if not exist
+    Path(path).touch(exist_ok=True)
+    return open(path, 'r+')
 
 
 if __name__ == '__main__':
