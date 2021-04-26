@@ -2,7 +2,9 @@ from datetime import datetime
 from typing import List, Dict
 from pathlib import Path
 
+# pip3 install json5, pykakasi
 import json5
+import pykakasi
 
 
 # Get all words from a book
@@ -38,6 +40,7 @@ def openRW(path: str):
 
 
 if __name__ == '__main__':
+    kks = pykakasi.kakasi()
     date = datetime.now().strftime('%Y-%m-%d')
 
     # Input paths
@@ -97,7 +100,12 @@ if __name__ == '__main__':
 
         # Prompt to input missing words
         for word in missingWords:
-            hiragana = input('Please input Hiragana for {}: '.format(word))
+            # Generate automatic hiragana, and take input for verification
+            auto = ''.join([item['hiragana'] for item in kks.convert(word)])
+            hiragana = input('Please input Hiragana for {} (or enter for {}): '.format(word, auto))
+            if hiragana == '':
+                hiragana = auto
+
             words[word] = {'word': [word, hiragana], 'definition': [], 'sentences': []}
             wordsWithoutDefinitions.append(word)
             wordsWithoutSentences.append(word)
