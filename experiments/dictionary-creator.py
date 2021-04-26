@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
             # Prompt to input definitions for one word
             print()
-            print('Inputting definition for {} (enter a single space to move on to the next word):'.format(word))
+            print('Inputting definition for {} (enter to move on to the next word):'.format(word))
             while True:
                 definition = input('> ')
 

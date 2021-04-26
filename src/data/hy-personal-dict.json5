@@ -1,27 +1,2862 @@
 {
-    name: "Hy's Personal Dictionary",
-    description: "Created for my own use, not really accurate",
-    author: "Hykilpikonna",
-    license: "CC0",
-    wordLanguage: "japanese",
-    definitionLanguage: "english",
-    words: {
-        '猫': {
-            word: ["猫", "ねこ"],
-            definition: ["n. Cat", "<strike>n. God :o</strike>"],
-            sentences: [
-                {s: "私(わたし)は猫(ねこ)です", tr: "I'm a cat :3"},
-                {s: "田中(たなか)さんは猫(ねこ)ではありません", tr: "Tanaka is not a cat"},
-                {s: "あそこの公園(こうえん)に猫(ねこ)がたくさんいます", tr: "That park over there has a lot of cats"},
-                {s: "猫(ねこ)は怖(こわ)くない", tr: "Cats are not scary"}
-            ]
+  name: "Hy's Personal Dictionary",
+  description: "Created for my own use, not really accurate",
+  author: "Hykilpikonna",
+  license: "CC0",
+  wordLanguage: "japanese",
+  definitionLanguage: "english",
+  words: {
+    猫: {
+      word: [
+        "猫",
+        "ねこ",
+      ],
+      definition: [
+        "n. Cat",
+        "<strike>n. God :o</strike>",
+      ],
+      sentences: [
+        {
+          s: "私(わたし)は猫(ねこ)です",
+          tr: "I'm a cat :3",
         },
-        '天気': {
-            word: ["天気", "てんき"],
-            definition: ["n. Weather"],
-            sentences: [
-                {s: "今日はいい天気ですね", tr: "Today's weather is great"},
-            ]
+        {
+          s: "田中(たなか)さんは猫(ねこ)ではありません",
+          tr: "Tanaka is not a cat",
         },
-    }
+        {
+          s: "あそこの公園(こうえん)に猫(ねこ)がたくさんいます",
+          tr: "That park over there has a lot of cats",
+        },
+        {
+          s: "猫(ねこ)は怖(こわ)くない",
+          tr: "Cats are not scary",
+        },
+      ],
+    },
+    天気: {
+      word: [
+        "天気",
+        "てんき",
+      ],
+      definition: [
+        "n. Weather",
+      ],
+      sentences: [
+        {
+          s: "今日はいい天気ですね",
+          tr: "Today's weather is great",
+        },
+      ],
+    },
+    韓国人: {
+      word: [
+        "韓国人",
+        "かんこくじん",
+      ],
+      definition: [
+        "n. Korean person",
+      ],
+      sentences: [],
+    },
+    アメリカ人: {
+      word: [
+        "アメリカ人",
+        "あめりかじん",
+      ],
+      definition: [
+        "n. American person",
+      ],
+      sentences: [],
+    },
+    中国人: {
+      word: [
+        "中国人",
+        "ちゅうごくじん",
+      ],
+      definition: [
+        "n. Chinese person",
+      ],
+      sentences: [],
+    },
+    イギリス人: {
+      word: [
+        "イギリス人",
+        "いぎりすじん",
+      ],
+      definition: [
+        "n. British person",
+      ],
+      sentences: [],
+    },
+    日本人: {
+      word: [
+        "日本人",
+        "にほんじん",
+      ],
+      definition: [
+        "n. Japanese person",
+      ],
+      sentences: [],
+    },
+    学生: {
+      word: [
+        "学生",
+        "がくせい",
+      ],
+      definition: [
+        "n. Student",
+      ],
+      sentences: [],
+    },
+    医者: {
+      word: [
+        "医者",
+        "いしゃ",
+      ],
+      definition: [
+        "n. Doctor",
+      ],
+      sentences: [],
+    },
+    先生: {
+      word: [
+        "先生",
+        "せんせい",
+      ],
+      definition: [
+        "n. Teacher",
+      ],
+      sentences: [],
+    },
+    留学生: {
+      word: [
+        "留学生",
+        "りゅがくせい",
+      ],
+      definition: [
+        "n. International student",
+      ],
+      sentences: [],
+    },
+    会社員: {
+      word: [
+        "会社員",
+        "かいしゃいん",
+      ],
+      definition: [
+        "n. Office worker",
+      ],
+      sentences: [],
+    },
+    女の人: {
+      word: [
+        "女の人",
+        "おんなのひと",
+      ],
+      definition: [
+        "n. Woman",
+      ],
+      sentences: [],
+    },
+    男の人: {
+      word: [
+        "男の人",
+        "おとこのひと",
+      ],
+      definition: [
+        "n. Man",
+      ],
+      sentences: [],
+    },
+    女の子: {
+      word: [
+        "女の子",
+        "おんなのこ",
+      ],
+      definition: [
+        "n. Girl",
+      ],
+      sentences: [],
+    },
+    男の子: {
+      word: [
+        "男の子",
+        "おとこのこ",
+      ],
+      definition: [
+        "n. Boy",
+      ],
+      sentences: [],
+    },
+    手紙: {
+      word: [
+        "手紙",
+        "てかみ",
+      ],
+      definition: [
+        "n. Letter",
+      ],
+      sentences: [],
+    },
+    雑誌: {
+      word: [
+        "雑誌",
+        "ざっし",
+      ],
+      definition: [
+        "n. Magazine",
+      ],
+      sentences: [],
+    },
+    新聞: {
+      word: [
+        "新聞",
+        "しんぶん",
+      ],
+      definition: [
+        "n. News",
+      ],
+      sentences: [],
+    },
+    本: {
+      word: [
+        "本",
+        "ほん",
+      ],
+      definition: [
+        "n. Book",
+      ],
+      sentences: [],
+    },
+    椅子: {
+      word: [
+        "椅子",
+        "いす",
+      ],
+      definition: [
+        "n. Chair",
+      ],
+      sentences: [],
+    },
+    机: {
+      word: [
+        "机",
+        "つくえ",
+      ],
+      definition: [
+        "n. Desk",
+      ],
+      sentences: [],
+    },
+    カメラ: {
+      word: [
+        "カメラ",
+        "かめら",
+      ],
+      definition: [
+        "n. Camera",
+      ],
+      sentences: [],
+    },
+    テレビ: {
+      word: [
+        "テレビ",
+        "てれび",
+      ],
+      definition: [
+        "n. TV",
+      ],
+      sentences: [],
+    },
+    英語: {
+      word: [
+        "英語",
+        "えいご",
+      ],
+      definition: [
+        "n. English language",
+      ],
+      sentences: [],
+    },
+    日本語: {
+      word: [
+        "日本語",
+        "にほんご",
+      ],
+      definition: [
+        "n. Japanese language",
+      ],
+      sentences: [],
+    },
+    中国語: {
+      word: [
+        "中国語",
+        "ちゅうごくご",
+      ],
+      definition: [
+        "n. Chinese language",
+      ],
+      sentences: [],
+    },
+    映画: {
+      word: [
+        "映画",
+        "えいが",
+      ],
+      definition: [
+        "n. Movie",
+      ],
+      sentences: [],
+    },
+    傘: {
+      word: [
+        "傘",
+        "かさ",
+      ],
+      definition: [
+        "n. Umbrella",
+      ],
+      sentences: [],
+    },
+    時計: {
+      word: [
+        "時計",
+        "とけい",
+      ],
+      definition: [
+        "n. Clock, watch",
+      ],
+      sentences: [],
+    },
+    かばん: {
+      word: [
+        "かばん",
+        "かばん",
+      ],
+      definition: [
+        "n. Bag",
+      ],
+      sentences: [],
+    },
+    パソコン: {
+      word: [
+        "パソコン",
+        "ぱそこん",
+      ],
+      definition: [
+        "n. PC (Personal Computer)",
+      ],
+      sentences: [],
+    },
+    ハンカチ: {
+      word: [
+        "ハンカチ",
+        "はんかち",
+      ],
+      definition: [
+        "n. Handkerchief",
+      ],
+      sentences: [],
+    },
+    辞書: {
+      word: [
+        "辞書",
+        "じしょ",
+      ],
+      definition: [
+        "n. Dictionary",
+      ],
+      sentences: [],
+    },
+    教室: {
+      word: [
+        "教室",
+        "きょうしつ",
+      ],
+      definition: [
+        "n. Classroom",
+      ],
+      sentences: [],
+    },
+    会議室: {
+      word: [
+        "会議室",
+        "かいぎしつ",
+      ],
+      definition: [
+        "n. Conference room",
+      ],
+      sentences: [],
+    },
+    トイレ: {
+      word: [
+        "トイレ",
+        "といれ",
+      ],
+      definition: [
+        "n. Toilet, bathroom",
+      ],
+      sentences: [],
+    },
+    図書館: {
+      word: [
+        "図書館",
+        "としょかん",
+      ],
+      definition: [
+        "n. Library",
+      ],
+      sentences: [],
+    },
+    学校: {
+      word: [
+        "学校",
+        "がっこう",
+      ],
+      definition: [
+        "n. School",
+      ],
+      sentences: [],
+    },
+    事務室: {
+      word: [
+        "事務室",
+        "じむしつ",
+      ],
+      definition: [
+        "n. Office",
+      ],
+      sentences: [],
+    },
+    レストラン: {
+      word: [
+        "レストラン",
+        "れすとらん",
+      ],
+      definition: [
+        "n. Restaurant",
+      ],
+      sentences: [],
+    },
+    映画館: {
+      word: [
+        "映画館",
+        "えいがかん",
+      ],
+      definition: [
+        "n. Movie theater",
+      ],
+      sentences: [],
+    },
+    銀行: {
+      word: [
+        "銀行",
+        "ぎんこう",
+      ],
+      definition: [
+        "n. Bank",
+      ],
+      sentences: [],
+    },
+    本屋: {
+      word: [
+        "本屋",
+        "ほんや",
+      ],
+      definition: [
+        "n. Bookstore",
+      ],
+      sentences: [],
+    },
+    病院: {
+      word: [
+        "病院",
+        "びょういん",
+      ],
+      definition: [
+        "n. Hospital",
+      ],
+      sentences: [],
+    },
+    デパート: {
+      word: [
+        "デパート",
+        "でぱーと",
+      ],
+      definition: [
+        "n. Department store",
+      ],
+      sentences: [],
+    },
+    郵便局: {
+      word: [
+        "郵便局",
+        "ゆうびんきょく",
+      ],
+      definition: [
+        "n. Post office",
+      ],
+      sentences: [],
+    },
+    喫茶店: {
+      word: [
+        "喫茶店",
+        "きっさてん",
+      ],
+      definition: [
+        "n. Coffee (tea) shop",
+      ],
+      sentences: [],
+    },
+    公園: {
+      word: [
+        "公園",
+        "こうえん",
+      ],
+      definition: [
+        "n. Park",
+      ],
+      sentences: [],
+    },
+    部屋: {
+      word: [
+        "部屋",
+        "へや",
+      ],
+      definition: [
+        "n. Room",
+      ],
+      sentences: [],
+    },
+    花: {
+      word: [
+        "花",
+        "はな",
+      ],
+      definition: [
+        "n. Flower",
+      ],
+      sentences: [],
+    },
+    石: {
+      word: [
+        "石",
+        "いし",
+      ],
+      definition: [
+        "n. Stone",
+      ],
+      sentences: [],
+    },
+    庭: {
+      word: [
+        "庭",
+        "にわ",
+      ],
+      definition: [
+        "n. Garden, yard",
+      ],
+      sentences: [],
+    },
+    子供: {
+      word: [
+        "子供",
+        "こども",
+      ],
+      definition: [
+        "n. Children",
+      ],
+      sentences: [],
+    },
+    犬: {
+      word: [
+        "犬",
+        "いぬ",
+      ],
+      definition: [
+        "n. Dog",
+      ],
+      sentences: [],
+    },
+    居間: {
+      word: [
+        "居間",
+        "いま",
+      ],
+      definition: [
+        "n. Living room",
+      ],
+      sentences: [],
+    },
+    下: {
+      word: [
+        "下",
+        "した",
+      ],
+      definition: [
+        "pre. Under, below",
+      ],
+      sentences: [],
+    },
+    上: {
+      word: [
+        "上",
+        "うえ",
+      ],
+      definition: [
+        "pre. Above",
+        "n. Top, superior",
+      ],
+      sentences: [],
+    },
+    前: {
+      word: [
+        "前",
+        "まえ",
+      ],
+      definition: [
+        "pre. In front",
+        "adv. Before",
+      ],
+      sentences: [],
+    },
+    後ろ: {
+      word: [
+        "後ろ",
+        "うしろ",
+      ],
+      definition: [
+        "pre. Behind",
+        "n. Back",
+      ],
+      sentences: [],
+    },
+    箱: {
+      word: [
+        "箱",
+        "はこ",
+      ],
+      definition: [
+        "n. Box",
+      ],
+      sentences: [],
+    },
+    ベッド: {
+      word: [
+        "ベッド",
+        "べっど",
+      ],
+      definition: [
+        "n. Bed",
+      ],
+      sentences: [],
+    },
+    隣: {
+      word: [
+        "隣",
+        "となり",
+      ],
+      definition: [
+        "adj. Next to",
+      ],
+      sentences: [],
+    },
+    薬: {
+      word: [
+        "薬",
+        "くすり",
+      ],
+      definition: [
+        "n. Medicine",
+      ],
+      sentences: [],
+    },
+    中: {
+      word: [
+        "中",
+        "なか",
+      ],
+      definition: [
+        "pre. Inside",
+      ],
+      sentences: [],
+    },
+    ビール: {
+      word: [
+        "ビール",
+        "びーる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    リンゴ: {
+      word: [
+        "リンゴ",
+        "りんご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    冷蔵庫: {
+      word: [
+        "冷蔵庫",
+        "れいぞうこ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    紅茶: {
+      word: [
+        "紅茶",
+        "こうちゃ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    茶碗: {
+      word: [
+        "茶碗",
+        "ちゃわん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    グラス: {
+      word: [
+        "グラス",
+        "ぐらす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    外: {
+      word: [
+        "外",
+        "そと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    横: {
+      word: [
+        "横",
+        "よこ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    車: {
+      word: [
+        "車",
+        "くるま",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    家: {
+      word: [
+        "家",
+        "いえ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    木: {
+      word: [
+        "木",
+        "き",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    魚: {
+      word: [
+        "魚",
+        "さかな",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    鳥: {
+      word: [
+        "鳥",
+        "とり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ペン: {
+      word: [
+        "ペン",
+        "ぺん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ペット: {
+      word: [
+        "ペット",
+        "ぺっと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    消しゴム: {
+      word: [
+        "消しゴム",
+        "けしごむ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    社長: {
+      word: [
+        "社長",
+        "しゃちょう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    財布: {
+      word: [
+        "財布",
+        "さいふ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一: {
+      word: [
+        "一",
+        "いち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二: {
+      word: [
+        "二",
+        "に",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三: {
+      word: [
+        "三",
+        "さん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    四: {
+      word: [
+        "四",
+        "よん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    五: {
+      word: [
+        "五",
+        "ご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    六: {
+      word: [
+        "六",
+        "ろく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    七: {
+      word: [
+        "七",
+        "しち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    八: {
+      word: [
+        "八",
+        "はち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    九: {
+      word: [
+        "九",
+        "きゅう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    十: {
+      word: [
+        "十",
+        "じゅう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二十九: {
+      word: [
+        "二十九",
+        "にじゅうきゅう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    六十五: {
+      word: [
+        "六十五",
+        "ろくじゅうご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    十一: {
+      word: [
+        "十一",
+        "じゅういち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三十八: {
+      word: [
+        "三十八",
+        "さんじゅうはち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    七十四: {
+      word: [
+        "七十四",
+        "しちじゅうよん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    午前: {
+      word: [
+        "午前",
+        "ごぜん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    午後: {
+      word: [
+        "午後",
+        "ごご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一時: {
+      word: [
+        "一時",
+        "いちじ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    四時: {
+      word: [
+        "四時",
+        "よじ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    七時: {
+      word: [
+        "七時",
+        "しちじ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    九時: {
+      word: [
+        "九時",
+        "くじ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一分: {
+      word: [
+        "一分",
+        "いっぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二分: {
+      word: [
+        "二分",
+        "にぶん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三分: {
+      word: [
+        "三分",
+        "さんぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    四分: {
+      word: [
+        "四分",
+        "よんぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    六分: {
+      word: [
+        "六分",
+        "ろっぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    八分: {
+      word: [
+        "八分",
+        "はっぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    十分: {
+      word: [
+        "十分",
+        "じゅっぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二時十分: {
+      word: [
+        "二時十分",
+        "にじじゅっぷん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    十時半: {
+      word: [
+        "十時半",
+        "じゅうじはん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    月曜日: {
+      word: [
+        "月曜日",
+        "げつようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    火曜日: {
+      word: [
+        "火曜日",
+        "かようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    水曜日: {
+      word: [
+        "水曜日",
+        "すいようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    木曜日: {
+      word: [
+        "木曜日",
+        "もくようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    金曜日: {
+      word: [
+        "金曜日",
+        "きんようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    土曜日: {
+      word: [
+        "土曜日",
+        "どようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    日曜日: {
+      word: [
+        "日曜日",
+        "にちようび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    今日: {
+      word: [
+        "今日",
+        "きょう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    明日: {
+      word: [
+        "明日",
+        "あした",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    明後日: {
+      word: [
+        "明後日",
+        "あさって",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    百: {
+      word: [
+        "百",
+        "ひゃく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三百: {
+      word: [
+        "三百",
+        "さんびゃく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    六百: {
+      word: [
+        "六百",
+        "ろっぴゃく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    八百: {
+      word: [
+        "八百",
+        "はっぴゃく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    千: {
+      word: [
+        "千",
+        "せん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三千: {
+      word: [
+        "三千",
+        "さんぜん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    八千: {
+      word: [
+        "八千",
+        "はっせん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    万: {
+      word: [
+        "万",
+        "まん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    円: {
+      word: [
+        "円",
+        "えん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    幾ら: {
+      word: [
+        "幾ら",
+        "いくら",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お母さん: {
+      word: [
+        "お母さん",
+        "おかあさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お父さん: {
+      word: [
+        "お父さん",
+        "おとうさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お爺さん: {
+      word: [
+        "お爺さん",
+        "おじいさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お婆さん: {
+      word: [
+        "お婆さん",
+        "おばあさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お姉さん: {
+      word: [
+        "お姉さん",
+        "おねえさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お兄さん: {
+      word: [
+        "お兄さん",
+        "おにいさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    母: {
+      word: [
+        "母",
+        "はは",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    父: {
+      word: [
+        "父",
+        "ちち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    姐: {
+      word: [
+        "姐",
+        "あね",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    兄: {
+      word: [
+        "兄",
+        "あに",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    娘: {
+      word: [
+        "娘",
+        "むすめ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    息子: {
+      word: [
+        "息子",
+        "むすこ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    晴れ: {
+      word: [
+        "晴れ",
+        "はれ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    曇り: {
+      word: [
+        "曇り",
+        "くもり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    雨: {
+      word: [
+        "雨",
+        "あめ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    雪: {
+      word: [
+        "雪",
+        "ゆき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    春: {
+      word: [
+        "春",
+        "はる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    夏: {
+      word: [
+        "夏",
+        "なつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    秋: {
+      word: [
+        "秋",
+        "あき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    冬: {
+      word: [
+        "冬",
+        "ふゆ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    温かい: {
+      word: [
+        "温かい",
+        "あたたかい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    暑い: {
+      word: [
+        "暑い",
+        "あつい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    涼しい: {
+      word: [
+        "涼しい",
+        "すずしい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    寒い: {
+      word: [
+        "寒い",
+        "さむい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    くない: {
+      word: [
+        "くない",
+        "くない",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    かった: {
+      word: [
+        "かった",
+        "かった",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    くなかった: {
+      word: [
+        "くなかった",
+        "くなかった",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    東京: {
+      word: [
+        "東京",
+        "とうきょう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    馬: {
+      word: [
+        "馬",
+        "うま",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    虎: {
+      word: [
+        "虎",
+        "とら",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    パンダ: {
+      word: [
+        "パンダ",
+        "ぱんだ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    小さい: {
+      word: [
+        "小さい",
+        "ちいさい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    大きい: {
+      word: [
+        "大きい",
+        "おおきい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    軽い: {
+      word: [
+        "軽い",
+        "かるい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    重い: {
+      word: [
+        "重い",
+        "おもい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    かわいい: {
+      word: [
+        "かわいい",
+        "かわいい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    猿: {
+      word: [
+        "猿",
+        "さる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ライオン: {
+      word: [
+        "ライオン",
+        "らいおん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    象: {
+      word: [
+        "象",
+        "ぞう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ウサギ: {
+      word: [
+        "ウサギ",
+        "うさぎ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    荷物: {
+      word: [
+        "荷物",
+        "にもつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    動物: {
+      word: [
+        "動物",
+        "どうぶつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    白い: {
+      word: [
+        "白い",
+        "しろい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    黒い: {
+      word: [
+        "黒い",
+        "くろい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    黄色い: {
+      word: [
+        "黄色い",
+        "きいろい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    青い: {
+      word: [
+        "青い",
+        "あおい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    赤い: {
+      word: [
+        "赤い",
+        "あかい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    緑: {
+      word: [
+        "緑",
+        "みどり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    色: {
+      word: [
+        "色",
+        "いろ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    オランジ色: {
+      word: [
+        "オランジ色",
+        "おらんじいろ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ジュース: {
+      word: [
+        "ジュース",
+        "じゅーす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    寿司: {
+      word: [
+        "寿司",
+        "すし",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    バナナ: {
+      word: [
+        "バナナ",
+        "ばなな",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    刺身: {
+      word: [
+        "刺身",
+        "さしみ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ツボン: {
+      word: [
+        "ツボン",
+        "つぼん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ネクタイ: {
+      word: [
+        "ネクタイ",
+        "ねくたい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    セーター: {
+      word: [
+        "セーター",
+        "せーたー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ジーンズ: {
+      word: [
+        "ジーンズ",
+        "じーんず",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    コート: {
+      word: [
+        "コート",
+        "こーと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    シャツ: {
+      word: [
+        "シャツ",
+        "しゃつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    靴下: {
+      word: [
+        "靴下",
+        "くつした",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    靴: {
+      word: [
+        "靴",
+        "くつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    上着: {
+      word: [
+        "上着",
+        "うわぎ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    洋服: {
+      word: [
+        "洋服",
+        "ようふく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    短い: {
+      word: [
+        "短い",
+        "みじかい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    長い: {
+      word: [
+        "長い",
+        "ながい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    高い: {
+      word: [
+        "高い",
+        "たかい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    安い: {
+      word: [
+        "安い",
+        "やすい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    簡単: {
+      word: [
+        "簡単",
+        "かんたん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    便利: {
+      word: [
+        "便利",
+        "べんり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    にぎやが: {
+      word: [
+        "にぎやが",
+        "にぎやが",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    静か: {
+      word: [
+        "静か",
+        "しずか",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    コンビニ: {
+      word: [
+        "コンビニ",
+        "こんびに",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    町: {
+      word: [
+        "町",
+        "まち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    人: {
+      word: [
+        "人",
+        "ひと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お酒: {
+      word: [
+        "お酒",
+        "おさけ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    料理: {
+      word: [
+        "料理",
+        "りょうり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    有名: {
+      word: [
+        "有名",
+        "ゆうめい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    きれい: {
+      word: [
+        "きれい",
+        "きれい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    親切: {
+      word: [
+        "親切",
+        "しんせつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    牛乳: {
+      word: [
+        "牛乳",
+        "ぎゅうにゅう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    パン: {
+      word: [
+        "パン",
+        "ぱん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    音楽: {
+      word: [
+        "音楽",
+        "おんがく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    コーヒー: {
+      word: [
+        "コーヒー",
+        "こーひー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ラジオ: {
+      word: [
+        "ラジオ",
+        "らじお",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お茶: {
+      word: [
+        "お茶",
+        "おちゃ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お主人: {
+      word: [
+        "お主人",
+        "おしゅじん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    奥さん: {
+      word: [
+        "奥さん",
+        "おくさん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    妻: {
+      word: [
+        "妻",
+        "つま",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    夫: {
+      word: [
+        "夫",
+        "おっと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    聞く: {
+      word: [
+        "聞く",
+        "きく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    読む: {
+      word: [
+        "読む",
+        "よむ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    買う: {
+      word: [
+        "買う",
+        "かう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    飲む: {
+      word: [
+        "飲む",
+        "のむ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    書く: {
+      word: [
+        "書く",
+        "かく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    卵: {
+      word: [
+        "卵",
+        "たまご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    朝ご飯: {
+      word: [
+        "朝ご飯",
+        "あさごはん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    昼ご飯: {
+      word: [
+        "昼ご飯",
+        "ひるごはん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    晩ご飯: {
+      word: [
+        "晩ご飯",
+        "ばんごはん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    起きる: {
+      word: [
+        "起きる",
+        "おきる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    出迎える: {
+      word: [
+        "出迎える",
+        "でむかえる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    出かける: {
+      word: [
+        "出かける",
+        "でかける",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    見る: {
+      word: [
+        "見る",
+        "みる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    寝る: {
+      word: [
+        "寝る",
+        "ねる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    食べる: {
+      word: [
+        "食べる",
+        "たべる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    両親: {
+      word: [
+        "両親",
+        "りょうしん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    友達: {
+      word: [
+        "友達",
+        "ともだち",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    中国: {
+      word: [
+        "中国",
+        "ちゅうごく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    旅行する: {
+      word: [
+        "旅行する",
+        "りょこうする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ジョギングする: {
+      word: [
+        "ジョギングする",
+        "じょぎんぐする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    来る: {
+      word: [
+        "来る",
+        "くる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    掃除する: {
+      word: [
+        "掃除する",
+        "そうじする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    散歩する: {
+      word: [
+        "散歩する",
+        "さんぽする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    出勤する: {
+      word: [
+        "出勤する",
+        "しゅっきんする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    スーパー: {
+      word: [
+        "スーパー",
+        "すーぱー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    プール: {
+      word: [
+        "プール",
+        "ぷーる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    カレー: {
+      word: [
+        "カレー",
+        "かれー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    食堂: {
+      word: [
+        "食堂",
+        "しょくどう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    働く: {
+      word: [
+        "働く",
+        "はたらく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    遊ぶ: {
+      word: [
+        "遊ぶ",
+        "あそぶ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    勉強する: {
+      word: [
+        "勉強する",
+        "べんきょうする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    休む: {
+      word: [
+        "休む",
+        "やすむ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    泳ぐ: {
+      word: [
+        "泳ぐ",
+        "およぐ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ラーメン: {
+      word: [
+        "ラーメン",
+        "らーめん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ナイフ: {
+      word: [
+        "ナイフ",
+        "ないふ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    箸: {
+      word: [
+        "箸",
+        "はし",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    スプーン: {
+      word: [
+        "スプーン",
+        "すぷーん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    スープ: {
+      word: [
+        "スープ",
+        "すーぷ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    鶏肉: {
+      word: [
+        "鶏肉",
+        "とりにく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    紙: {
+      word: [
+        "紙",
+        "かみ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    作る: {
+      word: [
+        "作る",
+        "つくる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    切る: {
+      word: [
+        "切る",
+        "きる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    はがき: {
+      word: [
+        "はがき",
+        "はがき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    兄弟: {
+      word: [
+        "兄弟",
+        "きょうだい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    動物園: {
+      word: [
+        "動物園",
+        "どうぶつえん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    蛇: {
+      word: [
+        "蛇",
+        "へび",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    出す: {
+      word: [
+        "出す",
+        "だす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一人: {
+      word: [
+        "一人",
+        "ひとり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二人: {
+      word: [
+        "二人",
+        "ふたり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一本: {
+      word: [
+        "一本",
+        "いっぽん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一回: {
+      word: [
+        "一回",
+        "いっかい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一冊: {
+      word: [
+        "一冊",
+        "いっさつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一枚: {
+      word: [
+        "一枚",
+        "いちまい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一台: {
+      word: [
+        "一台",
+        "いちだい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一頭: {
+      word: [
+        "一頭",
+        "いっとう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一匹: {
+      word: [
+        "一匹",
+        "いっぴき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一杯: {
+      word: [
+        "一杯",
+        "いっぱい",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一個: {
+      word: [
+        "一個",
+        "いっこ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    一つ: {
+      word: [
+        "一つ",
+        "ひとつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    二つ: {
+      word: [
+        "二つ",
+        "ふたつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    三つ: {
+      word: [
+        "三つ",
+        "みっつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    四つ: {
+      word: [
+        "四つ",
+        "よっつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    五つ: {
+      word: [
+        "五つ",
+        "いつつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    六つ: {
+      word: [
+        "六つ",
+        "むっつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    七つ: {
+      word: [
+        "七つ",
+        "ななつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    八つ: {
+      word: [
+        "八つ",
+        "やっつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    九つ: {
+      word: [
+        "九つ",
+        "ここのつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    とお: {
+      word: [
+        "とお",
+        "とお",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    イギリス: {
+      word: [
+        "イギリス",
+        "いぎりす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ドイツ: {
+      word: [
+        "ドイツ",
+        "どいつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    大坂: {
+      word: [
+        "大坂",
+        "おおさか",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    北京: {
+      word: [
+        "北京",
+        "ぺきん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    フランス: {
+      word: [
+        "フランス",
+        "ふらんす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    オーストラリア: {
+      word: [
+        "オーストラリア",
+        "おーすとらりあ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    国: {
+      word: [
+        "国",
+        "くに",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    家族: {
+      word: [
+        "家族",
+        "かぞく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    美術館: {
+      word: [
+        "美術館",
+        "びじゅつかん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    帰る: {
+      word: [
+        "帰る",
+        "かえる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    行く: {
+      word: [
+        "行く",
+        "いく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ホテル: {
+      word: [
+        "ホテル",
+        "ほてる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    電車: {
+      word: [
+        "電車",
+        "でんしゃ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    バス: {
+      word: [
+        "バス",
+        "ばす",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    自転車: {
+      word: [
+        "自転車",
+        "じてんしゃ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    空港: {
+      word: [
+        "空港",
+        "くうこう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    駅: {
+      word: [
+        "駅",
+        "えき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    タクシー: {
+      word: [
+        "タクシー",
+        "たくしー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    船: {
+      word: [
+        "船",
+        "ふね",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    飛行機: {
+      word: [
+        "飛行機",
+        "ひこうき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    地下鉄: {
+      word: [
+        "地下鉄",
+        "ちかてつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    寮: {
+      word: [
+        "寮",
+        "りょう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    お寺: {
+      word: [
+        "お寺",
+        "おてら",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    サッカー: {
+      word: [
+        "サッカー",
+        "さっかー",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    スポーツ: {
+      word: [
+        "スポーツ",
+        "すぽーつ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    フランス語: {
+      word: [
+        "フランス語",
+        "ふらんすご",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    授業: {
+      word: [
+        "授業",
+        "じゅぎょう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    アルバイト: {
+      word: [
+        "アルバイト",
+        "あるばいと",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    いつも: {
+      word: [
+        "いつも",
+        "いつも",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    よく: {
+      word: [
+        "よく",
+        "よく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    時々: {
+      word: [
+        "時々",
+        "ときどき",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    たまに: {
+      word: [
+        "たまに",
+        "たまに",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    あまり: {
+      word: [
+        "あまり",
+        "あまり",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    ほとんど: {
+      word: [
+        "ほとんど",
+        "ほとんど",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    全然: {
+      word: [
+        "全然",
+        "ぜんぜん",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    山: {
+      word: [
+        "山",
+        "やま",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    服: {
+      word: [
+        "服",
+        "ふく",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    歌: {
+      word: [
+        "歌",
+        "うた",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    鍋: {
+      word: [
+        "鍋",
+        "なべ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    登る: {
+      word: [
+        "登る",
+        "のぼる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    歌う: {
+      word: [
+        "歌う",
+        "うたう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    運転する: {
+      word: [
+        "運転する",
+        "うんてんする",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    字: {
+      word: [
+        "字",
+        "じ",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    地図: {
+      word: [
+        "地図",
+        "ちず",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    分かる: {
+      word: [
+        "分かる",
+        "わかる",
+      ],
+      definition: [],
+      sentences: [],
+    },
+    使う: {
+      word: [
+        "使う",
+        "つかう",
+      ],
+      definition: [],
+      sentences: [],
+    },
+  },
 }
