@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 from typing import List, Dict
 from pathlib import Path
@@ -127,9 +128,14 @@ if __name__ == '__main__':
                 if definition == ' ':
                     save()
                     break
-                if definition.strip() != '':
+
+                # Add one definition
+                definition = definition.strip()
+                if re.match('[a-zA-Z]+\\. .*', definition):
                     words[word]['definition'].append(definition)
-                    print('Definition added: ', definition)
+                    print('Definition added:', definition)
+                else:
+                    print('Wrong format. Please input definition in the "<word form>. <definition>" format. (For example, n. dog)')
 
         # Done, save
         save()
