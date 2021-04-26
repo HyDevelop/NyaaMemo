@@ -101,7 +101,7 @@ if __name__ == '__main__':
         # Prompt to input missing words
         for word in missingWords:
             # Generate automatic hiragana, and take input for verification
-            auto = ''.join([item['hiragana'] for item in kks.convert(word)])
+            auto = ''.join([item['hira'] for item in kks.convert(word)])
             hiragana = input('Please input Hiragana for {} (or enter for {}): '.format(word, auto))
             if hiragana == '':
                 hiragana = auto
