@@ -117,10 +117,15 @@ if __name__ == '__main__':
 
         # Prompt to input words without definitions
         for word in wordsWithoutDefinitions:
+
+            # Prompt to input definitions for one word
             print('Inputting definition for {} (enter a single space to move on to the next word):'.format(word))
             while True:
                 definition = input('> ')
+
+                # Finish inputting this word
                 if definition == ' ':
+                    save()
                     break
                 if definition.strip() != '':
                     words[word]['definition'].append(definition)
