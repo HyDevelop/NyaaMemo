@@ -2,6 +2,9 @@ from datetime import datetime
 from typing import List, Dict
 from pathlib import Path
 
+# Readline enables line editing features (https://stackoverflow.com/a/45772524/7346633)
+import readline
+
 # pip3 install json5, pykakasi
 import json5
 import pykakasi
