@@ -120,14 +120,20 @@ if __name__ == '__main__':
         for word in wordsWithoutDefinitions:
 
             # Prompt to input definitions for one word
+            print()
             print('Inputting definition for {} (enter a single space to move on to the next word):'.format(word))
             while True:
                 definition = input('> ')
 
                 # Finish inputting this word
-                if definition == ' ':
+                if definition == '':
                     save()
                     break
+
+                # Undo command
+                if definition == 'undo':
+                    print('Definition removed:', words[word]['definition'].pop())
+                    continue
 
                 # Add one definition
                 definition = definition.strip()
