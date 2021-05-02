@@ -687,7 +687,9 @@
         "ビール",
         "びーる",
       ],
-      definition: [],
+      definition: [
+        "n. Beer",
+      ],
       sentences: [],
     },
     リンゴ: {
@@ -695,7 +697,9 @@
         "リンゴ",
         "りんご",
       ],
-      definition: [],
+      definition: [
+        "n. Apple",
+      ],
       sentences: [],
     },
     冷蔵庫: {
@@ -703,7 +707,9 @@
         "冷蔵庫",
         "れいぞうこ",
       ],
-      definition: [],
+      definition: [
+        "n. Refrigerator",
+      ],
       sentences: [],
     },
     紅茶: {
@@ -711,7 +717,9 @@
         "紅茶",
         "こうちゃ",
       ],
-      definition: [],
+      definition: [
+        "n. Black tea (aka. red tea)",
+      ],
       sentences: [],
     },
     茶碗: {
@@ -719,7 +727,9 @@
         "茶碗",
         "ちゃわん",
       ],
-      definition: [],
+      definition: [
+        "n. Bowl, cup",
+      ],
       sentences: [],
     },
     グラス: {
@@ -727,7 +737,9 @@
         "グラス",
         "ぐらす",
       ],
-      definition: [],
+      definition: [
+        "n. Glass",
+      ],
       sentences: [],
     },
     外: {
@@ -735,7 +747,9 @@
         "外",
         "そと",
       ],
-      definition: [],
+      definition: [
+        "n. Outside",
+      ],
       sentences: [],
     },
     横: {
@@ -743,7 +757,10 @@
         "横",
         "よこ",
       ],
-      definition: [],
+      definition: [
+        "n. Side",
+        "pre. Beside",
+      ],
       sentences: [],
     },
     車: {
@@ -751,7 +768,9 @@
         "車",
         "くるま",
       ],
-      definition: [],
+      definition: [
+        "n. Car",
+      ],
       sentences: [],
     },
     家: {
@@ -759,7 +778,9 @@
         "家",
         "いえ",
       ],
-      definition: [],
+      definition: [
+        "n. House, home",
+      ],
       sentences: [],
     },
     木: {
@@ -767,7 +788,9 @@
         "木",
         "き",
       ],
-      definition: [],
+      definition: [
+        "n. Tree, wood",
+      ],
       sentences: [],
     },
     魚: {
@@ -775,7 +798,9 @@
         "魚",
         "さかな",
       ],
-      definition: [],
+      definition: [
+        "n. Fish",
+      ],
       sentences: [],
     },
     鳥: {
@@ -783,7 +808,9 @@
         "鳥",
         "とり",
       ],
-      definition: [],
+      definition: [
+        "n. Bird",
+      ],
       sentences: [],
     },
     ペン: {
@@ -791,7 +818,9 @@
         "ペン",
         "ぺん",
       ],
-      definition: [],
+      definition: [
+        "n. Pen",
+      ],
       sentences: [],
     },
     ペット: {
@@ -799,7 +828,9 @@
         "ペット",
         "ぺっと",
       ],
-      definition: [],
+      definition: [
+        "n. Pet",
+      ],
       sentences: [],
     },
     消しゴム: {
@@ -807,7 +838,9 @@
         "消しゴム",
         "けしごむ",
       ],
-      definition: [],
+      definition: [
+        "n. Eraser",
+      ],
       sentences: [],
     },
     社長: {
@@ -815,7 +848,9 @@
         "社長",
         "しゃちょう",
       ],
-      definition: [],
+      definition: [
+        "n. President, manager",
+      ],
       sentences: [],
     },
     財布: {
@@ -823,7 +858,9 @@
         "財布",
         "さいふ",
       ],
-      definition: [],
+      definition: [
+        "n. Wallet",
+      ],
       sentences: [],
     },
     一: {
@@ -831,7 +868,9 @@
         "一",
         "いち",
       ],
-      definition: [],
+      definition: [
+        "n. One",
+      ],
       sentences: [],
     },
     二: {
@@ -839,7 +878,9 @@
         "二",
         "に",
       ],
-      definition: [],
+      definition: [
+        "n. Two",
+      ],
       sentences: [],
     },
     三: {
@@ -847,7 +888,9 @@
         "三",
         "さん",
       ],
-      definition: [],
+      definition: [
+        "n. Three",
+      ],
       sentences: [],
     },
     四: {
@@ -855,7 +898,9 @@
         "四",
         "よん",
       ],
-      definition: [],
+      definition: [
+        "n. Four",
+      ],
       sentences: [],
     },
     五: {
@@ -863,7 +908,9 @@
         "五",
         "ご",
       ],
-      definition: [],
+      definition: [
+        "n. Five",
+      ],
       sentences: [],
     },
     六: {
@@ -871,7 +918,9 @@
         "六",
         "ろく",
       ],
-      definition: [],
+      definition: [
+        "n. Six",
+      ],
       sentences: [],
     },
     七: {
@@ -879,7 +928,9 @@
         "七",
         "しち",
       ],
-      definition: [],
+      definition: [
+        "n. Seven",
+      ],
       sentences: [],
     },
     八: {
@@ -887,7 +938,9 @@
         "八",
         "はち",
       ],
-      definition: [],
+      definition: [
+        "n. Eight",
+      ],
       sentences: [],
     },
     九: {
@@ -895,7 +948,9 @@
         "九",
         "きゅう",
       ],
-      definition: [],
+      definition: [
+        "n. Nine",
+      ],
       sentences: [],
     },
     十: {
@@ -903,7 +958,9 @@
         "十",
         "じゅう",
       ],
-      definition: [],
+      definition: [
+        "n. Ten",
+      ],
       sentences: [],
     },
     二十九: {
@@ -911,7 +968,9 @@
         "二十九",
         "にじゅうきゅう",
       ],
-      definition: [],
+      definition: [
+        "number. 29",
+      ],
       sentences: [],
     },
     六十五: {
@@ -919,7 +978,9 @@
         "六十五",
         "ろくじゅうご",
       ],
-      definition: [],
+      definition: [
+        "number. 65",
+      ],
       sentences: [],
     },
     十一: {
@@ -927,7 +988,9 @@
         "十一",
         "じゅういち",
       ],
-      definition: [],
+      definition: [
+        "number. 11",
+      ],
       sentences: [],
     },
     三十八: {
@@ -935,7 +998,9 @@
         "三十八",
         "さんじゅうはち",
       ],
-      definition: [],
+      definition: [
+        "number. 38",
+      ],
       sentences: [],
     },
     七十四: {
@@ -943,7 +1008,9 @@
         "七十四",
         "しちじゅうよん",
       ],
-      definition: [],
+      definition: [
+        "number. 74",
+      ],
       sentences: [],
     },
     午前: {
@@ -951,7 +1018,10 @@
         "午前",
         "ごぜん",
       ],
-      definition: [],
+      definition: [
+        "n. Morning",
+        "abv. A.M.",
+      ],
       sentences: [],
     },
     午後: {
@@ -959,7 +1029,10 @@
         "午後",
         "ごご",
       ],
-      definition: [],
+      definition: [
+        "n. Afternoon",
+        "abv. P.M.",
+      ],
       sentences: [],
     },
     一時: {
@@ -967,7 +1040,9 @@
         "一時",
         "いちじ",
       ],
-      definition: [],
+      definition: [
+        "n. 1:00",
+      ],
       sentences: [],
     },
     四時: {
@@ -975,7 +1050,9 @@
         "四時",
         "よじ",
       ],
-      definition: [],
+      definition: [
+        "n. 4:00",
+      ],
       sentences: [],
     },
     七時: {
@@ -983,7 +1060,9 @@
         "七時",
         "しちじ",
       ],
-      definition: [],
+      definition: [
+        "n. 7:00",
+      ],
       sentences: [],
     },
     九時: {
@@ -991,7 +1070,9 @@
         "九時",
         "くじ",
       ],
-      definition: [],
+      definition: [
+        "n. 9:00",
+      ],
       sentences: [],
     },
     一分: {
@@ -999,7 +1080,10 @@
         "一分",
         "いっぷん",
       ],
-      definition: [],
+      definition: [
+        "n. One minute",
+        "n. xx:01",
+      ],
       sentences: [],
     },
     二分: {
@@ -1007,7 +1091,10 @@
         "二分",
         "にぶん",
       ],
-      definition: [],
+      definition: [
+        "n. Two minutes",
+        "n. xx:02",
+      ],
       sentences: [],
     },
     三分: {
@@ -1015,7 +1102,10 @@
         "三分",
         "さんぷん",
       ],
-      definition: [],
+      definition: [
+        "n. Three minutes",
+        "n. xx:03",
+      ],
       sentences: [],
     },
     四分: {
@@ -1023,7 +1113,10 @@
         "四分",
         "よんぷん",
       ],
-      definition: [],
+      definition: [
+        "n. Four minutes",
+        "n. xx:04",
+      ],
       sentences: [],
     },
     六分: {
@@ -1031,7 +1124,10 @@
         "六分",
         "ろっぷん",
       ],
-      definition: [],
+      definition: [
+        "n. Six minutes",
+        "n. xx:06",
+      ],
       sentences: [],
     },
     八分: {
@@ -1039,7 +1135,10 @@
         "八分",
         "はっぷん",
       ],
-      definition: [],
+      definition: [
+        "n. Eight minutes",
+        "n. xx:08",
+      ],
       sentences: [],
     },
     十分: {
@@ -1047,7 +1146,11 @@
         "十分",
         "じゅっぷん",
       ],
-      definition: [],
+      definition: [
+        "n. Ten minutes, xx:10",
+        "adj. Sufficient, satisfactory",
+        "adv. Fully",
+      ],
       sentences: [],
     },
     二時十分: {
@@ -1055,7 +1158,9 @@
         "二時十分",
         "にじじゅっぷん",
       ],
-      definition: [],
+      definition: [
+        "n. 2:10",
+      ],
       sentences: [],
     },
     十時半: {
@@ -1063,7 +1168,9 @@
         "十時半",
         "じゅうじはん",
       ],
-      definition: [],
+      definition: [
+        "n. 10:30",
+      ],
       sentences: [],
     },
     月曜日: {
@@ -1071,7 +1178,9 @@
         "月曜日",
         "げつようび",
       ],
-      definition: [],
+      definition: [
+        "n. Monday",
+      ],
       sentences: [],
     },
     火曜日: {
@@ -1079,7 +1188,9 @@
         "火曜日",
         "かようび",
       ],
-      definition: [],
+      definition: [
+        "n. Tuesday",
+      ],
       sentences: [],
     },
     水曜日: {
@@ -1087,7 +1198,9 @@
         "水曜日",
         "すいようび",
       ],
-      definition: [],
+      definition: [
+        "n. Wednesday",
+      ],
       sentences: [],
     },
     木曜日: {
@@ -1095,7 +1208,9 @@
         "木曜日",
         "もくようび",
       ],
-      definition: [],
+      definition: [
+        "n. Thursday",
+      ],
       sentences: [],
     },
     金曜日: {
@@ -1103,7 +1218,9 @@
         "金曜日",
         "きんようび",
       ],
-      definition: [],
+      definition: [
+        "n. Friday",
+      ],
       sentences: [],
     },
     土曜日: {
@@ -1111,7 +1228,9 @@
         "土曜日",
         "どようび",
       ],
-      definition: [],
+      definition: [
+        "n. Saturday",
+      ],
       sentences: [],
     },
     日曜日: {
@@ -1119,7 +1238,9 @@
         "日曜日",
         "にちようび",
       ],
-      definition: [],
+      definition: [
+        "n. Sunday",
+      ],
       sentences: [],
     },
     今日: {
@@ -1127,7 +1248,9 @@
         "今日",
         "きょう",
       ],
-      definition: [],
+      definition: [
+        "n. Today",
+      ],
       sentences: [],
     },
     明日: {
@@ -1135,7 +1258,9 @@
         "明日",
         "あした",
       ],
-      definition: [],
+      definition: [
+        "n. Tomorrow",
+      ],
       sentences: [],
     },
     明後日: {
@@ -1143,7 +1268,9 @@
         "明後日",
         "あさって",
       ],
-      definition: [],
+      definition: [
+        "n. Day after tomorrow",
+      ],
       sentences: [],
     },
     百: {
@@ -1151,7 +1278,9 @@
         "百",
         "ひゃく",
       ],
-      definition: [],
+      definition: [
+        "n. Hundred, 100",
+      ],
       sentences: [],
     },
     三百: {
@@ -1159,7 +1288,9 @@
         "三百",
         "さんびゃく",
       ],
-      definition: [],
+      definition: [
+        "n. 300",
+      ],
       sentences: [],
     },
     六百: {
@@ -1167,7 +1298,9 @@
         "六百",
         "ろっぴゃく",
       ],
-      definition: [],
+      definition: [
+        "n. 600",
+      ],
       sentences: [],
     },
     八百: {
@@ -1175,7 +1308,9 @@
         "八百",
         "はっぴゃく",
       ],
-      definition: [],
+      definition: [
+        "n. 800",
+      ],
       sentences: [],
     },
     千: {
@@ -1183,7 +1318,9 @@
         "千",
         "せん",
       ],
-      definition: [],
+      definition: [
+        "n. Thousand, 1000",
+      ],
       sentences: [],
     },
     三千: {
@@ -1191,7 +1328,9 @@
         "三千",
         "さんぜん",
       ],
-      definition: [],
+      definition: [
+        "n. 3000",
+      ],
       sentences: [],
     },
     八千: {
@@ -1199,7 +1338,9 @@
         "八千",
         "はっせん",
       ],
-      definition: [],
+      definition: [
+        "n. 8000",
+      ],
       sentences: [],
     },
     万: {
@@ -1207,7 +1348,9 @@
         "万",
         "まん",
       ],
-      definition: [],
+      definition: [
+        "n. Ten thousand, 10,000",
+      ],
       sentences: [],
     },
     円: {
@@ -1215,7 +1358,9 @@
         "円",
         "えん",
       ],
-      definition: [],
+      definition: [
+        "n. Yen (Currency unit in Japan)",
+      ],
       sentences: [],
     },
     幾ら: {
@@ -1223,7 +1368,9 @@
         "幾ら",
         "いくら",
       ],
-      definition: [],
+      definition: [
+        "phrase. How much",
+      ],
       sentences: [],
     },
     お母さん: {
@@ -1231,7 +1378,9 @@
         "お母さん",
         "おかあさん",
       ],
-      definition: [],
+      definition: [
+        "n. Mother",
+      ],
       sentences: [],
     },
     お父さん: {
@@ -1239,7 +1388,9 @@
         "お父さん",
         "おとうさん",
       ],
-      definition: [],
+      definition: [
+        "n. Father",
+      ],
       sentences: [],
     },
     お爺さん: {
@@ -1247,7 +1398,9 @@
         "お爺さん",
         "おじいさん",
       ],
-      definition: [],
+      definition: [
+        "n. Grandfather",
+      ],
       sentences: [],
     },
     お婆さん: {
@@ -1255,7 +1408,9 @@
         "お婆さん",
         "おばあさん",
       ],
-      definition: [],
+      definition: [
+        "n. Grandmother",
+      ],
       sentences: [],
     },
     お姉さん: {
@@ -1263,7 +1418,9 @@
         "お姉さん",
         "おねえさん",
       ],
-      definition: [],
+      definition: [
+        "n. Older sister",
+      ],
       sentences: [],
     },
     お兄さん: {
@@ -1271,7 +1428,9 @@
         "お兄さん",
         "おにいさん",
       ],
-      definition: [],
+      definition: [
+        "n. Older brother",
+      ],
       sentences: [],
     },
     母: {
@@ -1279,7 +1438,9 @@
         "母",
         "はは",
       ],
-      definition: [],
+      definition: [
+        "n. Mom",
+      ],
       sentences: [],
     },
     父: {
@@ -1287,7 +1448,9 @@
         "父",
         "ちち",
       ],
-      definition: [],
+      definition: [
+        "n. Dad",
+      ],
       sentences: [],
     },
     姐: {
@@ -1295,7 +1458,9 @@
         "姐",
         "あね",
       ],
-      definition: [],
+      definition: [
+        "n. Older sister",
+      ],
       sentences: [],
     },
     兄: {
@@ -1303,7 +1468,9 @@
         "兄",
         "あに",
       ],
-      definition: [],
+      definition: [
+        "n. Older brother",
+      ],
       sentences: [],
     },
     娘: {
@@ -1311,7 +1478,9 @@
         "娘",
         "むすめ",
       ],
-      definition: [],
+      definition: [
+        "n. Daughter",
+      ],
       sentences: [],
     },
     息子: {
@@ -1319,7 +1488,9 @@
         "息子",
         "むすこ",
       ],
-      definition: [],
+      definition: [
+        "n. Son",
+      ],
       sentences: [],
     },
     晴れ: {
@@ -1327,7 +1498,9 @@
         "晴れ",
         "はれ",
       ],
-      definition: [],
+      definition: [
+        "n. Sunny, clear weather",
+      ],
       sentences: [],
     },
     曇り: {
@@ -1335,7 +1508,9 @@
         "曇り",
         "くもり",
       ],
-      definition: [],
+      definition: [
+        "n. Cloudy weather",
+      ],
       sentences: [],
     },
     雨: {
@@ -1343,7 +1518,9 @@
         "雨",
         "あめ",
       ],
-      definition: [],
+      definition: [
+        "n. Rain",
+      ],
       sentences: [],
     },
     雪: {
@@ -1351,7 +1528,9 @@
         "雪",
         "ゆき",
       ],
-      definition: [],
+      definition: [
+        "n. Snow",
+      ],
       sentences: [],
     },
     春: {
@@ -1359,7 +1538,9 @@
         "春",
         "はる",
       ],
-      definition: [],
+      definition: [
+        "n. Spring",
+      ],
       sentences: [],
     },
     夏: {
@@ -1367,7 +1548,9 @@
         "夏",
         "なつ",
       ],
-      definition: [],
+      definition: [
+        "n. Summer",
+      ],
       sentences: [],
     },
     秋: {
@@ -1375,7 +1558,9 @@
         "秋",
         "あき",
       ],
-      definition: [],
+      definition: [
+        "n. Autumn, fall",
+      ],
       sentences: [],
     },
     冬: {
@@ -1383,7 +1568,9 @@
         "冬",
         "ふゆ",
       ],
-      definition: [],
+      definition: [
+        "n. Winter",
+      ],
       sentences: [],
     },
     温かい: {
@@ -1391,7 +1578,9 @@
         "温かい",
         "あたたかい",
       ],
-      definition: [],
+      definition: [
+        "adj. Warm",
+      ],
       sentences: [],
     },
     暑い: {
@@ -1399,7 +1588,9 @@
         "暑い",
         "あつい",
       ],
-      definition: [],
+      definition: [
+        "adj. Hot",
+      ],
       sentences: [],
     },
     涼しい: {
@@ -1407,7 +1598,9 @@
         "涼しい",
         "すずしい",
       ],
-      definition: [],
+      definition: [
+        "adj. Cool, refreshing",
+      ],
       sentences: [],
     },
     寒い: {
@@ -1415,7 +1608,9 @@
         "寒い",
         "さむい",
       ],
-      definition: [],
+      definition: [
+        "adj. Cold",
+      ],
       sentences: [],
     },
     くない: {
@@ -1423,7 +1618,9 @@
         "くない",
         "くない",
       ],
-      definition: [],
+      definition: [
+        "phrase. Not",
+      ],
       sentences: [],
     },
     かった: {
