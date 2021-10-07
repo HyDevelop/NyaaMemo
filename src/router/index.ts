@@ -1,13 +1,19 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 import Debug from "@/views/Debug.vue";
 import Review from "@/views/0-Review.vue";
-import WordSelection from "@/views/1-WordSelection.vue";
+import WordSelection from "@/views/Backup-WordSelection.vue";
 import Stats from "@/views/2-Stats.vue";
 import SettingsView from "@/views/3-Settings.vue";
 import Create from "@/views/4-Create.vue";
 import WordAdd from "@/views/1-WordAdd.vue"
+import WorkspaceSelection from "@/views/0-WorkspaceSelection.vue";
 
 const routes: Array<RouteRecordRaw> = [
+    {
+        path: '/workspaces',
+        name: 'Workspace Selection',
+        component: WorkspaceSelection
+    },
     {
         path: '/',
         name: 'Review',
