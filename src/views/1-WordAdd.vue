@@ -5,14 +5,18 @@
             <p>You can use this page to simply add a word with its definition. If you added something by accident, you can remove words in the word lists page.</p>
         </div>
 
-        <div class="input-container">
-            <input />
-        </div>
-        <div class="input-container">
-            <input />
-        </div>
-        <div>
-            <el-button>Add</el-button>
+        <div class="fbox-v">
+            <div class="input-container f-v-expand">
+                <input />
+            </div>
+
+            <div class="input-container f-v-expand">
+                <input />
+            </div>
+
+            <div>
+                <el-button>Add</el-button>
+            </div>
         </div>
     </div>
 </template>
@@ -26,6 +30,11 @@ export default class WordAdd extends Vue
 }
 </script>
 
-<style scoped>
+<style lang="sass" scoped>
+@import "src/css/global"
+
+#word-add
+    width: $app-width
+    margin: 0 auto
 
 </style>
