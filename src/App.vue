@@ -15,6 +15,12 @@
                     <div class="sub-text">{{ needToAdd }}</div>
                 </div>
             </router-link>
+            <router-link class="clickable fbox-center" to="/wordadd">
+                <div class="w100">
+                    <i class="el-icon-plus"></i>
+                    <div class="sub-text">{{ needToAdd }}</div> <!-- TODO: Queue for adding words -->
+                </div>
+            </router-link>
             <router-link class="clickable fbox-center" to="/stats"><div><i class="el-icon-s-data"></i></div></router-link>
             <router-link class="clickable fbox-center" to="/settings"><div><i class="el-icon-s-tools"></i></div></router-link>
             <router-link class="clickable fbox-center" to="/create"><div><i class="el-icon-plus"></i></div></router-link>

@@ -5,6 +5,7 @@ import WordSelection from "@/views/1-WordSelection.vue";
 import Stats from "@/views/2-Stats.vue";
 import SettingsView from "@/views/3-Settings.vue";
 import Create from "@/views/4-Create.vue";
+import WordAdd from "@/views/1-WordAdd.vue"
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -16,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/words',
         name: 'Word Selection',
         component: WordSelection
+    },
+    {
+        path: '/wordadd',
+        name: 'Word Add',
+        component: WordAdd
     },
     {
         path: '/stats',
