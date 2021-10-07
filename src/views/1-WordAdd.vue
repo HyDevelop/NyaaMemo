@@ -35,9 +35,14 @@ export default class WordAdd extends Vue
     width: $app-width
     margin: 0 auto
 
-input
-    width: 100%
-    height: 100%
+.input-container
+    margin-bottom: 20px
+
+    input
+        width: 100%
+        height: 100%
+        padding: 0
+        border-width: 0
 
 #btn-add
     margin-bottom: 20px
