@@ -5,13 +5,13 @@
             <p>You can use this page to simply add a word with its definition. If you added something by accident, you can remove words in the word lists page.</p>
         </div>
 
-        <div class="fbox-v">
-            <div class="input-container f-v-expand">
-                <input />
+        <div id="content" class="fbox-v">
+            <div class="input-container f-v-expand" v-if="mode === 1">
+                <input v-model="word"/>
             </div>
 
-            <div class="input-container f-v-expand">
-                <input />
+            <div class="input-container f-v-expand" v-if="mode === 1">
+                <input v-model="definition"/>
             </div>
 
             <el-button id="btn-add" type="success" plain>Add</el-button>
@@ -46,6 +46,9 @@ export default class WordAdd extends Vue
 
         background-color: #edf1f2
         border-radius: 15px
+
+        text-align: center
+        font-size: x-large
 
 #btn-add
     margin-bottom: 20px
