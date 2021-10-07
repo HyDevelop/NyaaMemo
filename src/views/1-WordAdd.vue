@@ -14,9 +14,7 @@
                 <input />
             </div>
 
-            <div>
-                <el-button>Add</el-button>
-            </div>
+            <el-button id="btn-add" type="success" plain>Add</el-button>
         </div>
     </div>
 </template>
@@ -37,4 +35,10 @@ export default class WordAdd extends Vue
     width: $app-width
     margin: 0 auto
 
+input
+    width: 100%
+    height: 100%
+
+#btn-add
+    margin-bottom: 20px
 </style>
