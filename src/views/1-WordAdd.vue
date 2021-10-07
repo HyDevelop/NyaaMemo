@@ -44,6 +44,9 @@ export default class WordAdd extends Vue
         padding: 0
         border-width: 0
 
+        background-color: #edf1f2
+        border-radius: 15px
+
 #btn-add
     margin-bottom: 20px
 </style>
